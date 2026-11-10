@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Gadomi · Haut de page et estimation · aperçu</title>
+<script>if(screen.width<820)location.replace('m/index.html'+location.hash)</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&amp;family=Figtree:wght@400;500;600;700&amp;family=Outfit:wght@300;400;500;800&amp;display=swap">
+<style>
+body{margin:0;background:#C6C5B9}
+a{color:#16302e}a:hover{color:#1f6b63}
+.hero{background-color:#C6C5B9;background-image:url(assets/a2386622b1625fcd8eb9cff5aa192882.jpg);background-repeat:no-repeat;background-position:center calc(-1 * min(10.4vw, 150px));background-size:max(100%, 1280px) auto}
+.nav a{color:#FFFFFF;text-decoration:none}.nav a:hover{color:#F6B82F}
+
+#gdm{--gdm-ink:#16302e;--gdm-muted:#6b7d7a;--gdm-accent:#f5b82e;--gdm-accent-hover:#ffc74a;--gdm-accent-ink:#1b1606;--gdm-dark:#16302e;--gdm-dark-ink:#f3f6f4;--gdm-dark-muted:#a9bcb8;--gdm-ok:#1f6b63;--gdm-err:#c2410c;--gdm-note:#fde7b0;--gdm-display:"Bricolage Grotesque","Avenir Next","Segoe UI",system-ui,sans-serif;--gdm-body:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;font-family:var(--gdm-body);color:var(--gdm-ink);box-sizing:border-box}
+#gdm *,#gdm *::before,#gdm *::after{box-sizing:border-box}
+#gdm .bar{display:grid;grid-template-columns:1.09fr 1fr 195px;align-items:stretch;min-height:89px;background:#fff;border-radius:14px;box-shadow:0 12px 40px rgba(0,0,0,.18)}
+#gdm .fld{min-width:0;position:relative;display:flex;flex-direction:column;justify-content:center;padding:10px 28px 10px 30px}
+#gdm .fld + .fld{border-left:1px solid #dcdcdc;padding-left:25px}
+#gdm label{display:flex;align-items:center;gap:6px;font-family:"Outfit",system-ui,sans-serif;font-size:15px;font-weight:400;letter-spacing:.04em;text-transform:uppercase;color:#555;margin-bottom:4px}
+#gdm .fld.ok label{color:var(--gdm-ok)}
+#gdm .chk{display:none;width:16px;height:16px;border-radius:50%;background:var(--gdm-ok);color:#fff;place-items:center}
+#gdm .chk svg{width:10px;height:10px}
+#gdm .fld.ok .chk{display:inline-grid}
+#gdm input{all:unset;display:block;width:100%;font-family:"Outfit",system-ui,sans-serif;font-size:20px;font-weight:400;color:var(--gdm-ink);line-height:1.3;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+#gdm input::placeholder{color:#A3A3A3;font-weight:300}
+#gdm .go{all:unset;cursor:pointer;display:flex;align-items:center;justify-content:center;background:var(--gdm-accent);color:var(--gdm-accent-ink);font-family:"Outfit",system-ui,sans-serif;font-weight:500;font-size:21px;border-radius:0 14px 14px 0;transition:background .15s}
+#gdm .go:hover{background:var(--gdm-accent-hover)}
+#gdm .go:focus-visible{outline:3px solid var(--gdm-accent);outline-offset:3px}
+#gdm .sugg{position:absolute;left:12px;right:12px;top:calc(100% + 10px);z-index:50;margin:0;padding:5px;list-style:none;background:#fff;border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.2);max-height:260px;overflow:auto}
+#gdm .sugg li{padding:9px 11px;border-radius:9px;cursor:pointer;font-size:14.5px;color:var(--gdm-ink)}
+#gdm .sugg li small{display:block;color:var(--gdm-muted);font-size:12px}
+#gdm .sugg li:hover{background:#f1f4f2}
+#gdm .msg{margin:10px 30px 0;font-size:13.5px;font-weight:600;color:#000}
+#gdm .msg.err{color:var(--gdm-err)}
+#gdm .res{margin-top:12px;min-height:148px;background:var(--gdm-dark);color:var(--gdm-dark-ink);border-radius:16px;padding:22px 41px 22px 128px;display:flex;align-items:center;gap:37px;box-shadow:0 12px 40px rgba(0,0,0,.18)}
+#gdm .kick{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gdm-dark-muted);margin:0}
+#gdm .price{font-family:var(--gdm-display);font-weight:800;font-size:46px;line-height:1.05;letter-spacing:-.02em;margin:4px 0 8px;font-variant-numeric:tabular-nums;white-space:nowrap}
+#gdm .pill{display:inline-block;background:var(--gdm-note);color:var(--gdm-accent-ink);font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;font-variant-numeric:tabular-nums}
+#gdm .pts{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:15px}
+#gdm .pts li{display:flex;gap:10px;align-items:center}
+#gdm .tick{flex:none;width:20px;height:20px;border-radius:50%;background:var(--gdm-accent);color:var(--gdm-accent-ink);display:inline-grid;place-items:center}
+#gdm .book{all:unset;cursor:pointer;margin-left:auto;flex:none;display:flex;align-items:center;justify-content:center;width:234px;height:89px;background:var(--gdm-accent);color:var(--gdm-accent-ink);font-family:"Outfit",system-ui,sans-serif;font-weight:500;font-size:20px;border-radius:12px;white-space:nowrap;transition:background .15s}
+#gdm .book:hover{background:var(--gdm-accent-hover)}
+#gdm .book:focus-visible{outline:3px solid var(--gdm-accent);outline-offset:3px}
+#gdm .res.blocked .price{font-size:28px}
+#gdm .foot{margin:14px 30px 0;font-family:Arial,Helvetica,sans-serif;font-size:13.5px;color:#fff}
+@media (prefers-reduced-motion:no-preference){#gdm .res{animation:gdmIn .28s ease-out}@keyframes gdmIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}}
+@media (max-width:720px){
+#gdm .bar{grid-template-columns:1fr}
+#gdm .fld{padding:12px 16px}
+#gdm .fld + .fld{border-left:0;border-top:1px solid #dcdcdc;padding-left:16px}
+#gdm .go{min-height:60px;border-radius:0 0 14px 14px}
+#gdm .sugg{left:0;right:0}
+#gdm .res{flex-direction:column;align-items:stretch;padding:22px;gap:18px}
+#gdm .book{margin-left:0;width:auto;height:64px}
+#gdm .msg,#gdm .foot{margin-left:6px;margin-right:6px}
+}
+
+.svc-tab{all:unset;box-sizing:border-box;cursor:pointer;width:100%;height:89px;display:flex;align-items:center;gap:min(1.16vw, 17px);padding:0 min(1.90vw, 27px) 0 min(1.70vw, 24px);background:#FFFFFF;color:#16302E;border-radius:min(1.09vw, 16px);box-shadow:0 4px 16px rgba(22,48,46,.07);font-family:"Outfit",system-ui,sans-serif;font-weight:600;font-size:min(1.43vw, 21px);transition:background .15s,color .15s}
+.svc-tab:hover{background:#FDF1CF}
+.svc-tab.on{background:#16302E;color:#FFFFFF}
+.svc-tab:focus-visible{outline:3px solid #F6B82F;outline-offset:2px}
+.svc-ico{flex:none;width:min(3.81vw, 55px);height:min(3.81vw, 55px);border-radius:50%;display:grid;place-items:center}
+.svc-ico svg{width:52%;height:52%}
+.svc-tab.on .svc-ico{background:#F5B82E !important;color:#16302E !important}
+.svc-lab{flex:1;text-align:left}
+.svc-arr{display:none;font-size:1.1em}
+.svc-tab.on .svc-arr{display:inline}
+.svc-panel{background:#16302E;color:#FFFFFF;border-radius:min(1.36vw, 20px);min-height:calc(445px + 4 * min(0.68vw, 10px));box-sizing:border-box;padding:min(4.22vw, 61px) min(4.76vw, 69px);font-family:"Outfit",system-ui,sans-serif;font-weight:400;font-size:min(1.22vw, 18px);line-height:1.6}
+.svc-panel strong{font-weight:600}
+.svc-panel{display:grid;grid-template-columns:minmax(0,1fr) min(17.7vw,255px);overflow:hidden;padding:0 !important}
+.svc-text{padding:min(3.06vw, 44px) min(3.40vw, 49px) min(3.06vw, 44px) min(3.74vw, 54px)}
+#services [role="tablist"] > li{flex:1;display:flex}
+#services [role="tablist"] .svc-tab{height:auto;min-height:89px}
+.svc-h3{margin:0;font-family:"Outfit",sans-serif;font-weight:600;font-size:min(1.90vw, 27px);line-height:1.2;color:#FFFFFF}
+.svc-chips{list-style:none;margin:min(1.36vw, 20px) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:min(0.68vw, 10px)}
+.svc-chips li{background:#F5B82E;color:#1B1606;font-weight:500;font-size:min(1.09vw, 16px);line-height:1.2;padding:min(0.48vw, 7px) min(1.09vw, 16px);border-radius:999px}
+.svc-intro{margin:min(1.22vw, 18px) 0 0}
+.svc-checks{list-style:none;margin:min(1.09vw, 16px) 0 0;padding:0;display:flex;flex-direction:column;gap:min(0.68vw, 10px)}
+.svc-checks li{display:flex;gap:min(0.82vw, 12px);align-items:flex-start}
+.svc-checks svg{flex:none;width:1.05em;height:1.05em;margin-top:.33em;color:#F5B82E}
+.svc-photo{background:#C6C5B9;color:#16302E;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;font-size:min(1.09vw, 16px);text-align:center}
+.svc-photo svg{width:min(3.4vw, 48px);height:min(3.4vw, 48px)}
+.svc-panel{grid-area:1/1}
+.svc-panel.is-hidden{visibility:hidden}
+.zn-list{margin:0 auto;padding:0;list-style:none;max-width:min(82.78vw, 1192px);display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:min(3.33vw, 48px)}
+.zn-item{display:flex;flex-direction:column;align-items:flex-start;gap:min(1.25vw, 18px)}
+.zn-ico{width:min(4.44vw, 64px);height:min(4.44vw, 64px);border-radius:50%;background:#F5B82E;color:#16302E;display:grid;place-items:center;flex:none}
+.zn-ico svg{width:50%;height:50%}
+.zn-ico svg.zn-map{width:56%;height:56%}
+.zn-ico svg.zn-map-eu{width:62%;height:62%}
+.zn-item h3{margin:0;font-family:"Outfit",sans-serif;font-weight:600;font-size:min(1.53vw, 22px);line-height:1.2;color:#FFFFFF}
+.zn-item p{margin:min(0.42vw, 6px) 0 0;font-size:min(1.18vw, 17px);line-height:1.45;color:#E3E8E6}
+#zones .zn-list,#formules .fm-list{position:relative;z-index:1}
+#bien-etre .be-in{max-width:min(82.78vw, 1192px);margin:0 auto;padding:min(6.94vw, 100px) 0;display:grid;grid-template-columns:minmax(0, 5fr) minmax(0, 7fr);gap:min(6.94vw, 100px);align-items:start}
+#bien-etre .be-left{position:sticky;top:40px}
+#bien-etre .be-kick{margin:0;font-family:"Outfit",sans-serif;font-weight:400;font-size:min(3.27vw, 47px);line-height:1.2;color:#111111}
+#bien-etre .be-intro{margin:min(1.67vw, 24px) 0 0;font-size:min(1.32vw, 19px);line-height:1.6;color:#3A4644}
+#bien-etre .be-list{list-style:none;margin:0;padding:0;counter-reset:none}
+#bien-etre .be-item{display:grid;grid-template-columns:min(5.56vw, 80px) minmax(0, 1fr);align-items:baseline;padding:min(1.94vw, 28px) 0;border-top:1px solid #DEDBD0}
+#bien-etre .be-item:last-child{border-bottom:1px solid #DEDBD0}
+#bien-etre .be-num{font-weight:300;font-size:min(2.5vw, 36px);line-height:1;color:#D9A21C;letter-spacing:-.02em}
+#bien-etre .be-item h3{margin:0;font-weight:600;font-size:min(1.46vw, 21px);line-height:1.25;color:#16302E}
+#bien-etre .be-item p{margin:min(0.56vw, 8px) 0 0;font-size:min(1.18vw, 17px);line-height:1.55;color:#3A4644}
+#bien-etre .be-in{display:block}
+#bien-etre .be-left{position:static;text-align:center;max-width:min(52.78vw, 760px);margin:0 auto}
+#bien-etre .be-intro{margin:min(1.39vw, 20px) 0 0}
+#bien-etre .be-list{margin:min(4.44vw, 64px) 0 0;display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));column-gap:min(5.56vw, 80px)}
+#bien-etre .be-item:last-child{border-bottom:0}
+#bien-etre .be-item:nth-last-child(-n+2){border-bottom:1px solid #DEDBD0}
+#bien-etre .be-cta{display:flex;align-items:center;padding:min(0.97vw, 14px) 0}
+#bien-etre .be-cta > .be-faq{flex:1}
+#bien-etre .be-faq{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:min(6.18vw, 89px);padding:0 min(2.22vw, 32px);border:2px solid #16302E;border-radius:16px;color:#16302E;text-decoration:none;font-family:"Outfit",sans-serif;font-weight:500;font-size:min(1.39vw, 20px);transition:background-color .15s, color .15s}
+#bien-etre .be-faq svg{width:1em;height:1em}
+#bien-etre .be-faq .be-q{width:1.25em;height:1.25em}
+#bien-etre .be-faq:hover{background-color:#16302E;color:#FFFFFF}
+
+.hv-btn{transition:background-color .15s}
+.hv-yel:hover{background-color:#FFC74A !important}
+.hv-grn:hover{background-color:#2C5652 !important}
+
+.fm-li{display:block}
+a.fm-card{text-decoration:none;color:inherit;cursor:pointer}
+a.fm-card:focus-visible{outline:3px solid #F5B82E;outline-offset:3px}
+.fm-card{transition:background-color .15s}
+.fm-card:hover{background-color:#FEF3D7}
+
+.fm-list{margin:0 auto;padding:0;list-style:none;max-width:min(62.50vw, 900px);display:flex;flex-direction:column;gap:min(1.11vw, 16px)}
+.fm-card{display:grid;grid-template-columns:min(15.28vw, 220px) minmax(0, 1fr);align-items:center;background:#FFFFFF;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.08);padding:min(1.67vw, 24px) min(2.78vw, 40px) min(1.67vw, 24px) 0}
+.fm-vis{display:flex;justify-content:center}
+.fm-arw{width:min(6.11vw, 88px);height:auto;display:block}
+.fm-two{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:min(0.69vw, 10px);row-gap:min(1.11vw, 16px)}
+.fm-arw-s{width:min(4.72vw, 68px);height:auto;display:block}
+.fm-day{font-family:"Outfit",sans-serif;font-size:min(0.90vw, 13px);color:#5B6B69}
+.fm-txt h3{margin:0;font-family:"Outfit",sans-serif;font-weight:600;font-size:min(1.39vw, 20px);line-height:1.2;color:#111111}
+.fm-txt p{margin:min(0.42vw, 6px) 0 0;font-size:min(1.18vw, 17px);line-height:1.55;color:#2B3238}
+
+
+.hw-sub{margin:min(0.97vw, 14px) 0 0;text-align:center;font-size:min(1.46vw, 21px);color:#3D3410}
+.hw-row{position:relative;margin:min(5.56vw, 80px) auto 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(4, min(18.19vw, 262px));gap:min(3.33vw, 48px);justify-content:center}
+.hw-line{position:absolute;top:min(6.67vw, 96px);left:calc(50% - min(32.29vw, 465px));right:calc(50% - min(32.29vw, 465px));border-top:3px dashed rgba(22,48,46,.35)}
+.hw-card{position:relative;z-index:1;background:#FFFFFF;border-radius:16px;box-shadow:0 4px 16px rgba(22,48,46,.09);padding:min(3.06vw, 44px) min(1.81vw, 26px) min(2.50vw, 36px);text-align:center}
+.hw-card.hw-last{background:#16302E;color:#FFFFFF}
+.hw-ico{position:relative;width:min(6.67vw, 96px);height:min(6.67vw, 96px);margin:0 auto;border-radius:50%;background:#F5B82E;color:#16302E;display:grid;place-items:center}
+.hw-ico svg{width:48%;height:48%}
+.hw-num{position:absolute;top:-6px;left:-6px;width:min(2.36vw, 34px);height:min(2.36vw, 34px);border-radius:50%;background:#16302E;color:#FFFFFF;font-weight:600;font-size:min(1.18vw, 17px);display:grid;place-items:center;border:3px solid #FFFFFF}
+.hw-last .hw-num{background:#FFFFFF;color:#16302E;border-color:#16302E}
+.hw-card h3{margin:min(1.81vw, 26px) 0 0;font-family:"Outfit",sans-serif;font-weight:600;font-size:min(2.08vw, 30px);line-height:1.15;color:inherit}
+.hw-card p{margin:min(0.83vw, 12px) 0 0;font-size:min(1.32vw, 19px);line-height:1.45;color:#3A4644}
+.hw-last p{color:#E3E8E6}
+
+
+#transport .pr-in{max-width:min(82.78vw, 1192px);margin:0 auto;padding:min(6.94vw, 100px) 0 min(7.64vw, 110px)}
+#transport h2{margin:0;text-align:center;font-family:"Outfit",sans-serif;font-weight:400;font-size:min(3.27vw, 47px);line-height:1.2;color:#111111}
+#transport .pr-sub{margin:min(0.97vw, 14px) 0 0;text-align:center;font-size:min(1.46vw, 21px);color:#5B6B69}
+#transport .pr-an{list-style:none;margin:min(4.44vw, 64px) 0 0;padding:0;display:grid;grid-template-columns:repeat(6, minmax(0, 1fr));gap:min(1.39vw, 20px)}
+#transport .pr-an li{text-align:center;padding:min(1.94vw, 28px) min(0.97vw, 14px) min(1.81vw, 26px);border-radius:16px;background:#F7F6F2}
+#transport .pr-an img{width:min(5.28vw, 76px);height:min(5.28vw, 76px);display:block;margin:0 auto}
+#transport .pr-an h3{margin:min(1.11vw, 16px) 0 0;font-weight:600;font-size:min(1.32vw, 19px);color:#16302E}
+#transport .pr-an p{margin:min(0.42vw, 6px) 0 0;font-size:min(1.01vw, 14.5px);line-height:1.45;color:#3A4644}
+#transport .pr-ex{margin:min(1.39vw, 20px) 0 0;text-align:center;font-size:min(1.18vw, 17px);color:#3A4644}
+#transport .pr-ex strong{color:#16302E;font-weight:600}
+#transport .pr-tr{margin-top:min(3.89vw, 56px);background:#16302E;border-radius:24px;padding:min(2.78vw, 40px) min(3.33vw, 48px);display:grid;grid-template-columns:minmax(0, 5fr) minmax(0, 7fr);gap:min(3.33vw, 48px);align-items:center;color:#FFFFFF}
+#transport .pr-tr h3{margin:0;font-weight:400;font-size:min(2.22vw, 32px);line-height:1.2}
+#transport .pr-tr ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:min(0.97vw, 14px) min(1.94vw, 28px)}
+#transport .pr-tr li{display:flex;gap:12px;align-items:flex-start;font-size:min(1.18vw, 17px);line-height:1.45;color:#E3E8E6}
+#transport .pr-tr li span{flex:none;width:26px;height:26px;border-radius:50%;background:#F5B82E;display:grid;place-items:center;margin-top:1px}
+#transport .pr-tr li svg{width:15px;height:15px}
+
+#transport .pr-tr li.pr-cta{grid-column:2;display:block;margin-top:min(0.56vw, 8px)}
+#transport .pr-btn{display:flex;width:100%;box-sizing:border-box;justify-content:center;align-items:center;gap:.45em;height:min(4.44vw, 64px);padding:0 min(1.94vw, 28px);background:#F5B82E;color:#1B1606;border-radius:16px;text-decoration:none;font-family:"Outfit",sans-serif;font-weight:500;font-size:min(1.39vw, 20px);transition:background-color .15s}
+#transport .pr-btn:hover{background:#FFC74A}
+#transport .pr-tr li.pr-cta .pr-btn svg{width:1.05em;height:1.05em}
+
+.ft{background:#16302E;color:#FFFFFF;font-family:"Outfit",sans-serif}
+.ft a{color:inherit;text-decoration:none}
+.ft-in{max-width:min(82.78vw, 1192px);margin:0 auto;padding:min(5.56vw, 80px) 0 min(4.17vw, 60px);display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1.1fr) minmax(0,1.2fr);gap:min(3.33vw, 48px)}
+.ft-brand img{width:min(8.9vw, 128px);height:auto;display:block}
+.ft-brand p{margin:18px 0 0;font-size:16px;line-height:1.55;color:#C9D3D1;max-width:300px}
+.ft-badge{display:inline-block;margin-top:16px !important;padding:6px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:13.5px !important;color:#FFFFFF !important}
+.ft-soc{display:flex;gap:10px;margin-top:20px}
+.ft-soc a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;transition:background-color .15s}
+.ft-soc a:hover{background:#2C5652}
+.ft-soc svg{width:18px;height:18px}
+.ft-col h2{margin:0;font-weight:600;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:#F5B82E}
+.ft-col ul{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16.5px}
+.ft-col a:hover{color:#F6B82F}
+.ft-ct li{display:flex;gap:10px;align-items:flex-start;color:#E3E8E6;line-height:1.4}
+.ft-ct svg{flex:none;width:19px;height:19px;margin-top:1px;color:#F5B82E}
+.ft-txt{margin:18px 0 0;font-size:16px;line-height:1.5;color:#C9D3D1}
+.ft-btn{margin-top:18px;display:inline-flex;align-items:center;gap:.45em;height:56px;padding:0 24px;border-radius:16px;background:#F5B82E;color:#1B1606 !important;font-weight:500;font-size:18px}
+.ft-btn svg{width:1.05em;height:1.05em}
+.ft-bot{border-top:1px solid rgba(255,255,255,.12)}
+.ft-bot-in{max-width:min(82.78vw, 1192px);margin:0 auto;padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:14px;color:#A9BCB8}
+.ft-bot p{margin:0}
+.ft-bot ul{list-style:none;margin:0;padding:0;display:flex;gap:24px}
+.ft-bot a:hover{color:#FFFFFF}
+
+.to-top{position:fixed;right:28px;bottom:28px;z-index:60;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.7);color:#16302E;display:grid;place-items:center;text-decoration:none;transition:background-color .15s}
+.to-top:hover{background:#F5B82E}
+.to-top svg{width:20px;height:20px}
+
+.wa-btn{position:fixed;right:24px;bottom:88px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.18);transition:background-color .15s}
+.wa-btn:hover{background:#1EBE5A}
+.wa-btn svg{width:30px;height:30px}
+</style>
+
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="hero" id="haut" style="width: 100%; font-family: 'Outfit', sans-serif; color: #FFFFFF">
+<div style="max-width: 1440px; margin: 0 auto; padding: min(2.36vw, 34px) min(3.47vw, 50px) 64px min(5vw, 72px); box-sizing: border-box; display: flex; flex-direction: column">
+
+<!-- En-tête : toutes les tailles suivent la largeur de l'écran (référence 1440 px) -->
+<header style="display: flex; flex-wrap: nowrap; align-items: flex-start">
+<a href="#accueil" aria-label="Gadomi Taxi Animalier, accueil" style="flex: none; display: block; margin-right: min(2.22vw, 32px)">
+<img src="assets/d052ca0c091a3d19cd5c4455eefdac21.png" alt="Gadomi Taxi Animalier" style="width: min(8.9vw, 128px); height: auto; display: block">
+</a>
+<nav class="nav" aria-label="Navigation principale" style="flex: none; display: flex; flex-wrap: nowrap; gap: min(1.25vw, 18px); padding-top: min(0.9vw, 13px); margin-right: min(1.67vw, 24px); font-weight: 500; font-size: min(1.6vw, 23px); white-space: nowrap; text-shadow: 0 1px 10px rgba(10,30,30,0.35)">
+<a href="#trajets">Trajets</a>
+<a href="#zones">Zones</a>
+<a href="#transport">Transport</a>
+<a href="tarifs.html">Tarifs</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div style="flex: none; display: flex; align-items: flex-start; gap: min(1.39vw, 20px)">
+<div style="display: flex; flex-direction: column; align-items: center; gap: min(0.9vw, 13px)">
+<div style="display: flex; align-items: center; gap: min(0.97vw, 14px)">
+<a href="reserver.html" class="hv-btn hv-grn" style="display: inline-flex; align-items: center; justify-content: center; width: min(18.4vw, 265px); height: min(4.44vw, 64px); background: #16302E; color: #FFFFFF; text-decoration: none; font-weight: 400; font-size: min(1.6vw, 23px); white-space: nowrap; border-radius: 999px; gap: 0.45em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 1.05em; height: 1.05em; display: block; flex: none"><rect x="3" y="4.5" width="18" height="16.5" rx="2.5"></rect><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 15l2.5 2.5 4.5-4.5"></path></svg>Réserver un trajet</a>
+<a href="tel:+33670984055" class="hv-btn hv-yel" style="display: inline-flex; align-items: center; justify-content: center; width: min(18.4vw, 265px); height: min(4.44vw, 64px); background: #F6B82F; color: #FFFFFF; text-decoration: none; font-weight: 400; font-size: min(1.6vw, 23px); white-space: nowrap; border-radius: 999px; gap: 0.45em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 1em; height: 1em; display: block; flex: none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>06.70.98.40.55</a>
+</div>
+<p style="margin: 0; font-weight: 400; font-size: min(1.25vw, 18px); white-space: nowrap; text-shadow: 0 1px 10px rgba(10,30,30,0.35)">Ouvert 7j/7 6h00 à 20h00&nbsp; <span style="font-size: min(1.11vw, 16px)">sauf urgence</span></p>
+</div>
+<div style="display: flex; align-items: center; gap: min(0.42vw, 6px); height: min(4.44vw, 64px)">
+<a href="mailto:gadomi42@gmail.com" aria-label="E-mail" style="color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; width: min(2.78vw, 40px); height: min(2.78vw, 40px)"><svg viewBox="0 0 40 30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true" style="width: min(1.81vw, 26px); height: auto; display: block"><rect x="2" y="3" width="36" height="24" rx="2"></rect><path d="M2 4l18 14L38 4M2 26l13-11M38 26L25 15"></path></svg></a>
+<a href="#facebook" aria-label="Facebook" style="color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; width: min(2.78vw, 40px); height: min(2.78vw, 40px)"><svg viewBox="0 0 20 38" fill="currentColor" aria-hidden="true" style="width: min(0.90vw, 13px); height: auto; display: block"><path d="M13 38V21h5.6l.9-6.6H13v-4.2c0-1.9.5-3.2 3.3-3.2H20V1.1C19.4 1 17.2.8 14.7.8 9.4.8 5.9 4 5.9 9.8v4.6H0V21h5.9v17z"></path></svg></a>
+<a href="#instagram" aria-label="Instagram" style="color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; width: min(2.78vw, 40px); height: min(2.78vw, 40px)"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true" style="width: min(1.67vw, 24px); height: auto; display: block"><rect x="2" y="2" width="32" height="32" rx="9"></rect><circle cx="18" cy="18" r="7.5"></circle><circle cx="27" cy="9" r="1.6" fill="currentColor" stroke="none"></circle></svg></a>
+</div>
+</div>
+</header>
+
+<!-- Titre et badges -->
+<div id="accueil" style="display: flex; flex-direction: column; margin-top: min(0.7vw, 10px); text-shadow: 0 2px 18px rgba(10,30,30,0.28)">
+<h1 style="margin: 0; display: flex; flex-direction: column; font-weight: 800; letter-spacing: -0.02em">
+<span style="font-size: min(10.4vw, 150px); line-height: 0.92">Taxi</span>
+<span style="font-size: min(5.76vw, 83px); line-height: 1">Animalier agréé</span>
+</h1>
+<p style="margin: min(2.78vw, 40px) 0 0 min(6.9vw, 99px); font-weight: 400; font-size: min(2.08vw, 30px); line-height: 1.3">Trajets locaux, longue distance<br>en France, Europe et monde</p>
+<p style="margin: min(4.6vw, 66px) 0 0; text-align: center; font-weight: 600; font-size: min(1.68vw, 24px); white-space: nowrap">Certification ACACED + TAV &nbsp;•&nbsp; Agrément Type 1 et 2 &nbsp;•&nbsp; Véhicule agréé &nbsp;•&nbsp; Assurance &nbsp;•&nbsp; Chiens, chats, NAC</p>
+</div>
+
+<!-- Module d'estimation rapide (repris de module-estimation-gadomi.html) -->
+<div id="gdm" style="margin: min(1.7vw, 24px) calc(-1 * min(1.3vw, 19px)) 0 calc(-1 * min(1.72vw, 25px))">
+<div class="bar" role="search">
+<div class="{{f1Class}}">
+<label for="gdm-a1">Départ <span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></label>
+<input type="text" id="gdm-a1" placeholder="Adresse de départ" value="{{a1}}" autocomplete="off" onChange="{{setA1}}" onKeyDown="{{key1}}" onBlur="{{blur1}}" role="combobox" aria-expanded="{{open1Str}}" aria-autocomplete="list" aria-controls="gdm-s1">
+<sc-if value="{{open1}}" hint-placeholder-val="{{ false }}">
+<ul class="sugg" id="gdm-s1" role="listbox">
+<sc-for list="{{s1}}" as="it" hint-placeholder-count="3"><li role="option" aria-selected="false" onMouseDown="{{it.pick}}">{{it.main}}<small>{{it.sub}}</small></li></sc-for>
+</ul>
+</sc-if>
+</div>
+<div class="{{f2Class}}">
+<label for="gdm-a2">Destination <span class="chk" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span></label>
+<input type="text" id="gdm-a2" placeholder="Adresse de destination" value="{{a2}}" autocomplete="off" onChange="{{setA2}}" onKeyDown="{{key2}}" onBlur="{{blur2}}" role="combobox" aria-expanded="{{open2Str}}" aria-autocomplete="list" aria-controls="gdm-s2">
+<sc-if value="{{open2}}" hint-placeholder-val="{{ false }}">
+<ul class="sugg" id="gdm-s2" role="listbox">
+<sc-for list="{{s2}}" as="it" hint-placeholder-count="3"><li role="option" aria-selected="false" onMouseDown="{{it.pick}}">{{it.main}}<small>{{it.sub}}</small></li></sc-for>
+</ul>
+</sc-if>
+</div>
+<button type="button" class="go" onClick="{{submit}}" style="gap: 0.45em"><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 1.05em; height: 1.05em; display: block; flex: none"><rect x="5" y="2.5" width="14" height="19" rx="2.5"></rect><rect x="8" y="5.5" width="8" height="3.5" rx="1"></rect><path d="M8.5 13h.01M12 13h.01M15.5 13h.01M8.5 17h.01M12 17h.01M15.5 17h.01"></path></svg>Estimer</button>
+</div>
+
+<sc-if value="{{hasMsg}}" hint-placeholder-val="{{ false }}">
+<p class="{{msgClass}}" aria-live="polite">{{msg}}</p>
+</sc-if>
+
+<sc-if value="{{shown}}" hint-placeholder-val="{{ false }}">
+<div class="{{resClass}}" aria-live="polite">
+<div>
+<p class="kick">À partir de</p>
+<p class="price">{{price}}</p>
+<span class="pill">{{pill}}</span>
+</div>
+<ul class="pts">
+<li><span class="tick" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>Tarif fixe, pas de compteur</li>
+<li><span class="tick" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>Prise en charge à domicile</li>
+<li><span class="tick" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>Véhicule climatisé et désinfecté</li>
+</ul>
+<a class="book" href="reserver.html">Réserver sur l'app</a>
+</div>
+</sc-if>
+
+<p class="foot">Estimation gratuite, sans inscription • Réservation finale sur l'app</p>
+</div>
+
+</div>
+
+<!-- Bloc « Comment ça marche » (d'après la maquette de Pierre) -->
+<!-- Fond plan de ville (filigrane) commun aux blocs Zones et Formules -->
+<div style="position: relative; overflow: hidden; background: #16302E">
+<div aria-hidden="true" class="cm-bg" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0;-webkit-mask-image:linear-gradient(to top,transparent 0,#000 160px,#000 35%,transparent 100%);mask-image:linear-gradient(to top,transparent 0,#000 160px,#000 35%,transparent 100%)"><div class="cm-map" style="position:absolute;left:50%;bottom:0;width:max(100%, 1500px);aspect-ratio:2599/1733;transform:translateX(-50%)"><img src="assets/19adb8c469efc79704abb5907a676cdb.svg" alt="" style="position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0.18"></div></div>
+<!-- Bloc « Zones » : types de trajets proposés -->
+<section id="zones" aria-label="Types de trajets proposés" style="background: #16302E; color: #FFFFFF; font-family: 'Outfit', sans-serif; padding: min(4.17vw, 60px) min(2.78vw, 40px)">
+<ul class="zn-list">
+<li class="zn-item"><span class="zn-ico"><svg viewBox="0 0 100 100" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true" class="zn-map"><path d="M94.9,80.1L94.9,81.4L95.0,81.8L95.3,82.1L95.5,82.4L96,85.9L96.0,86.2L95.3,87.7L95.2,88.1L95.3,89.9L95.2,90.4L94.9,90.9L94.5,92.5L94.1,93.2L92.8,92.5L92.0,92.2L91.7,91.8L91.4,91.6L91.5,91.2L91.8,90.8L91.8,90.5L91.0,90.2L90.6,90.1L90.6,89.7L90.8,89.1L90.7,88.6L90.2,88.6L89.9,88.6L89.8,88.3L90.0,88.0L90.3,87.5L90.3,87.0L89.9,86.9L89.5,86.5L89.3,86.0L89.5,85.6L90.0,85.3L89.6,84.8L89.3,84.8L89.2,84.7L89.3,84.5L89.6,84.0L90.0,82.9L90.6,82.3L91.8,81.8L92.1,81.7L92.4,81.3L92.7,81.0L93.1,81.0L93.5,81.1L93.7,81.2L93.9,81.0L94.0,80.5L93.9,80.1L93.8,78.9L94.0,78.2L94.3,78.2L94.7,78.5L94.7,78.8L94.9,79.6ZM79.4,37.6L78.7,38.0L78.5,38.4L78.3,38.9L77.8,39.1L77.3,39.2L76.9,39.2L76.7,39.0L76.7,38.8L76.5,38.7L76.0,38.7L75.5,39.1L75.1,39.7L75.2,40.0L75.6,40.0L75.7,40.1L75.8,40.3L75.6,40.5L75.5,40.8L74.7,41.8L74.0,42.8L73.8,43.1L73.6,43.3L72.6,43.9L72.5,44.1L72.5,44.9L72.4,45.7L71.6,46.4L70.9,47.1L70.7,47.5L70.6,47.9L70.4,48.5L70.4,48.8L70.8,49.2L70.8,49.6L70.7,50.1L70.3,50.5L69.9,50.7L69.9,51.3L70.2,51.4L70.7,51.3L71.4,50.9L71.8,50.3L71.5,49.8L71.4,49.7L71.5,49.6L72.0,49.0L72.7,48.6L73.6,48.5L74.8,48.6L74.9,48.7L74.8,49.0L75.0,49.5L75.2,49.9L75.0,50.9L75.2,51.2L75.6,51.6L75.8,51.9L76.2,52.2L76.6,52.7L76.7,53.0L76.2,53.5L75.4,54.1L75.3,54.4L75.3,54.8L75.4,55.0L75.9,55.4L76.5,56.1L76.9,56.8L77.7,57.5L77.8,57.7L77.8,57.9L77.6,58.2L77.5,59.2L77.2,59.4L76.9,59.5L76.0,60.2L75.6,60.2L75.0,60.2L74.6,60.5L74.7,60.9L75.1,61.3L75.3,61.8L75.4,62.2L75.9,62.6L76.5,62.7L76.8,62.7L77.0,62.8L77.1,63.0L77.4,64.0L77.3,64.2L77.0,64.4L76.9,64.8L76.5,65.4L76.3,65.9L76.6,66.4L76.7,66.7L76.6,67.0L76.8,67.5L77.3,68.0L78.5,68.6L79.7,69.1L80.0,69.2L81.5,68.7L81.7,68.7L82.0,69.2L82.0,69.5L81.9,69.9L81.6,70.6L81.1,71.1L80.9,71.5L81.0,71.9L81.0,72.4L80.7,72.6L80.7,72.5L80.5,72.4L80.4,72.5L80.3,72.6L80.3,72.8L79.6,73.2L79.1,73.5L77.1,75.7L76.1,76.3L76.0,76.7L75.8,77.4L75.3,78.0L74.8,78.3L73.5,78.6L72.3,79.3L71.7,79.1L70.3,79.2L69.3,78.5L67.5,78.1L66.9,77.1L66.1,77.0L65.6,77.1L65.3,76.9L65.2,76.6L65.1,76.2L64.6,76.4L64.2,76.4L63.9,76.6L63.7,76.8L63.5,76.7L63.3,76.7L63.4,76.9L62.9,77.0L62.3,76.9L60.8,76.4L60.6,76.3L59.6,76.1L59.2,75.9L58.8,75.4L58.6,75.2L58.4,75.1L57.5,75.4L57.2,75.8L56.7,76.3L53.3,78.9L52.6,79.9L51.9,81.4L51.9,82.1L52.2,84.4L52.9,85.5L53.0,85.8L52.6,85.8L52.0,85.7L51.4,85.5L50.9,85.6L50.4,85.9L49.9,86.0L49.6,86.1L49.4,86.2L49.3,86.5L49.3,86.7L48.7,86.7L47.4,86.3L46.2,86.0L45.5,86.3L45.1,86.6L44.8,86.5L44.5,86.2L44.4,85.9L43.9,85.7L42.9,85.2L42.9,85.0L43.1,84.7L43.1,84.6L42.9,84.3L42.0,84.0L41.5,83.9L41.2,84.1L41.0,84.4L40.5,83.5L40.1,83.3L39.5,83.3L38.9,83.0L38.2,82.7L36.6,82.1L36.1,82.0L36.0,82.1L35.8,82.4L35.7,83.3L35.7,83.5L34.9,83.5L34.0,83.3L33.5,83.4L33.1,83.4L32.8,83.1L31.2,83.4L30.9,83.2L30.5,82.8L30.1,82.4L29.7,82.3L29.4,82.1L29.2,82.0L28.8,82.2L28.2,82.3L27.8,82.2L27.5,82.2L26.5,81.2L26.4,80.9L25.9,80.8L25.2,80.8L23.7,80.1L22.9,79.7L22.8,79.5L22.9,79.3L22.7,79.3L22.5,79.6L22.4,79.9L22.2,79.9L22.0,79.9L21.8,79.7L21.6,79.5L21.8,79.2L22.1,78.8L22.2,78.4L22.2,78.0L21.8,77.7L21.2,77.6L20.8,77.6L20.2,77.3L19.9,77.1L19.7,76.7L19.7,76.4L20.8,76.1L21.8,75.0L22.9,70.9L23.8,66.0L24.3,65.1L24.9,64.9L24.4,64.2L24.1,64.5L24.0,64.9L23.8,65.0L24.4,60.6L24.7,58.9L25.2,57.2L26.1,57.9L26.8,58.6L27.1,59.3L27.5,61.3L27.9,61.7L28.4,62.2L28.2,61.7L27.9,61.3L27.4,58.6L27.0,57.8L26.5,57.2L24.7,55.8L24.5,55.5L24.4,55.0L25.1,55.0L25.6,55.3L25.5,55.0L25.4,54.7L25.2,53.6L25.1,51.1L25.1,50.6L25.1,50.1L24.5,49.9L24.0,49.9L23.5,49.7L21.1,48.0L20.3,46.5L19.5,45.3L19.4,44.8L19.4,44.3L19.9,43.2L19.5,42.5L19.2,42.4L18.8,42.0L19.2,41.5L19.5,41.1L19.9,41.1L20.6,41.2L21.2,41.6L21.7,41.7L20.3,40.8L17.9,40.9L17.4,40.8L17.0,40.6L16.9,39.9L17.3,39.7L17.6,39.1L17.3,38.7L16.8,38.6L16.1,38.6L15.5,38.6L15.4,38.4L15.8,37.8L15.4,37.6L15.0,37.7L14.4,37.7L13.7,37.5L13.2,36.8L12.8,36.8L12.6,36.9L12.2,36.6L11.8,36.5L11.5,36.6L11.1,36.2L8.8,35.2L7.7,35.0L6.8,35.3L6.3,35.2L5.9,34.6L5.7,33.8L4.2,33.0L4.5,32.6L5.2,32.6L6.1,32.3L6.4,32.0L5.8,31.5L5.3,31.3L5.1,31.2L5.0,30.8L5.3,30.6L5.5,30.7L6.0,30.8L7.0,30.8L6.7,30.4L6.3,30.3L6.2,30.2L5.4,30.0L5.0,30.2L4.2,30.0L4.0,29.6L4,29.2L4.3,28.4L5.5,27.8L8.4,27.2L9.6,27.4L10.5,27.3L11.5,26.9L12.0,26.5L13.5,26.4L14.8,26.9L16.0,28.7L16.5,29.3L18.1,28.4L20.3,28.6L20.7,29.1L20.9,28.7L21.3,28.1L21.7,28.4L21.8,28.8L24.1,28.8L24.5,28.7L23.9,28.3L23.4,27.3L23.5,23.6L22.9,22.6L22.3,20.9L22.0,20.0L22.0,19.6L22.1,19.2L23.0,19.2L23.7,19.4L25.0,19.1L25.6,19.4L25.5,20.1L25.7,21.1L25.9,21.5L26.2,22.0L27.3,22.0L28.4,22.4L29.9,22.5L32.0,23.1L32.9,22.8L33.8,22.2L35.5,21.8L35.6,21.5L34.7,21.6L33.8,21.2L33.7,20.7L33.8,20.3L34.1,19.4L36.7,18.0L38.5,17.6L40.4,16.8L41.4,16.0L42.0,14.9L42.2,14.7L42.5,14.5L42.2,14.1L42.4,10.1L42.6,9.3L43.0,8.7L43.5,8.3L44.4,7.8L47.4,7.1L47.9,6.8L47.9,7.2L48.2,7.8L48.3,8.1L48.2,8.5L48.3,8.8L48.7,9.4L49.3,9.9L49.7,10.3L49.9,10.2L50.2,10.2L50.8,9.8L51.3,9.7L51.5,9.9L51.7,10.1L52.0,10.7L52.1,11.4L52.3,11.9L52.5,12.1L53.4,12.2L54.1,12.4L54.3,12.5L54.6,13.7L54.7,13.9L54.9,13.8L55.1,13.6L55.3,13.5L55.7,13.6L56.2,13.6L56.8,13.7L57.6,14.4L57.6,14.6L57.4,15.0L57.4,15.3L57.5,15.5L57.7,15.8L57.7,16.2L57.5,16.4L57.4,16.7L57.4,16.8L57.5,16.9L57.7,17.0L58.8,17.1L59.8,16.9L60.5,16.5L60.6,16.1L60.7,15.7L61.1,15.3L61.4,15.1L61.6,15.3L61.3,16.9L61.6,17.3L61.6,17.9L61.8,18.5L62.1,18.4L62.6,18.5L62.9,18.7L63.3,19.0L63.9,19.3L64.2,19.4L64.4,19.6L64.7,19.9L65.2,20.4L65.6,20.8L65.9,20.8L66.3,20.6L66.8,20.5L67.3,20.5L67.5,20.8L68.0,20.9L68.2,21.0L68.4,21.2L68.7,21.3L69.0,21.2L69.3,20.9L69.6,20.7L70.0,20.8L70.2,20.9L70.6,21.1L70.9,21.1L71.3,21.2L71.8,21.6L72.0,22.0L72.1,22.2L72.3,22.5L73.1,23.6L73.4,23.7L73.6,23.5L73.8,23.2L74.0,23.2L74.4,23.2L74.7,23.4L74.8,23.9L74.9,24.0L75.1,23.8L75.4,23.8L75.9,23.9L76.6,23.7L77.1,23.4L77.4,23.4L77.9,24.0L78.4,24.2L79.5,24.3L80.8,24.5L81.2,24.7L81.6,24.8L81.7,25.6L81.6,25.7L80.5,27.4L80.0,28.0L79.8,28.8L79.7,30.1L79.5,31.3L79.0,32.4L78.9,33.3L79.1,33.8L79.0,34.7L78.8,36.0L78.8,36.9L79.1,37.5Z"/></svg></span><div><h3>France entière</h3><p>dans toutes les régions,<br>en porte à porte,<br>sans groupage</p></div></li>
+<li class="zn-item"><span class="zn-ico"><svg viewBox="0 0 100 100" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true" class="zn-map zn-map-eu"><path d="M65.0,22.2L63.3,23.1L62.5,25.0L62.8,26.5L61.3,28.6L59.3,30.9L58.6,34.4L59.5,36.1L60.8,37.3L59.8,40.2L58.5,40.8L58.2,44.9L57.5,47.2L55.8,47.0L55.1,48.9L53.5,49.0L53.1,46.7L52.0,43.9L51.2,40.5L50.4,38.9L47.8,41.6L46.0,42.0L44.4,40.6L44.2,37.9L44.6,32.3L45.8,30.8L48.9,29.0L51.2,26.6L53.3,23.2L55.7,18.4L57.2,16.4L59.5,13.1L61.3,11.8L62.8,11.8L63.7,9.5L65.3,9.4L66.7,8.6L69.6,9.9L68.7,10.8L70.0,12.1L68.8,13.5L68.1,13.9L68.3,15.6L70.1,17.0L69.6,19.0L71.4,21.5L71.2,23.8L72.5,25.4L72.4,27.0L74.4,28.3L74.3,29.6L73.6,31.3L71.8,34.8L69.7,35.4L67.7,36.7L65.8,37.4L64.9,36.2L63.7,35.5L63.7,33.1L62.9,30.9L63.3,29.5L64.1,27.8L66.2,24.8L66.8,24.2L66.6,23.2ZM66.2,79.1L66.0,79.7L66.4,80.3L66.8,80.5L67.1,81.4L67.3,81.4L67.3,80.9L68.4,80.4L68.8,80.3L68.7,80.1L68.9,79.8L69.0,79.2L68.8,79.2L68.4,78.8L68.0,78.7L67.8,78.3L67.4,78.2L67.1,77.9L66.8,78.1L66.7,78.9ZM96,59.7L94.7,60.4L94.1,61.3L94.4,62.4L93.2,63.0L92.4,64.1L91.0,64.7L89.8,66.0L90.3,67.2L90.0,67.2L89.7,66.8L89.1,66.9L87.8,66.7L87.6,67.4L87.3,67.2L84.6,67.3L84.2,66.4L82.8,67.1L82.5,68.6L81.6,70.6L81.8,71.2L81.1,71.9L80.5,71.8L80.6,74.8L79.9,76.0L79.6,77.8L80.5,79.1L78.9,79.1L77.1,80.2L78.1,80.7L77.8,82.3L77.5,82.6L76.3,82.8L75.3,82.7L73.2,83.6L74.6,84.8L73.7,85.4L72.7,85.5L71.5,84.4L71.3,85.0L71.9,86.4L73.0,87.4L72.3,88.0L73.5,89.1L74.6,89.6L74.8,91.0L72.9,90.6L73.7,91.8L72.4,92.2L73.5,94.3L72.1,94.5L70.4,93.6L69.4,91.7L68.9,90.1L68.0,89.0L66.9,87.7L66.7,87.0L66.4,86.9L66.3,86.3L65.2,85.6L64.9,84.4L65.0,82.7L65.2,81.9L64.8,81.6L64.4,81.4L63.8,80.6L63.0,80.2L61.3,79.4L60.2,78.5L58.5,77.9L57.0,76.1L57.4,75.9L56.5,74.9L56.5,74.0L55.4,73.7L54.9,74.7L54.4,73.9L54.4,73.1L54.5,73.0L54.8,72.8L53.5,72.4L52.1,73.3L52.1,74.5L51.9,75.2L52.5,76.4L54.1,77.7L55,79.7L57.0,81.7L58.5,81.7L58.9,82.2L58.4,82.7L60.1,83.6L61.5,84.2L63.2,85.4L63.4,85.9L63.1,86.8L62.0,85.7L60.4,85.4L59.6,87.0L61.0,87.9L60.9,89.2L60.1,89.4L59.1,91.5L58.3,91.8L58.3,91.0L58.6,89.6L59.0,89.1L58.2,87.7L57.6,86.4L56.8,86.1L56.3,85.1L55.1,84.6L54.3,83.6L52.9,83.5L51.4,82.3L49.8,80.6L48.7,79.2L48.2,76.7L47.4,76.4L46.0,75.5L45.2,75.8L44.0,76.8L43.3,76.9L41.5,78.1L38.1,77.1L35.4,77.5L35.0,78.9L34.9,80.4L32.9,81.7L30.4,81.8L30.1,82.6L28.7,83.7L27.6,85.6L28.1,87.1L26.7,88.0L26.0,89.5L24.4,89.7L22.6,91.2L20.1,90.7L18.2,90.2L16.8,90.7L15.8,91.4L14.9,90.9L14.4,89.9L14.2,88.4L12.6,87.4L11.6,87.8L10.7,87.2L9.6,87.1L10.5,85.3L10.8,83.8L10.1,83.3L9.9,82.3L10.6,80.8L11.6,80.2L12.1,79.2L12.9,77.9L13.2,76.9L13.1,76.0L13.3,75.2L13.9,73.5L13.6,72.3L16.5,71.4L18.5,72.4L20.8,73.1L22.5,74.0L24.0,74.2L26.8,75.0L28.0,73.7L29.3,69.0L28.2,66.2L27.3,64.7L25.1,63.2L25.4,61.4L27.6,61.4L30.0,62.6L30.1,59.8L31.4,61.2L35.3,60.0L36.1,58.1L37.5,57.9L38.8,57.6L39.7,57.0L41.4,53.7L43.5,52.9L44.7,53.1L45.0,52.6L46.3,52.6L46.5,53.1L47.5,52.0L47.3,51.1L47.3,49.7L46.9,48.3L47.0,45.8L47.3,45.2L47.7,44.5L48.9,44.4L49.4,43.8L50.5,43.2L50.4,44.4L50.0,45.2L50.1,45.9L50.8,46.3L50.4,47.2L50.0,46.9L49.0,48.6L49.3,49.8L49.3,49.8L49.2,50.7L50.6,51.4L50.6,52.2L52.0,51.8L52.9,51.2L54.4,52.2L55.1,52.9L56.1,52.2L58.3,51.0L60.0,50.1L61.4,50.5L61.6,51.1L62.9,51.0L64.7,51.1L67.3,50.8L67.1,50.2L67.2,49.5L66.5,49.2L65,48.9L64.5,46.9L64.4,45.1L64.9,43.5L66.0,42.6L67.3,44.2L68.3,44.0L68.3,42.2L68.2,40.7L67.8,41.1L66.9,40.3L66.6,39.0L68.1,38.1L69.5,37.5L70.9,37.6L72.2,37.3L72.4,37.7L71.8,39.3L72.6,41.4L72.2,42.3L73.0,42.7L73.3,43.9L74.0,45.2L75.5,45.5L75.8,46.0L76.5,45.6L77.9,45.9L78.3,46.9L78.2,47.6L79.4,49.0L80.1,49.3L80.1,49.7L81.1,49.9L81.7,50.4L81.3,51.1L80.1,51.3L79.9,51.6L80.5,52.3L81.2,53.7L81.8,53.6L82.0,53L82.4,53.0L83.9,52.4L85.2,53.4L84.9,54.0L85.3,54.7L86.5,54.5L87.3,55.3L87.4,55.8L89.5,56.0L90.5,55.3L91.8,56.0L92.7,55.7L95.1,55.6L95.4,56.3L95.2,57.7L96,58.8L96,59.7ZM26.4,48.6L26.2,50.3L24.5,52.1L21.5,52.7L19.6,51.7L21.6,49.7L21.7,47.1L24.1,45.9L25.4,45.1L26.6,45.4L27.6,47.2ZM30.4,50.9L30.5,50.9L31.0,49.5L30.4,47.9L30.4,47.8L28.9,47.0L28.7,46.3L29.5,45.3L29.2,44.6L28.2,45.5L28.8,43.2L28.5,41.8L29.6,39.5L31.1,37.9L32.0,38.3L33.6,38.5L31.6,40.7L33.0,40.7L34.3,41.1L33.6,42.9L31.9,44.8L33.2,45.3L33.3,45.5L33.9,48.6L34.7,49.2L35.0,52.1L35.3,53.1L36.9,53.8L36.5,55.3L35.6,55.9L36.0,57.3L34.4,58.3L32.4,57.8L29.7,57.9L29.1,57.3L27.8,58.1L26.5,57.5L25.2,58.1L24.5,57.4L27.4,55.6L28.8,55.4L28.8,55.4L26.6,54.4L26.5,53.4L28.2,53.0L27.7,51.6L28.4,50.1Z"/></svg></span><div><h3>Europe</h3><p>Suisse, Italie, Espagne,<br>Portugal, Belgique, Pays-Bas,<br>Allemagne, Royaume-Uni</p></div></li>
+<li class="zn-item"><span class="zn-ico"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="currentColor"/><path d="M2.5 12h19M12 2.5a14 14 0 0 1 0 19M12 2.5a14 14 0 0 0 0 19M4.5 7.5h15M4.5 16.5h15" stroke="#F5B82E" stroke-width="1.3"/></svg></span><div><h3>International</h3><p>destinations hors UE<br>sur demande, selon<br>les formalités du pays</p></div></li>
+<li class="zn-item"><span class="zn-ico"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" aria-hidden="true"><path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7H9l2-7H7l-2 2H2l2-4-2-4h3l2 2h4L9 3h3z"/></svg></span><div><h3>Transport aérien</h3><p>accompagnement en cabine<br>ou en fret selon<br>la compagnie aérienne</p></div></li>
+</ul>
+</section>
+
+<!-- Bloc « Formules de trajet » (d'après la maquette de Pierre) -->
+<section id="formules" aria-label="Formules de trajet" style="background: #16302E; font-family: 'Outfit', sans-serif; padding: min(2.78vw, 40px) min(2.78vw, 40px) min(6.94vw, 100px)">
+<ul class="fm-list">
+<li class="fm-li"><a class="fm-card" href="reserver.html" aria-label="Aller simple : réserver ce trajet"><div class="fm-vis"><svg viewBox="0 0 100 12" aria-hidden="true" class="fm-arw"><path d="M0 6H88" stroke="#16302E" stroke-width="2.5"/><path d="M86 0.5L100 6L86 11.5Z" fill="#16302E"/></svg></div><div class="fm-txt"><h3>Aller simple</h3><p>Un seul sens, sans retour. Déménagement, départ vers l'aéroport ou la gare, arrivée d'un animal adopté.</p></div></a></li>
+<li class="fm-li"><a class="fm-card" href="reserver.html" aria-label="Aller-retour même jour : réserver ce trajet"><div class="fm-vis"><svg viewBox="0 0 100 12" aria-hidden="true" class="fm-arw"><path d="M12 6H88" stroke="#16302E" stroke-width="2.5"/><path d="M86 0.5L100 6L86 11.5Z" fill="#16302E"/><path d="M14 0.5L0 6L14 11.5Z" fill="#16302E"/></svg></div><div class="fm-txt"><h3>Aller-retour même jour</h3><p>Le conducteur attend sur place pendant le rendez-vous (vétérinaire, toilettage), puis ramène votre animal. Attente au choix, ou «&nbsp;sans attente&nbsp;».</p></div></a></li>
+<li class="fm-li"><a class="fm-card" href="reserver.html" aria-label="Aller-retour dates différentes : réserver ce trajet"><div class="fm-vis"><div class="fm-two"><span class="fm-day">jour 1</span><svg viewBox="0 0 76 12" aria-hidden="true" class="fm-arw-s"><path d="M0 6H64" stroke="#16302E" stroke-width="2.5"/><path d="M62 0.5L76 6L62 11.5Z" fill="#16302E"/></svg><span class="fm-day">jour 2</span><svg viewBox="0 0 76 12" aria-hidden="true" class="fm-arw-s"><path d="M12 6H76" stroke="#16302E" stroke-width="2.5"/><path d="M14 0.5L0 6L14 11.5Z" fill="#16302E"/></svg></div></div><div class="fm-txt"><h3>Aller-retour dates différentes</h3><p>Départ un jour, retour un autre. Pratique pour un séjour en pension. Les deux trajets, un seul prix à la réservation.</p></div></a></li>
+</ul>
+</section>
+</div>
+
+<!-- Bloc « Bien-être à bord » : mise en page éditoriale numérotée -->
+<section id="bien-etre" aria-labelledby="be-title" style="background: #F7F6F2; color: #16302E; font-family: 'Outfit', sans-serif">
+<div class="be-in">
+<div class="be-left">
+<h2 id="be-title" class="be-kick">Le transport</h2>
+<p class="be-intro">Le bien-être de vos compagnons au cœur de mes déplacements. Chez Gadomi taxi animalier, chaque trajet est pensé pour offrir à votre animal une expérience sur-mesure, fluide et apaisante.</p>
+</div>
+<ol class="be-list">
+<li class="be-item"><span class="be-num" aria-hidden="true">01</span><div><h3>Confort &amp; sécurité à bord</h3><p>Véhicule climatisé et chauffé, cages adaptées, caméras de surveillance et désinfection intégrale avant chaque trajet.</p></div></li>
+<li class="be-item"><span class="be-num" aria-hidden="true">02</span><div><h3>Avec ou sans vous</h3><p>Accompagnement de votre animal, avec ou sans votre présence.</p></div></li>
+<li class="be-item"><span class="be-num" aria-hidden="true">03</span><div><h3>Soins &amp; attentions</h3><p>Eau fraîche à volonté et pauses bien-être toutes les 2 heures sur les trajets.</p></div></li>
+<li class="be-item"><span class="be-num" aria-hidden="true">04</span><div><h3>Sérénité partagée</h3><p>Suivi en temps réel avec partage de la localisation GPS, photos et vidéos.</p></div></li>
+<li class="be-item"><span class="be-num" aria-hidden="true">05</span><div><h3>Agilité</h3><p>Adaptation constante de l'itinéraire et gestion réactive des aléas de la route.</p></div></li>
+<li class="be-cta"><a class="be-faq" href="faq.html"><svg class="be-q" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.3a2.5 2.5 0 0 1 4.8.9c0 1.7-2.4 2.2-2.4 3.8"/><path d="M12 17h.01"/></svg>Questions fréquentes<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+</ol>
+</div>
+</section>
+
+<section id="trajets" aria-label="Comment ça marche" style="background: #FFFFFF; color: #111111; font-family: 'Outfit', sans-serif">
+<div style="max-width: 1440px; margin: 0 auto; padding: min(6.31vw, 91px) 0 min(6.61vw, 95px)">
+<h2 style="margin: 0; text-align: center; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: min(3.27vw, 47px); line-height: 1.2; color: #111111">Comment ça marche</h2>
+<p class="hw-sub">Du clic au transport, en 4 étapes</p>
+<ol class="hw-row">
+<li class="hw-line" aria-hidden="true"></li>
+<li class="hw-card"><div class="hw-ico"><span class="hw-num" aria-hidden="true">1</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><rect x="8" y="6" width="8" height="3" rx="1"/><path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg></div><div class="hw-txt"><h3>Je simule</h3><p>mon prix sur le site en ligne</p></div></li>
+<li class="hw-card"><div class="hw-ico"><span class="hw-num" aria-hidden="true">2</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M16 3v4M8 3v4M4 11h16"/><path d="M9 16l2 2 4-4"/></svg></div><div class="hw-txt"><h3>Je réserve</h3><p>mon trajet avec l'app de réservation</p></div></li>
+<li class="hw-card"><div class="hw-ico"><span class="hw-num" aria-hidden="true">3</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"/><path d="M9 13h6M9 17h4"/></svg></div><div class="hw-txt"><h3>Je prépare</h3><p>documents : carnets, passeports, consignes</p></div></li>
+<li class="hw-card hw-last"><div class="hw-ico"><span class="hw-num" aria-hidden="true">4</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/><path d="M5 17H3v-6l2-5h9l4 5h1a2 2 0 0 1 2 2v4h-2M9 17h6M6 11h12"/></svg></div><div class="hw-txt"><h3>Mon trajet</h3><p>pauses toutes les 2 h, nouvelles à l'arrivée</p></div></li>
+</ol>
+<div style="margin-top: min(6.98vw, 100px); text-align: center"><a href="reserver.html" class="hv-btn hv-yel" style="display: inline-flex; align-items: center; justify-content: center; width: 234px; height: 89px; background: #F5B82E; color: #1B1606; text-decoration: none; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 20px; border-radius: 16px; gap: 0.45em; white-space: nowrap"><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 1.05em; height: 1.05em; display: block; flex: none"><rect x="3" y="4.5" width="18" height="16.5" rx="2.5"></rect><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 15l2.5 2.5 4.5-4.5"></path></svg>Réserver sur l'app</a></div>
+</div>
+</section>
+
+<!-- Bloc « Nos services » à onglets (d'après la capture de Pierre) -->
+<section id="services" aria-label="Nos services" style="background: #F7F6F2; color: #16302E; font-family: 'Outfit', sans-serif">
+<div style="max-width: 1440px; margin: 0 auto; padding: min(6.31vw, 91px) 0 min(6.80vw, 98px)">
+<h2 style="margin: 0; text-align: center; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: min(3.27vw, 47px); line-height: 1.2; color: #111111">Un trajet pour chaque besoin</h2>
+<p class="hw-sub">Vétérinaire, pension, aéroport ou déménagement : je m’occupe du trajet</p>
+<div style="display: flex; align-items: stretch; gap: min(2.72vw, 39px); margin: min(5.56vw, 80px) auto 0; padding: 0 min(6.94vw, 100px) 0 min(5.99vw, 86px)">
+<ul role="tablist" aria-orientation="vertical" aria-label="Nos services" style="flex: 0 0 min(27.21vw, 392px); margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: min(0.68vw, 10px)">
+<li role="presentation"><button type="button" role="tab" id="svc-tab-0" aria-controls="svc-panel-0" class="{{t0c}}" onClick="{{pick0}}" aria-selected="{{t0p}}">
+<span class="svc-ico" style="background: #F5B82E; color: #16302E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
+<span class="svc-lab">Au quotidien</span><span class="svc-arr" aria-hidden="true">→</span>
+</button></li>
+<li role="presentation"><button type="button" role="tab" id="svc-tab-1" aria-controls="svc-panel-1" class="{{t1c}}" onClick="{{pick1}}" aria-selected="{{t1p}}">
+<span class="svc-ico" style="background: #F5B82E; color: #16302E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4H5a2 2 0 0 0-2 2v3.5a5.5 5.5 0 0 0 11 0V6a2 2 0 0 0-2-2h-1"/><path d="M8.5 15a6 6 0 0 0 11.5 0v-3"/><circle cx="20" cy="10" r="2"/></svg></span>
+<span class="svc-lab">Vétérinaire &amp; soins</span><span class="svc-arr" aria-hidden="true">→</span>
+</button></li>
+<li role="presentation"><button type="button" role="tab" id="svc-tab-2" aria-controls="svc-panel-2" class="{{t2c}}" onClick="{{pick2}}" aria-selected="{{t2p}}">
+<span class="svc-ico" style="background: #F5B82E; color: #16302E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V8M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="2"/></svg></span>
+<span class="svc-lab">Pension &amp; hôtel</span><span class="svc-arr" aria-hidden="true">→</span>
+</button></li>
+<li role="presentation"><button type="button" role="tab" id="svc-tab-3" aria-controls="svc-panel-3" class="{{t3c}}" onClick="{{pick3}}" aria-selected="{{t3p}}">
+<span class="svc-ico" style="background: #F5B82E; color: #16302E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 16l20-6-2-3-7 2-5-5-2 1 3 6-5 2-2-2-1 1 2 4z"/></svg></span>
+<span class="svc-lab">Aéroports &amp; gares</span><span class="svc-arr" aria-hidden="true">→</span>
+</button></li>
+<li role="presentation"><button type="button" role="tab" id="svc-tab-4" aria-controls="svc-panel-4" class="{{t4c}}" onClick="{{pick4}}" aria-selected="{{t4p}}">
+<span class="svc-ico" style="background: #F5B82E; color: #16302E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M12 19h4.5a3.5 3.5 0 0 0 0-7h-8a3.5 3.5 0 0 1 0-7H12"/></svg></span>
+<span class="svc-lab">Longue distance</span><span class="svc-arr" aria-hidden="true">→</span>
+</button></li>
+</ul>
+<div style="flex: 1; min-width: 0; display: grid">
+<div class="{{pc0}}" id="svc-panel-0" role="tabpanel" aria-labelledby="svc-tab-0">
+<div class="svc-text">
+<h3 class="svc-h3">Un taxi dédié à votre compagnon, en toute liberté</h3>
+<ul class="svc-chips"><li>7j/7</li><li>Prix fixe</li><li>Avec ou sans vous</li></ul>
+<p class="svc-intro">Toiletteur, garde d'animaux, visite chez des proches ou déménagement local : je prends en charge tous vos déplacements de tous les jours, dans un véhicule aménagé, avec un chauffeur formé.</p>
+<ul class="svc-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Avec ou sans vous :</strong> s'il voyage seul, je vous préviens dès son arrivée.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Prix fixe</strong> selon la distance, sans supplément en cas d'embouteillage ou de détour.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>15 minutes d'attente comprises</strong>, puis 5 € par quart d'heure, payés après la course par un lien envoyé par SMS.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Réservation 24 h à l'avance</strong> sur l'application. Urgence : 06 70 98 40 55 (selon disponibilité).</span></li></ul>
+</div>
+<div class="svc-photo" role="img" aria-label="Golden retriever assis dans une caisse de transport à l'arrière d'un utilitaire" style="background: #C6C5B9 url('assets/b793c48c66d9042717bedad89a020f53.png') center / cover no-repeat"></div>
+</div>
+<div class="{{pc1}}" id="svc-panel-1" role="tabpanel" aria-labelledby="svc-tab-1">
+<div class="svc-text">
+<h3 class="svc-h3">Un accompagnement spécialisé pour les soins de votre animal</h3>
+<ul class="svc-chips"><li>Chauffeur formé</li><li>Conduite douce</li><li>Accompagnement complet</li></ul>
+<p class="svc-intro">Visite de contrôle, vaccination, suivi post-opératoire ou urgence : quand vous ne pouvez pas vous déplacer, je prends le relais comme taxi vétérinaire.</p>
+<ul class="svc-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Un chauffeur formé</strong> pour rassurer un animal stressé, souffrant ou fatigué.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Une conduite souple</strong> et une ambiance calme à bord.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Un matériel adapté :</strong> couvertures, harnais sécurisés et solutions apaisantes naturelles si besoin.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Accompagnement complet (+20 €) :</strong> je présente votre animal en consultation, j'attends jusqu'à 1 h et je vous envoie photos et compte rendu.</span></li></ul>
+</div>
+<div class="svc-photo" role="img" aria-label="Chat installé sur une couverture, caressé à la clinique vétérinaire" style="background: #C6C5B9 url('assets/b9cae8cb06f0985eb393fef94203f0ba.png') 45% center / cover no-repeat"></div>
+</div>
+<div class="{{pc2}}" id="svc-panel-2" role="tabpanel" aria-labelledby="svc-tab-2">
+<div class="svc-text">
+<h3 class="svc-h3">Offrez à votre compagnon un transfert serein vers son lieu de vacances</h3>
+<ul class="svc-chips"><li>Week-end ou vacances</li><li>À domicile</li></ul>
+<p class="svc-intro">Pour un week-end ou de longues vacances, je conduis votre compagnon de votre porte jusqu'à sa pension, à l'aller, au retour ou les deux.</p>
+<ul class="svc-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>De A à Z :</strong> dépose et récupération à domicile.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Suivi en direct :</strong> une notification dès qu'il est bien installé à la pension.</span></li></ul>
+</div>
+<div class="svc-photo" role="img" aria-label="Golden retriever accueilli à la pension, à côté de sa caisse de transport" style="background: #C6C5B9 url('assets/e5af319bdc7fbddd75b435e270cc8d58.png') 48% center / cover no-repeat"></div>
+</div>
+<div class="{{pc3}}" id="svc-panel-3" role="tabpanel" aria-labelledby="svc-tab-3">
+<div class="svc-text">
+<h3 class="svc-h3">Voyagez l'esprit tranquille, sans le stress des transports</h3>
+<ul class="svc-chips"><li>Dès 6 h</li><li>Terminal ou quai</li></ul>
+<p class="svc-intro">Un vol ou un train à ne pas manquer ? Je vous dépose avec votre animal au terminal de votre choix ou au plus près du quai dans les grandes gares.</p>
+<ul class="svc-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Ponctuel :</strong> je m'adapte à vos horaires, même très tôt le matin.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Équipement à bord :</strong> caisse sécurisée, harnais et gamelle d'eau.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Sans galère :</strong> fini les transports bondés et les refus en taxi classique.</span></li></ul>
+</div>
+<div class="svc-photo" role="img" aria-label="Utilitaire Gadomi taxi animalier déposant une voyageuse et son chien devant le terminal 2 de l'aéroport de Lyon Saint-Exupéry" style="background: #C6C5B9 url('assets/4e3269a050574e15dcffa09cc08be84f.png') 100% center / cover no-repeat"></div>
+</div>
+<div class="{{pc4}}" id="svc-panel-4" role="tabpanel" aria-labelledby="svc-tab-4">
+<div class="svc-text">
+<h3 class="svc-h3">Un accompagnement sur-mesure pour vos grands déplacements</h3>
+<ul class="svc-chips"><li>Dès 65 km</li><li>Péages compris</li><li>France et Europe</li></ul>
+<p class="svc-intro">Déménagement, adoption dans une autre région ou transfert vers une nouvelle famille : je conduis votre compagnon porte à porte, en transport privé et sans groupage.</p>
+<ul class="svc-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Prix fixe</strong> selon la distance, communiqué avant la réservation.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Trajet serein :</strong> seul avec moi, en caisse aux normes, pause toutes les 2 h et nouvelles à l'arrivée.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Réservation :</strong> 7 jours à l'avance pour la France, 15 pour l'Europe. Départs dès 6 h.</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg><span><strong>Europe :</strong> puce électronique, passeport européen et vaccin antirabique à jour.</span></li></ul>
+</div>
+<div class="svc-photo" role="img" aria-label="Chauffeur et jack russell au point de passage frontalier, avec passeport européen pour animaux" style="background: #C6C5B9 url('assets/35e3e41df130df44af3b62cd0da53606.png') 70% center / cover no-repeat"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Bloc présentation (d'après la maquette de Pierre) -->
+<section id="transport" aria-labelledby="pr-title" style="background: #FFFFFF; color: #111111; font-family: 'Outfit', sans-serif">
+<div class="pr-in">
+<h2 id="pr-title">Chiens, chats, NAC et animaux sauvages</h2>
+<p class="pr-sub">transportés seuls ou accompagnés, en toute sécurité</p>
+<ul class="pr-an">
+<li><img src="assets/284a4ce095fac36933d7f85be8157037.png" alt=""><h3>Chiens</h3><p>labradors, bergers allemands, carlins</p></li>
+<li><img src="assets/6799ac2c4d4e8e8e1b423858558f6795.png" alt=""><h3>Chats</h3><p>européens, persans, maine&nbsp;coons</p></li>
+<li><img src="assets/66daa5bfbd7ee397bebeca00f744d418.png" alt=""><h3>NAC</h3><p>lapins, cochons d’Inde, hamsters, furets</p></li>
+<li><img src="assets/7a5b82225c035d1ab68808c2ba08835d.png" alt=""><h3>Oiseaux</h3><p>perruches, perroquets, canaris</p></li>
+<li><img src="assets/f25f25a3f902334ec7a2971fca33de16.png" alt=""><h3>Reptiles</h3><p>serpents, lézards, tortues</p></li>
+<li><img src="assets/f13b89c4bd696b72df1317f23b3efb7f.svg" alt=""><h3>Poissons</h3><p>poissons rouges, carpes koï</p></li>
+</ul>
+<p class="pr-ex">Animaux pour les parcs, refuges et éleveurs agréés.</p>
+<div class="pr-tr">
+<h3>Vous confiez votre animal à un conducteur formé et bienveillant</h3>
+<ul>
+<li><span><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>Formé et certifié ACACED</li>
+<li><span><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>Agréé pour le transport d’animaux vivants</li>
+<li><span><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>Véhicule adapté et aménagé pour le confort et la sécurité</li>
+<li><span><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg></span>Tarif fixé et validé avant le départ, sans compteur</li>
+<li class="pr-cta"><a class="pr-btn" href="tarifs.html"><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 7.5A6.5 6.5 0 1 0 18 16.5"/><path d="M4 10.5h9M4 13.5h9"/></svg>Voir les tarifs<svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></li>
+</ul>
+</div>
+</div>
+</section>
+</div>
+<!-- Pied de page -->
+<footer class="ft" aria-label="Pied de page">
+<div class="ft-in">
+<div class="ft-brand">
+<img src="assets/d052ca0c091a3d19cd5c4455eefdac21.png" alt="Gadomi Taxi Animalier">
+<p>Transport sécurisé de chiens, chats et NAC, avec ou sans leur propriétaire, au départ de Feurs.</p>
+<p class="ft-badge">Certifié ACACED · Agrément type 1 et 2</p>
+<div class="ft-soc"><a href="#facebook" aria-label="Facebook"><svg viewBox="0 0 20 38" fill="currentColor" aria-hidden="true"><path d="M13 38V21h5.6l.9-6.6H13v-4.2c0-1.9.5-3.2 3.3-3.2H20V1.1C19.4 1 17.2.8 14.7.8 9.4.8 5.9 4 5.9 9.8v4.6H0V21h5.9v17z"/></svg></a><a href="#instagram" aria-label="Instagram"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><rect x="2" y="2" width="32" height="32" rx="9"/><circle cx="18" cy="18" r="7.5"/><circle cx="27" cy="9" r="1.6" fill="currentColor" stroke="none"/></svg></a></div>
+</div>
+<nav class="ft-col" aria-label="Plan du site"><h2>Navigation</h2><ul>
+<li><a href="index.html#trajets">Trajets</a></li><li><a href="index.html#zones">Zones</a></li><li><a href="index.html#transport">Transport</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="faq.html">Questions fréquentes</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+<div class="ft-col"><h2>Contact</h2><ul class="ft-ct">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+33670984055">06 70 98 40 55</a></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:gadomi42@gmail.com">gadomi42@gmail.com</a></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Feurs (42110), Loire</span></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>7j/7 de 6 h à 20 h<br>sauf urgence</span></li></ul></div>
+<div class="ft-col"><h2>Réserver</h2><p class="ft-txt">Votre trajet en quelques clics, prix annoncé avant de réserver.</p>
+<a class="ft-btn hv-btn hv-yel" href="reserver.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M16 3v4M8 3v4M4 11h16"/><path d="M9 16l2 2 4-4"/></svg>Réserver un trajet</a></div>
+</div>
+<div class="ft-bot"><div class="ft-bot-in">
+<p>© 2026 Gadomi Taxi Animalier · TVA non applicable, art. 293 B du CGI</p>
+<ul><li><a href="#mentions">Mentions légales</a></li><li><a href="conditions.html">Conditions de réservation et d’annulation</a></li><li><a href="#confidentialite">Confidentialité</a></li></ul>
+</div></div>
+</footer>
+
+<a href="#haut" class="to-top" aria-label="Revenir en haut de la page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+<a href="https://wa.me/33670984055?text=Bonjour%2C%20je%20souhaite%20un%20renseignement%20pour%20un%20transport%20d%27animal." target="_blank" rel="noopener" class="wa-btn" aria-label="Écrire sur WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</template>
+<script type="text/x-dc" id="dc-code">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { a1: '', a2: '', p1: null, p2: null, open1: false, open2: false, shown: false, km: 0, msg: '', err: false, tab: 0 };
+  }
+  renderVals() {
+    var s = this.state, self = this;
+    // Tarifs repris du CONFIG du module (estimation = aller simple, 1 animal, en journée)
+    var CONFIG = { local: { priseEnCharge: 18, parKm: 1.00 }, longue: { seuil: 65, priseEnCharge: 50, parKm: 0.85, nuitee: 100, seuilNuitee: 350, maxKm: 500 } };
+    // Maquette seulement : le vrai module cherche les adresses (api-adresse.data.gouv.fr) et l'itinéraire (OSRM).
+    var C = [
+      ['Feurs', '42110', 'Loire', 45.7426, 4.2264], ['Montbrison', '42600', 'Loire', 45.6075, 4.0653],
+      ['Balbigny', '42510', 'Loire', 45.8197, 4.1886], ['Boën-sur-Lignon', '42130', 'Loire', 45.7425, 4.0067],
+      ['Panissières', '42360', 'Loire', 45.7917, 4.3417], ['Montrond-les-Bains', '42210', 'Loire', 45.6431, 4.2386],
+      ['Saint-Galmier', '42330', 'Loire', 45.5975, 4.3114], ['Andrézieux-Bouthéon', '42160', 'Loire', 45.5264, 4.2603],
+      ['Saint-Just-Saint-Rambert', '42170', 'Loire', 45.4997, 4.2408], ['Saint-Étienne', '42000', 'Loire', 45.4397, 4.3872],
+      ['Roanne', '42300', 'Loire', 46.0367, 4.0683], ['Tarare', '69170', 'Rhône', 45.8961, 4.4331],
+      ['Lyon', '69001', 'Rhône', 45.7640, 4.8357], ['Clermont-Ferrand', '63000', 'Puy-de-Dôme', 45.7772, 3.0870],
+      ['Grenoble', '38000', 'Isère', 45.1885, 5.7245], ['Montpellier', '34000', 'Hérault', 43.6108, 3.8767],
+      ['Marseille', '13001', 'Bouches-du-Rhône', 43.2965, 5.3698], ['Paris', '75001', 'Paris', 48.8566, 2.3522]
+    ];
+    var norm = function (t) { return String(t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim(); };
+    var label = function (c) { return c[1] + ' ' + c[0]; };
+    var search = function (q) {
+      var n = norm(q); if (n.length < 2) return [];
+      return C.map(function (c, i) { return i; }).filter(function (i) { var city = norm(C[i][0]); return norm(label(C[i])).indexOf(n) !== -1 || city.indexOf(n) !== -1 || n.indexOf(city) !== -1 || n.indexOf(C[i][1]) !== -1; }).slice(0, 5);
+    };
+    var road = function (a, b) {
+      var r = Math.PI / 180, dLat = (b[3] - a[3]) * r, dLon = (b[4] - a[4]) * r;
+      var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(a[3] * r) * Math.cos(b[3] * r) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+      var d = 2 * 6371 * Math.asin(Math.sqrt(h)); return d < 1 ? 4 : Math.round(d * 1.27);
+    };
+    var prix = function (B) {
+      var L = CONFIG.local, G = CONFIG.longue;
+      if (B > G.maxKm) return null;
+      if (B > G.seuil) { var t = G.priseEnCharge + B * G.parKm; if (B > G.seuilNuitee) t += G.nuitee; return t; }
+      return L.priseEnCharge + B * L.parKm;
+    };
+    var duree = function (km) {
+      var m = Math.round(km / (km > 65 ? 85 : 55) * 60); if (m < 60) return '~' + m + ' min';
+      var h = Math.floor(m / 60), rr = m % 60; return '~' + h + ' h' + (rr ? (rr < 10 ? '0' : '') + rr : '');
+    };
+    var euro = function (v) { return v.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €'; };
+    var items = function (key, q) {
+      return search(q).map(function (i) {
+        return { main: C[i][0], sub: C[i][1] + ' · ' + C[i][2], pick: function (e) { if (e) e.preventDefault(); var o = {}; o['a' + key] = label(C[i]); o['p' + key] = i; o['open' + key] = false; o.msg = ''; self.setState(o); } };
+      });
+    };
+    var s1 = items(1, s.a1), s2 = items(2, s.a2);
+    var total = prix(s.km);
+    return {
+      pc0: s.tab === 0 ? 'svc-panel' : 'svc-panel is-hidden',
+      pc1: s.tab === 1 ? 'svc-panel' : 'svc-panel is-hidden',
+      pc2: s.tab === 2 ? 'svc-panel' : 'svc-panel is-hidden',
+      pc3: s.tab === 3 ? 'svc-panel' : 'svc-panel is-hidden',
+      pc4: s.tab === 4 ? 'svc-panel' : 'svc-panel is-hidden',
+      t0c: s.tab === 0 ? 'svc-tab on' : 'svc-tab', t0p: String(s.tab === 0), p0: s.tab === 0, pick0: function () { self.setState({ tab: 0 }); },
+      t1c: s.tab === 1 ? 'svc-tab on' : 'svc-tab', t1p: String(s.tab === 1), p1: s.tab === 1, pick1: function () { self.setState({ tab: 1 }); },
+      t2c: s.tab === 2 ? 'svc-tab on' : 'svc-tab', t2p: String(s.tab === 2), p2: s.tab === 2, pick2: function () { self.setState({ tab: 2 }); },
+      t3c: s.tab === 3 ? 'svc-tab on' : 'svc-tab', t3p: String(s.tab === 3), p3: s.tab === 3, pick3: function () { self.setState({ tab: 3 }); },
+      t4c: s.tab === 4 ? 'svc-tab on' : 'svc-tab', t4p: String(s.tab === 4), p4: s.tab === 4, pick4: function () { self.setState({ tab: 4 }); },
+      a1: s.a1, a2: s.a2, s1: s1, s2: s2,
+      open1: s.open1 && s1.length > 0, open2: s.open2 && s2.length > 0,
+      open1Str: String(s.open1 && s1.length > 0), open2Str: String(s.open2 && s2.length > 0),
+      f1Class: s.p1 !== null ? 'fld ok' : 'fld', f2Class: s.p2 !== null ? 'fld ok' : 'fld',
+      hasMsg: !!s.msg, msg: s.msg, msgClass: s.err ? 'msg err' : 'msg',
+      shown: s.shown, resClass: total === null ? 'res blocked' : 'res',
+      price: total === null ? 'Sur devis' : euro(total),
+      pill: total === null ? s.km + ' km · trajet de plus de 8 h' : s.km + ' km · ' + duree(s.km),
+      setA1: function (e) { self.setState({ a1: e.target.value, p1: null, open1: e.target.value.trim().length >= 2 }); },
+      setA2: function (e) { self.setState({ a2: e.target.value, p2: null, open2: e.target.value.trim().length >= 2 }); },
+      blur1: function () { setTimeout(function () { self.setState({ open1: false }); }, 150); },
+      blur2: function () { setTimeout(function () { self.setState({ open2: false }); }, 150); },
+      key1: function (e) { if (e.key === 'Enter') { e.preventDefault(); if (s.open1 && s1.length) s1[0].pick(); else doSubmit(); } else if (e.key === 'Escape') self.setState({ open1: false }); },
+      key2: function (e) { if (e.key === 'Enter') { e.preventDefault(); if (s.open2 && s2.length) s2[0].pick(); else doSubmit(); } else if (e.key === 'Escape') self.setState({ open2: false }); },
+      submit: function (e) { if (e && e.preventDefault) e.preventDefault(); doSubmit(); }
+    };
+    function doSubmit() {
+        var p1 = s.p1, p2 = s.p2;
+        if (p1 === null) {
+          if (s.a1.trim().length < 2) { self.setState({ msg: 'Saisissez l’adresse de départ.', err: true }); return; }
+          var r1 = search(s.a1); if (!r1.length) { self.setState({ msg: 'Adresse introuvable : « ' + s.a1.trim() + ' ». Ajoutez le code postal (ex. 42110 Feurs).', err: true }); return; }
+          p1 = r1[0];
+        }
+        if (p2 === null) {
+          if (s.a2.trim().length < 2) { self.setState({ msg: 'Saisissez l’adresse de destination.', err: true }); return; }
+          var r2 = search(s.a2); if (!r2.length) { self.setState({ msg: 'Adresse introuvable : « ' + s.a2.trim() + ' ». Ajoutez le code postal (ex. 42110 Feurs).', err: true }); return; }
+          p2 = r2[0];
+        }
+        self.setState({ p1: p1, p2: p2, a1: label(C[p1]), a2: label(C[p2]), km: road(C[p1], C[p2]), shown: true, msg: '', err: false, open1: false, open2: false });
+    }
+  }
+}
+</script>
+<script src="assets/morphdom.min.js"></script>
+<script src="assets/dc-lite.js"></script>
+
+</body>
+</html>

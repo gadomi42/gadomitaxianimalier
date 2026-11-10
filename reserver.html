@@ -1,0 +1,1496 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Gadomi · Réserver un trajet · aperçu</title>
+<script>if(screen.width<820)location.replace('m/reserver.html'+location.hash)</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&amp;display=swap">
+<style>
+body{margin:0;background:#F7F6F2;font-family:"Outfit",sans-serif;color:#16302E}
+.nav a{color:#FFFFFF;text-decoration:none}.nav a:hover{color:#F6B82F}
+.hv-btn{transition:background-color .15s}
+.hv-yel:hover{background-color:#FFC74A !important}
+.hv-grn:hover{background-color:#2C5652 !important}
+.fq-crumb{display:flex;align-items:center;gap:10px;margin:min(2.22vw, 32px) 0 0;font-size:16px;color:#C9D3D1}
+.fq-crumb a{display:inline-flex;align-items:center;gap:6px;color:#C9D3D1;text-decoration:none}
+.fq-crumb a:hover{color:#F6B82F}
+.fq-crumb svg{width:17px;height:17px}
+.fq-crumb [aria-current]{color:#FFFFFF}
+.tf-top{background:#16302E;color:#FFFFFF}
+.tf-top-in{max-width:1440px;margin:0 auto;padding:min(2.36vw, 34px) min(3.47vw, 50px) 0 min(5vw, 72px);box-sizing:border-box}
+.tf-hero{text-align:center;padding:min(3.33vw, 48px) 0 min(8.33vw, 120px)}
+.tf-hero h1{margin:0;font-weight:400;font-size:min(3.27vw, 47px);line-height:1.2}
+.tf-hero p{margin:min(0.97vw, 14px) 0 0;font-size:min(1.46vw, 21px);color:#C9D3D1}
+.tf-eq{display:flex;align-items:center;justify-content:center;gap:min(1.11vw, 16px);margin-top:min(2.78vw, 40px)}
+.tf-eq span{display:inline-flex;align-items:center;height:min(4.44vw, 64px);padding:0 min(1.94vw, 28px);border-radius:16px;font-size:min(1.39vw, 20px);font-weight:500}
+.tf-eq .e1{background:#FFFFFF;color:#16302E}
+.tf-eq .e2{background:#F5B82E;color:#1B1606}
+.tf-eq .op{padding:0;height:auto;font-size:min(2.22vw, 32px);color:#F5B82E;font-weight:300}
+.tf-eq .e3{border:1px solid #FFFFFF;color:#FFFFFF}
+.tf-main{max-width:min(82.78vw, 1192px);margin:0 auto;padding:0 0 min(6.94vw, 100px)}
+.tf-inc{margin-top:calc(-1 * min(4.44vw, 64px));background:#FFFFFF;border-radius:20px;box-shadow:0 8px 28px rgba(22,48,46,.10);padding:min(2.5vw, 36px) min(3.06vw, 44px)}
+.tf-inc h2{margin:0;font-weight:600;font-size:min(1.53vw, 22px)}
+.tf-inc ul{list-style:none;margin:min(1.67vw, 24px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:min(1.39vw, 20px) min(2.22vw, 32px)}
+.tf-inc li{display:flex;align-items:center;gap:14px;font-size:min(1.18vw, 17px);line-height:1.35;color:#3A4644}
+.tf-ii{flex:none;width:min(3.33vw, 48px);height:min(3.33vw, 48px);border-radius:50%;background:#F5B82E;color:#16302E;display:grid;place-items:center}
+.tf-ii svg{width:52%;height:52%}
+.tf-sec{margin-top:min(6.94vw, 100px)}
+.tf-sec > h2{margin:0;text-align:center;font-weight:400;font-size:min(3.27vw, 47px);line-height:1.2;color:#111111}
+.tf-sub{margin:min(0.97vw, 14px) 0 0;text-align:center;font-size:min(1.46vw, 21px);color:#5B6B69}
+.tf-cards{margin-top:min(3.89vw, 56px);display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:min(1.67vw, 24px);align-items:stretch}
+.tf-card{background:#FFFFFF;border-radius:20px;box-shadow:0 4px 16px rgba(22,48,46,.08);padding:min(2.5vw, 36px) min(2.22vw, 32px);display:flex;flex-direction:column}
+.tf-tag{margin:0;align-self:flex-start;background:#FEF3D7;color:#6B4E00;font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px}
+.tf-card h3{margin:min(1.11vw, 16px) 0 0;font-weight:600;font-size:min(1.67vw, 24px);color:#16302E}
+.tf-pr{margin-top:min(1.67vw, 24px);display:flex;align-items:baseline;gap:10px}
+.tf-big{font-weight:600;font-size:min(3.89vw, 56px);line-height:1;color:#16302E}
+.tf-lab{font-size:min(1.18vw, 17px);color:#5B6B69}
+.tf-km{margin-top:8px;font-size:min(1.25vw, 18px);color:#3A4644}
+.tf-km span{font-weight:600;font-size:min(1.67vw, 24px);color:#B07D10}
+.tf-ul{list-style:none;margin:min(1.67vw, 24px) 0 0;padding:min(1.67vw, 24px) 0 0;border-top:1px solid #E4E2D9;display:flex;flex-direction:column;gap:10px}
+.tf-ul li,.tf-docs li{display:flex;gap:10px;align-items:flex-start;font-size:min(1.15vw, 16.5px);line-height:1.4;color:#3A4644}
+.tf-ck{flex:none;width:22px;height:22px;border-radius:50%;background:#F5B82E;display:grid;place-items:center;margin-top:1px}
+.tf-ck svg{width:13px;height:13px}
+.tf-cn{margin:auto 0 0;padding-top:min(1.39vw, 20px);font-size:14px;line-height:1.45;color:#5B6B69;font-style:italic}
+.tf-eu{margin-top:min(1.67vw, 24px);display:grid;grid-template-columns:minmax(0, 2fr) minmax(0, 1fr);gap:min(1.67vw, 24px)}
+.tf-docs{background:#FFFFFF;border-radius:20px;padding:min(2.22vw, 32px)}
+.tf-docs h3,.tf-intl h3{margin:0;display:flex;align-items:center;gap:12px;font-weight:600;font-size:min(1.39vw, 20px)}
+.tf-docs h3 svg,.tf-intl h3 svg{width:26px;height:26px;color:#B07D10}
+.tf-docs ul{list-style:none;margin:min(1.39vw, 20px) 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.tf-intl{background:#16302E;color:#FFFFFF;border-radius:20px;padding:min(2.22vw, 32px);display:flex;flex-direction:column}
+.tf-intl h3 svg{color:#F5B82E}
+.tf-intl p{margin:12px 0 0;font-size:min(1.18vw, 17px);line-height:1.5;color:#C9D3D1}
+.tf-intl a{margin-top:auto;align-self:stretch;justify-content:center;display:inline-flex;align-items:center;gap:.45em;height:56px;padding:0 24px;border-radius:16px;background:#F5B82E;color:#1B1606;text-decoration:none;font-weight:500;font-size:18px}
+.tf-intl a svg{width:1.05em;height:1.05em}
+.tf-tys{list-style:none;margin:min(3.89vw, 56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:min(1.67vw, 24px)}
+.tf-ty{background:#FFFFFF;border-radius:20px;padding:min(2.22vw, 32px)}
+.tf-tyv{height:44px;display:flex;align-items:center}
+.tf-arw{width:88px;height:auto;display:block}
+.tf-arw-s{width:66px;height:auto;display:block}
+.tf-two{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:8px;row-gap:6px;font-size:13px;color:#5B6B69}
+.tf-ty h3{margin:min(1.11vw, 16px) 0 0;font-weight:600;font-size:min(1.39vw, 20px)}
+.tf-ty p{margin:8px 0 0;font-size:min(1.15vw, 16.5px);line-height:1.5;color:#3A4644}
+.tf-calc{margin-top:min(3.89vw, 56px);display:grid;grid-template-columns:minmax(0, 7fr) minmax(0, 5fr);gap:min(1.67vw, 24px);align-items:start}
+.tf-steps{background:#FFFFFF;border-radius:20px;padding:min(2.22vw, 32px)}
+.tf-steps > h3{margin:0;font-weight:600;font-size:min(1.39vw, 20px)}
+.tf-steps > p{margin:8px 0 0;font-size:min(1.18vw, 17px);color:#5B6B69}
+.tf-steps ol{list-style:none;margin:min(1.67vw, 24px) 0 0;padding:0;position:relative}
+.tf-steps ol::before{content:"";position:absolute;left:19px;top:20px;bottom:20px;border-left:2px dashed #D9D6CB}
+.tf-steps ol li{position:relative;display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:16px;align-items:center;padding:12px 0}
+.tf-sn{width:40px;height:40px;border-radius:50%;background:#16302E;color:#FFFFFF;display:grid;place-items:center;font-weight:600;font-size:17px;position:relative;z-index:1}
+.tf-steps ol h3{margin:0;font-weight:600;font-size:min(1.25vw, 18px)}
+.tf-steps ol h3 span{color:#B07D10}
+.tf-steps ol p{margin:2px 0 0;font-size:15px;color:#5B6B69}
+.tf-skm{font-weight:600;font-size:17px;background:#FEF3D7;color:#6B4E00;padding:6px 12px;border-radius:999px;white-space:nowrap}
+.tf-sim{margin-top:min(1.67vw, 24px);padding-top:min(1.67vw, 24px);border-top:1px solid #E4E2D9;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+.tf-sim label{display:block;font-size:14px;color:#5B6B69}
+.tf-sim b{display:block;margin-top:2px;font-size:18px;color:#16302E}
+.tf-sim input{width:100%;margin-top:8px;accent-color:#F5B82E}
+.tf-tk{background:#16302E;color:#FFFFFF;border-radius:20px;padding:min(2.22vw, 32px)}
+.tf-tk h3{margin:0;font-weight:600;font-size:min(1.39vw, 20px)}
+.tf-tk p.ex{margin:8px 0 0;font-size:15px;line-height:1.5;color:#C9D3D1}
+.tf-tk dl{margin:min(1.67vw, 24px) 0 0;padding:0}
+.tf-tk dl div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px dashed rgba(255,255,255,.25);font-size:17px}
+.tf-tk dt{color:#E3E8E6}
+.tf-tk dd{margin:0;font-weight:500;font-variant-numeric:tabular-nums}
+.tf-tot{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px}
+.tf-tot span{font-size:17px;letter-spacing:.08em;text-transform:uppercase;color:#C9D3D1}
+.tf-tot strong{font-size:min(3.06vw, 44px);font-weight:600;color:#F5B82E;font-variant-numeric:tabular-nums}
+.tf-tk small{display:block;margin-top:10px;font-size:13px;color:#A9BCB8}
+.tf-ops{list-style:none;margin:min(3.89vw, 56px) 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:min(1.11vw, 16px)}
+.tf-op{background:#FFFFFF;border-radius:16px;padding:min(1.53vw, 22px) min(1.94vw, 28px);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.tf-op-big{grid-column:1 / -1;align-items:flex-start}
+.tf-op h3{margin:0;font-weight:600;font-size:min(1.25vw, 18px);line-height:1.35}
+.tf-op p{margin:8px 0 0;font-size:min(1.15vw, 16.5px);line-height:1.55;color:#3A4644;max-width:820px}
+.tf-pill{flex:none;background:#F5B82E;color:#1B1606;font-weight:600;font-size:17px;padding:8px 16px;border-radius:999px;white-space:nowrap}
+.tf-pill-g{background:#16302E;color:#FFFFFF}
+.tf-notes{margin:min(3.33vw, 48px) 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 32px;font-size:15px;color:#5B6B69}
+.tf-notes li::before{content:"•";color:#F5B82E;margin-right:8px}
+.tf-cta{margin-top:min(5.56vw, 80px);background:#16302E;border-radius:24px;padding:min(3.47vw, 50px);display:flex;align-items:center;justify-content:space-between;gap:32px;color:#FFFFFF}
+.tf-cta h2{margin:0;font-weight:400;font-size:min(2.22vw, 32px)}
+.tf-cta p{margin:8px 0 0;font-size:18px;color:#C9D3D1}
+.tf-cta-b{display:flex;gap:16px;flex:none}
+.tf-btn{display:inline-flex;align-items:center;justify-content:center;gap:.45em;height:64px;padding:0 28px;border-radius:16px;text-decoration:none;font-family:"Outfit",sans-serif;font-weight:500;font-size:20px;white-space:nowrap}
+.tf-btn svg{width:1.05em;height:1.05em}
+.tf-yel{background:#F5B82E;color:#1B1606}
+.tf-out{border:1px solid #FFFFFF;color:#FFFFFF}
+.tf-out:hover{background:#FFFFFF;color:#16302E}
+
+.tf-right{display:flex;flex-direction:column}
+.tf-book{margin-top:16px;display:flex;align-items:center;justify-content:center;gap:.45em;height:64px;border-radius:16px;background:#F5B82E;color:#1B1606;text-decoration:none;font-family:"Outfit",sans-serif;font-weight:500;font-size:20px}
+.tf-book svg{width:1.05em;height:1.05em}
+.tf-book-n{margin:10px 0 0;text-align:center;font-size:14px;color:#5B6B69}
+
+.tf-notes{margin:min(3.33vw, 48px) 0 0;padding:min(1.94vw, 28px) min(2.22vw, 32px);list-style:none;display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:min(2.22vw, 32px);background:#FFFFFF;border-radius:20px;box-shadow:0 4px 16px rgba(22,48,46,.06);font-size:inherit;color:inherit;flex-direction:row}
+.tf-notes li{display:flex;align-items:flex-start;gap:14px}
+.tf-notes li::before{content:none}
+.tf-notes li + li{border-left:1px solid #E4E2D9;padding-left:min(2.22vw, 32px)}
+.tf-ni{flex:none;width:44px;height:44px;border-radius:50%;background:#FEF3D7;color:#B07D10;display:grid;place-items:center}
+.tf-ni svg{width:22px;height:22px}
+.tf-notes strong{display:block;font-weight:600;font-size:min(1.18vw, 17px);color:#16302E}
+.tf-notes div span{display:block;margin-top:2px;font-size:min(1.08vw, 15.5px);line-height:1.45;color:#5B6B69}
+
+.ft{background:#16302E;color:#FFFFFF;font-family:"Outfit",sans-serif}
+.ft a{color:inherit;text-decoration:none}
+.ft-in{max-width:min(82.78vw, 1192px);margin:0 auto;padding:min(5.56vw, 80px) 0 min(4.17vw, 60px);display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1.1fr) minmax(0,1.2fr);gap:min(3.33vw, 48px)}
+.ft-brand img{width:min(8.9vw, 128px);height:auto;display:block}
+.ft-brand p{margin:18px 0 0;font-size:16px;line-height:1.55;color:#C9D3D1;max-width:300px}
+.ft-badge{display:inline-block;margin-top:16px !important;padding:6px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:13.5px !important;color:#FFFFFF !important}
+.ft-soc{display:flex;gap:10px;margin-top:20px}
+.ft-soc a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;transition:background-color .15s}
+.ft-soc a:hover{background:#2C5652}
+.ft-soc svg{width:18px;height:18px}
+.ft-col h2{margin:0;font-weight:600;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:#F5B82E}
+.ft-col ul{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:12px;font-size:16.5px}
+.ft-col a:hover{color:#F6B82F}
+.ft-ct li{display:flex;gap:10px;align-items:flex-start;color:#E3E8E6;line-height:1.4}
+.ft-ct svg{flex:none;width:19px;height:19px;margin-top:1px;color:#F5B82E}
+.ft-txt{margin:18px 0 0;font-size:16px;line-height:1.5;color:#C9D3D1}
+.ft-btn{margin-top:18px;display:inline-flex;align-items:center;gap:.45em;height:56px;padding:0 24px;border-radius:16px;background:#F5B82E;color:#1B1606 !important;font-weight:500;font-size:18px}
+.ft-btn svg{width:1.05em;height:1.05em}
+.ft-bot{border-top:1px solid rgba(255,255,255,.12)}
+.ft-bot-in{max-width:min(82.78vw, 1192px);margin:0 auto;padding:22px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;font-size:14px;color:#A9BCB8}
+.ft-bot p{margin:0}
+.ft-bot ul{list-style:none;margin:0;padding:0;display:flex;gap:24px}
+.ft-bot a:hover{color:#FFFFFF}
+
+.to-top{position:fixed;right:28px;bottom:28px;z-index:60;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.7);color:#16302E;display:grid;place-items:center;text-decoration:none;transition:background-color .15s}
+.to-top:hover{background:#F5B82E}
+.to-top svg{width:20px;height:20px}
+
+.tf-top{position:relative;overflow:hidden}
+.tf-top-in{position:relative;z-index:1}
+.tf-coins{position:absolute;inset:0;pointer-events:none;z-index:0}
+.tf-coins svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+
+.wa-btn{position:fixed;right:24px;bottom:88px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.18);transition:background-color .15s}
+.wa-btn:hover{background:#1EBE5A}
+.wa-btn svg{width:30px;height:30px}
+
+.tf-tagsub{margin:6px 0 0;font-size:13px;line-height:1.35;color:#5B6B69}
+.tf-steps p.tf-note65{margin:18px 0 0;font-size:13px;line-height:1.45;color:#5B6B69}
+
+.tf-op-disc{grid-column:1 / -1;background:#F5B82E}
+.tf-op-disc h3{color:#1B1606}
+
+.ct-ways{margin-top:calc(-1 * min(4.44vw, 64px));display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:min(1.39vw, 20px);position:relative;z-index:2}
+.ct-way{background:#FFFFFF;border-radius:20px;box-shadow:0 8px 28px rgba(22,48,46,.10);padding:min(2.22vw, 32px);display:flex;flex-direction:column;align-items:flex-start;text-decoration:none;color:#16302E;transition:background-color .15s}
+.ct-way:hover{background:#FEF3D7}
+.ct-ic{width:52px;height:52px;border-radius:50%;background:#F5B82E;color:#16302E;display:grid;place-items:center}
+.ct-ic svg{width:24px;height:24px}
+.ct-ic-wa{background:#25D366;color:#FFFFFF}
+.ct-ic-wa svg{width:26px;height:26px}
+.ct-wt{margin-top:18px;font-size:min(1.11vw, 16px);color:#5B6B69}
+.ct-wv{margin-top:4px;font-weight:600;font-size:min(1.53vw, 22px)}
+.ct-wn{margin-top:8px;font-size:min(1.04vw, 15px);color:#5B6B69}
+.ct-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:min(1.67vw, 24px);align-items:start}
+.ct-form{background:#FFFFFF;border-radius:20px;padding:min(2.78vw, 40px);display:flex;flex-direction:column;gap:18px}
+.ct-form h2,.ct-info h2{margin:0;font-weight:600;font-size:min(1.67vw, 24px)}
+.ct-fs{margin:-8px 0 4px;font-size:min(1.11vw, 16px);color:#5B6B69;line-height:1.5}
+.ct-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ct-form label{display:flex;flex-direction:column;gap:8px;font-size:15px;font-weight:500;color:#16302E}
+.ct-form input,.ct-form select,.ct-form textarea{font:inherit;font-weight:300;font-size:16px;color:#16302E;border:1px solid #D9DEDC;border-radius:12px;padding:13px 14px;background:#FFFFFF;box-sizing:border-box;width:100%}
+.ct-form input::placeholder,.ct-form textarea::placeholder{color:#A3A3A3}
+.ct-form textarea{resize:vertical}
+.ct-form label.ct-ck{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:14px;color:#5B6B69;line-height:1.45}
+.ct-ck input{width:18px;height:18px;margin:2px 0 0;flex:none;accent-color:#16302E}
+.ct-send{align-self:stretch;height:56px;border:0;border-radius:16px;background:#F5B82E;color:#1B1606;font:inherit;font-weight:500;font-size:18px;display:inline-flex;align-items:center;justify-content:center;gap:.5em;cursor:pointer}
+.ct-send svg{width:1.05em;height:1.05em}
+.ct-info{background:#16302E;color:#FFFFFF;border-radius:20px;padding:min(2.78vw, 40px)}
+.ct-info ul{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-direction:column;gap:22px}
+.ct-info li{display:flex;gap:14px;align-items:flex-start}
+.ct-ii{flex:none;width:40px;height:40px;border-radius:50%;background:#F5B82E;color:#16302E;display:grid;place-items:center}
+.ct-ii svg{width:20px;height:20px}
+.ct-info b{font-weight:600;font-size:17px}
+.ct-info p{margin:4px 0 0;font-size:15px;line-height:1.5;color:#C9D3D1}
+.ct-urg p a{color:#F5B82E;font-weight:500;text-decoration:none;white-space:nowrap}
+.ct-resa{margin-top:28px;height:56px;border-radius:16px;background:#F5B82E;color:#1B1606;text-decoration:none;font-weight:500;font-size:18px;display:flex;align-items:center;justify-content:center;gap:.5em}
+.ct-resa svg{width:1.05em;height:1.05em}
+
+.ct-grid > sc-if{display:contents}
+.ct-err{margin:-4px 0 0;padding:12px 14px;border-radius:12px;background:#FDECEA;color:#9B2C22;font-size:15px;line-height:1.4}
+.ct-ok{align-items:flex-start}
+.ct-okic{width:56px;height:56px;border-radius:50%;background:#F5B82E;color:#16302E;display:grid;place-items:center}
+.ct-okic svg{width:28px;height:28px}
+.ct-ok p{margin:0;font-size:16px;line-height:1.55;color:#3A4644}
+.ct-ok p a{color:#16302E;font-weight:600;text-decoration:none;white-space:nowrap}
+.ct-again{margin-top:6px;height:48px;padding:0 22px;border-radius:14px;border:1px solid #16302E;background:#FFFFFF;color:#16302E;font:inherit;font-size:16px;cursor:pointer}
+
+.ct-fil{position:absolute;left:min(8.33vw, 120px);bottom:min(4.44vw, 64px);height:min(13.2vw, 190px);width:auto;pointer-events:none;z-index:0;opacity:.5}
+
+/* ===== Formulaire de réservation (extension Gadomi Réservation) ===== */
+/* Gadomi Réservation : formulaire à gauche, ticket de course à droite (empilés sur mobile). Couleurs fixes, lisibles quel que soit le thème du site. */
+#gadomi-resa{
+  --gd-paper:#f6f7f4;      /* fond de page */
+  --gd-panel:#ffffff;      /* cartes */
+  --gd-ink:#16302e;        /* texte principal, vert sapin très sombre */
+  --gd-muted:#5b6f6c;      /* texte secondaire */
+  --gd-line:#d9e1de;       /* filets */
+  --gd-soft:#eef2ef;       /* champs, puces */
+  --gd-accent:#f5b82e;     /* jaune taxi */
+  --gd-accent-ink:#1b1606; /* texte sur jaune */
+  --gd-teal:#1f6b63;       /* liens, état actif */
+  --gd-warn:#a4520c;       /* avertissements */
+  --gd-ok:#2f7a3d;         /* remise */
+  --gd-display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --gd-body:"Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+#gadomi-resa{--r:14px;font-family:var(--gd-body);color:var(--gd-ink);font-size:15px;line-height:1.45;max-width:1080px;margin:0 auto;box-sizing:border-box}
+#gadomi-resa *,#gadomi-resa *::before,#gadomi-resa *::after{box-sizing:border-box}
+#gadomi-resa .head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:8px 24px;margin-bottom:18px}
+#gadomi-resa .eyebrow{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gd-teal);margin:0 0 4px}
+#gadomi-resa h2{font-family:var(--gd-display);font-weight:800;font-size:clamp(26px,4vw,38px);line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+#gadomi-resa h2 mark{background:linear-gradient(transparent 58%, var(--gd-accent) 58%, var(--gd-accent) 92%, transparent 92%);color:inherit;padding:0 .08em}
+#gadomi-resa .head p{margin:0;color:var(--gd-muted);max-width:40ch;font-size:14px}
+
+#gadomi-resa .grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:20px;align-items:start}
+@media (max-width:820px){#gadomi-resa .grid{grid-template-columns:minmax(0,1fr)}}
+
+#gadomi-resa .form{background:var(--gd-panel);border:1px solid var(--gd-line);border-radius:var(--r);padding:22px;display:grid;gap:22px;min-width:0}
+#gadomi-resa fieldset{border:0;margin:0;padding:0;min-width:0;display:grid;gap:10px}
+#gadomi-resa legend{font-family:var(--gd-display);font-weight:700;font-size:17px;padding:0;margin-bottom:10px;display:flex;gap:10px;align-items:baseline}
+#gadomi-resa legend small{font-family:var(--gd-body);font-weight:500;font-size:13px;color:var(--gd-muted)}
+#gadomi-resa label{font-size:13px;font-weight:600;color:var(--gd-ink)}
+#gadomi-resa .hint{font-size:12.5px;color:var(--gd-muted);margin:0}
+
+#gadomi-resa .seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;background:var(--gd-soft);padding:5px;border-radius:12px}
+@media (max-width:520px){#gadomi-resa .seg{grid-template-columns:minmax(0,1fr)}}
+#gadomi-resa .seg button{all:unset;cursor:pointer;border-radius:9px;padding:10px 12px;display:grid;gap:2px;color:var(--gd-ink)}
+#gadomi-resa .seg button b{font-weight:700;font-size:14px}
+#gadomi-resa .seg button span{font-size:12px;color:var(--gd-muted)}
+#gadomi-resa .seg button[aria-pressed="true"]{background:var(--gd-panel);box-shadow:0 1px 0 var(--gd-line),0 0 0 2px var(--gd-teal) inset}
+#gadomi-resa .seg button:focus-visible{outline:2px solid var(--gd-teal);outline-offset:2px}
+
+#gadomi-resa .tabs{display:inline-flex;gap:4px;background:var(--gd-soft);border-radius:999px;padding:4px;justify-self:start}
+#gadomi-resa .tabs button{all:unset;cursor:pointer;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px;color:var(--gd-muted)}
+#gadomi-resa .tabs button[aria-pressed="true"]{background:var(--gd-panel);color:var(--gd-ink);box-shadow:0 0 0 1px var(--gd-line)}
+#gadomi-resa .tabs button:focus-visible{outline:2px solid var(--gd-teal);outline-offset:2px}
+
+#gadomi-resa .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+#gadomi-resa .field{display:grid;gap:5px;position:relative;min-width:0}
+#gadomi-resa input[type=text],#gadomi-resa input[type=number],#gadomi-resa input[type=datetime-local],#gadomi-resa select{
+  width:100%;font:inherit;font-size:15px;color:var(--gd-ink);background:var(--gd-soft);border:1px solid transparent;border-radius:10px;padding:10px 12px;min-height:44px}
+#gadomi-resa input:focus,#gadomi-resa select:focus{outline:none;border-color:var(--gd-teal);background:var(--gd-panel)}
+#gadomi-resa .km{position:relative}
+#gadomi-resa .km input{padding-right:40px;font-variant-numeric:tabular-nums}
+#gadomi-resa .km::after{content:"km";position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--gd-muted);pointer-events:none}
+
+#gadomi-resa .sugg{position:absolute;left:0;right:0;top:100%;z-index:20;margin:4px 0 0;padding:4px;list-style:none;background:var(--gd-panel);border:1px solid var(--gd-line);border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.12);max-height:240px;overflow:auto}
+#gadomi-resa .sugg li{padding:8px 10px;border-radius:7px;cursor:pointer;font-size:14px}
+#gadomi-resa .sugg li small{display:block;color:var(--gd-muted);font-size:12px}
+#gadomi-resa .sugg li[aria-selected="true"],#gadomi-resa .sugg li:hover{background:var(--gd-soft)}
+
+#gadomi-resa .chips{display:flex;flex-wrap:wrap;gap:6px}
+#gadomi-resa .chips button{all:unset;cursor:pointer;font-size:13.5px;font-weight:600;padding:8px 13px;border-radius:999px;background:var(--gd-soft);color:var(--gd-ink);border:1px solid transparent}
+#gadomi-resa .chips button[aria-pressed="true"]{border-color:var(--gd-teal);background:var(--gd-panel);color:var(--gd-teal)}
+#gadomi-resa .chips button:focus-visible{outline:2px solid var(--gd-teal);outline-offset:2px}
+
+#gadomi-resa .stepper{display:inline-flex;align-items:center;gap:0;background:var(--gd-soft);border-radius:10px;justify-self:start}
+#gadomi-resa .stepper button{all:unset;cursor:pointer;width:40px;height:40px;display:grid;place-items:center;font-size:18px;font-weight:700;border-radius:10px}
+#gadomi-resa .stepper button:hover{background:var(--gd-line)}
+#gadomi-resa .stepper button:focus-visible{outline:2px solid var(--gd-teal)}
+#gadomi-resa .stepper output{min-width:28px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+
+#gadomi-resa .toggle{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;background:var(--gd-soft);cursor:pointer}
+#gadomi-resa .toggle input{appearance:none;flex:none;width:38px;height:22px;border-radius:999px;background:var(--gd-line);position:relative;margin:1px 0 0;cursor:pointer;transition:background .15s}
+#gadomi-resa .toggle input::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--gd-panel);transition:transform .15s}
+#gadomi-resa .toggle input:checked{background:var(--gd-teal)}
+#gadomi-resa .toggle input:checked::after{transform:translateX(16px)}
+#gadomi-resa .toggle input:focus-visible{outline:2px solid var(--gd-teal);outline-offset:2px}
+#gadomi-resa .toggle span{display:grid;gap:2px;font-size:14px;font-weight:600}
+#gadomi-resa .toggle span small{font-weight:400;font-size:12.5px;color:var(--gd-muted)}
+#gadomi-resa .toggle em{font-style:normal;color:var(--gd-teal);font-weight:700}
+
+#gadomi-resa .status{font-size:12.5px;color:var(--gd-muted);min-height:1.2em}
+#gadomi-resa .status.err{color:var(--gd-warn)}
+
+/* Ticket */
+#gadomi-resa .ticket{position:sticky;top:16px;background:var(--gd-panel);border:1px solid var(--gd-line);border-radius:var(--r);overflow:hidden;min-width:0}
+@media (max-width:820px){#gadomi-resa .ticket{position:static}}
+#gadomi-resa .ticket-top{background:var(--gd-accent);color:var(--gd-accent-ink);padding:18px 20px 16px}
+#gadomi-resa .ticket-top .kind{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+#gadomi-resa .price{font-family:var(--gd-display);font-weight:800;font-size:clamp(44px,7vw,58px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin:6px 0 4px}
+#gadomi-resa .price small{font-size:.42em;font-weight:700;letter-spacing:0}
+#gadomi-resa .ticket-top p{margin:0;font-size:13px;font-weight:500}
+#gadomi-resa .perf{height:14px;background:radial-gradient(circle at 7px -1px, var(--gd-accent) 6px, transparent 6.5px) 0 0/14px 14px repeat-x}
+#gadomi-resa .ticket-body{padding:6px 20px 20px;display:grid;gap:16px}
+
+#gadomi-resa .route{list-style:none;margin:0;padding:0;display:grid;gap:0}
+#gadomi-resa .route li{display:grid;grid-template-columns:14px 1fr auto;gap:10px;align-items:center;font-size:13.5px;position:relative;padding:5px 0}
+#gadomi-resa .route li::before{content:"";width:10px;height:10px;border-radius:50%;border:2px solid var(--gd-teal);background:var(--gd-panel);justify-self:center;z-index:1}
+#gadomi-resa .route li.base::before{background:var(--gd-teal)}
+#gadomi-resa .route li:not(:last-child)::after{content:"";position:absolute;left:6px;top:50%;height:100%;border-left:2px dotted var(--gd-line)}
+#gadomi-resa .route li .leg{color:var(--gd-muted);font-variant-numeric:tabular-nums;font-size:12.5px}
+#gadomi-resa .tip{display:inline-grid;place-items:center;width:18px;height:18px;margin-left:5px;vertical-align:-3px;color:var(--gd-teal);cursor:help;border-radius:50%;flex:none}
+#gadomi-resa .tip svg{width:17px;height:17px}
+#gadomi-resa .tip:hover,#gadomi-resa .tip:focus-visible,#gadomi-resa .tip.on{color:var(--gd-ink);outline:none}
+#gadomi-resa .route-sub{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--gd-muted);margin:2px 0 6px}
+#gadomi-resa .route-sub span{display:inline-flex;align-items:center}
+.gd-tipbox{position:fixed;z-index:9999;max-width:280px;padding:10px 12px;border-radius:10px;background:#16302E;color:#fff;font:500 13px/1.45 "Figtree","Segoe UI",system-ui,sans-serif;box-shadow:0 8px 24px rgba(0,0,0,.22);pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .12s,transform .12s}
+.gd-tipbox.show{opacity:1;transform:none}
+.gd-tipbox{white-space:pre-line}
+.gd-tipbox::after{content:"";position:absolute;left:var(--ax,50%);width:10px;height:10px;background:#16302E;transform:translateX(-50%) rotate(45deg)}
+.gd-tipbox.below::after{top:-5px}.gd-tipbox.above::after{bottom:-5px}
+#gadomi-resa .route-head{display:flex;justify-content:space-between;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gd-muted)}
+#gadomi-resa .route-head span:last-child{font-variant-numeric:tabular-nums;color:var(--gd-ink)}
+
+#gadomi-resa .lines{margin:0;padding:12px 0 0;border-top:1px dashed var(--gd-line);display:grid;gap:7px}
+#gadomi-resa .lines div{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+#gadomi-resa .lines dt{color:var(--gd-ink);min-width:0}
+#gadomi-resa .lines dt small{display:block;color:var(--gd-muted);font-size:12px}
+#gadomi-resa .lines dd{margin:0;font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+#gadomi-resa .lines .minus dd{color:var(--gd-ok)}
+#gadomi-resa .lines .total{border-top:1px solid var(--gd-line);padding-top:8px;margin-top:2px;font-weight:700}
+#gadomi-resa .lines .total dd{font-weight:800}
+
+#gadomi-resa .notes{display:grid;gap:6px;margin:0;padding:0;list-style:none;font-size:12.5px;color:var(--gd-muted)}
+#gadomi-resa .notes li{padding-left:16px;position:relative}
+#gadomi-resa .notes li::before{content:"";position:absolute;left:3px;top:.6em;width:5px;height:5px;border-radius:50%;background:var(--gd-line)}
+#gadomi-resa .notes li.warn{color:var(--gd-warn)}
+#gadomi-resa .notes li.warn::before{background:var(--gd-warn)}
+#gadomi-resa .cta{display:grid;gap:6px;justify-items:center;text-align:center;font-size:12.5px;color:var(--gd-muted);padding-top:4px}
+#gadomi-resa .callbtn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:52px;padding:12px 18px;border-radius:12px;background:var(--gd-accent);color:var(--gd-accent-ink);font-family:var(--gd-display);font-weight:700;font-size:18px;text-decoration:none;box-shadow:0 2px 0 rgba(0,0,0,.18);transition:transform .12s ease, box-shadow .12s ease}
+#gadomi-resa .callbtn:hover{transform:translateY(-1px);box-shadow:0 4px 0 rgba(0,0,0,.18)}
+#gadomi-resa .callbtn:active{transform:translateY(1px);box-shadow:0 1px 0 rgba(0,0,0,.18)}
+#gadomi-resa .callbtn:focus-visible{outline:3px solid var(--gd-teal);outline-offset:2px}
+#gadomi-resa .cta .tel{font-family:var(--gd-display);font-weight:700;font-size:20px;letter-spacing:.03em;color:var(--gd-ink);user-select:all;font-variant-numeric:tabular-nums}
+#gadomi-resa .blocked .price{font-size:30px;line-height:1.15}
+@media (prefers-reduced-motion:no-preference){
+  #gadomi-resa .price{transition:transform .18s ease}
+  #gadomi-resa .price.bump{transform:scale(1.04)}
+}
+
+/* ----- Réservation ----- */
+#gadomi-resa textarea{width:100%;font:inherit;font-size:15px;color:var(--gd-ink);background:var(--gd-soft);border:1px solid transparent;border-radius:10px;padding:10px 12px;min-height:80px;resize:vertical}
+#gadomi-resa input[type=date],#gadomi-resa input[type=email],#gadomi-resa input[type=tel]{width:100%;font:inherit;font-size:15px;color:var(--gd-ink);background:var(--gd-soft);border:1px solid transparent;border-radius:10px;padding:10px 12px;min-height:44px}
+#gadomi-resa textarea:focus,#gadomi-resa input[type=date]:focus,#gadomi-resa input[type=email]:focus,#gadomi-resa input[type=tel]:focus{outline:none;border-color:var(--gd-teal);background:var(--gd-panel)}
+#gadomi-resa .req{color:var(--gd-warn)}
+#gadomi-resa .slots{display:flex;flex-wrap:wrap;gap:6px;min-height:24px}
+#gadomi-resa .slots button{all:unset;cursor:pointer;font-variant-numeric:tabular-nums;font-weight:700;font-size:14px;padding:8px 12px;border-radius:9px;background:var(--gd-soft);border:1px solid transparent;color:var(--gd-ink)}
+#gadomi-resa .slots button:hover{border-color:var(--gd-line)}
+#gadomi-resa .slots button[aria-pressed="true"]{background:var(--gd-teal);color:#fff}
+#gadomi-resa .slots button:focus-visible{outline:2px solid var(--gd-teal);outline-offset:2px}
+#gadomi-resa .slots .empty{font-size:13px;color:var(--gd-muted)}
+#gadomi-resa .daybox{display:grid;gap:8px;padding:12px;border-radius:10px;border:1px dashed var(--gd-line)}
+#gadomi-resa .daybox h4{margin:0;font-size:14px;font-weight:700;color:var(--gd-ink)}
+#gadomi-resa .check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;font-weight:500;cursor:pointer}
+#gadomi-resa .check input{margin-top:3px;width:18px;height:18px;accent-color:var(--gd-teal);flex:none}
+#gadomi-resa .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+#gadomi-resa .bookbtn{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:54px;padding:12px 18px;border-radius:12px;background:var(--gd-teal);color:#fff;font-family:var(--gd-display);font-weight:700;font-size:18px;text-align:center}
+#gadomi-resa .bookbtn:hover{filter:brightness(1.08)}
+#gadomi-resa .bookbtn:focus-visible{outline:3px solid var(--gd-accent);outline-offset:2px}
+#gadomi-resa .bookbtn[aria-disabled="true"]{background:var(--gd-line);color:var(--gd-muted);cursor:not-allowed;filter:none}
+#gadomi-resa .missing{font-size:12.5px;color:var(--gd-muted);text-align:center;margin:0}
+#gadomi-resa .callbtn.secondary{background:var(--gd-soft);color:var(--gd-ink);box-shadow:none;font-size:16px;min-height:46px}
+#gadomi-resa .alert{border-radius:var(--r);padding:14px 16px;margin-bottom:16px;font-size:14.5px;border:1px solid var(--gd-line);background:var(--gd-panel);color:var(--gd-ink)}
+#gadomi-resa .alert.ok{border-color:var(--gd-ok);background:#eef7ef}
+#gadomi-resa .alert.err{border-color:var(--gd-warn);background:#fbf1e8}
+#gadomi-resa .alert b{display:block;font-family:var(--gd-display);font-size:18px;margin-bottom:2px}
+#gadomi-resa .formerr{color:var(--gd-warn);font-size:13.5px;font-weight:600;margin:0;text-align:center}
+#gadomi-resa .done{display:grid;gap:12px;justify-items:start;background:var(--gd-panel);border:1px solid var(--gd-line);border-radius:var(--r);padding:28px;color:var(--gd-ink)}
+#gadomi-resa .done h3{font-family:var(--gd-display);font-size:26px;margin:0}
+#gadomi-resa .done p{margin:0;max-width:56ch}
+#gadomi-resa .done .ref{font-variant-numeric:tabular-nums;font-weight:700;background:var(--gd-soft);padding:4px 10px;border-radius:8px}
+#gadomi-resa .spin{display:inline-block;width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:gdspin .7s linear infinite;vertical-align:-2px}
+@keyframes gdspin{to{transform:rotate(360deg)}}
+#gadomi-resa .ticket.loading .price{opacity:.45}
+#gadomi-resa .empty-ticket{font-size:14px;color:var(--gd-muted);margin:0}
+
+/* Protection contre les styles du thème WordPress */
+#gadomi-resa [hidden]{display:none!important}
+#gadomi-resa ul,#gadomi-resa ol{margin:0;padding:0;list-style:none}
+#gadomi-resa .notes li{margin:0}
+#gadomi-resa fieldset legend{float:none;width:auto}
+#gadomi-resa button{text-transform:none;letter-spacing:normal}
+#gadomi-resa .route li{grid-template-columns:14px minmax(0,1fr) auto}
+
+#gadomi-resa .subgroup{display:grid;gap:8px;margin-top:6px}
+#gadomi-resa .sublabel{margin:0;font-size:13px;font-weight:600;color:var(--gd-ink)}
+#gadomi-resa .seg button:disabled{cursor:default}
+#gadomi-resa .toggle small.oblig{color:var(--gd-teal);font-weight:600}
+#gadomi-resa .toggle input:disabled{opacity:.9;cursor:not-allowed}
+#gadomi-resa .toggle:has(input:disabled){cursor:default}
+
+/* Distance calculée, mise en valeur */
+#gadomi-resa .dist{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 14px;border-radius:12px;background:#e6f1ef;border:1px solid #bcd9d4;color:var(--gd-teal)}
+#gadomi-resa .dist svg{flex:none}
+#gadomi-resa .dist > div{display:grid;gap:0;min-width:0;flex:1}
+#gadomi-resa .dist-label{font-size:11.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+#gadomi-resa .dist-km{font-family:var(--gd-display);font-size:26px;line-height:1.1;color:var(--gd-ink);font-variant-numeric:tabular-nums}
+#gadomi-resa .dist-km b{font-weight:800}
+#gadomi-resa .dist-sub{font-size:12.5px;color:var(--gd-muted)}
+#gadomi-resa .dist-type{font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:999px;background:var(--gd-panel);border:1px solid #bcd9d4;white-space:nowrap}
+#gadomi-resa .dist.longue .dist-type{background:var(--gd-accent);border-color:var(--gd-accent);color:var(--gd-accent-ink)}
+
+#gadomi-resa .animal1{display:grid;gap:10px}
+#gadomi-resa .animal1.boxed{padding:12px;border-radius:10px;border:1px dashed var(--gd-line)}
+#gadomi-resa .animal1 .row{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+#gadomi-resa .animal1 h4{margin:0;font-size:14px;font-weight:700;color:var(--gd-ink)}
+#gadomi-resa .autres{display:grid;gap:12px}
+#gadomi-resa .autre{display:grid;gap:8px;padding:12px;border-radius:10px;border:1px dashed var(--gd-line)}
+#gadomi-resa .autre h4{margin:0;font-size:14px;font-weight:700;color:var(--gd-ink)}
+#gadomi-resa .autre .row{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+
+#gadomi-resa [data-zone]:disabled{cursor:default}
+#gadomi-resa [data-zone]:disabled[aria-pressed="false"]{opacity:.45}
+#gadomi-resa .route li > span:not(.leg){min-width:0}
+#gadomi-resa .route .lieu{display:block;font-size:12px;color:var(--gd-muted);overflow-wrap:anywhere}
+
+
+/* Habillage Gadomi : couleurs, police et formes du site */
+#gadomi-resa{
+  --gd-paper:#F7F6F2;--gd-panel:#FFFFFF;--gd-ink:#16302E;--gd-muted:#5B6B69;--gd-line:#D9DEDC;--gd-soft:#F7F6F2;
+  --gd-accent:#F5B82E;--gd-accent-ink:#1B1606;--gd-teal:#16302E;
+  --gd-display:"Outfit",sans-serif;--gd-body:"Outfit",sans-serif;--r:20px;
+  max-width:none;font-size:16px;color:#16302E}
+.rs-main #gadomi-resa{margin-top:calc(-1 * min(4.44vw, 64px));position:relative;z-index:2}
+#gadomi-resa .grid{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:min(1.67vw, 24px)}
+#gadomi-resa .form{border:0;border-radius:20px;padding:min(2.78vw, 40px);gap:36px;box-shadow:0 8px 28px rgba(22,48,46,.10)}
+#gadomi-resa legend{font-weight:600;font-size:22px;margin-bottom:14px;color:#16302E}
+#gadomi-resa legend small{font-weight:400;font-size:14px}
+#gadomi-resa label,#gadomi-resa .sublabel{font-size:15px;font-weight:500}
+#gadomi-resa .hint{font-size:14px}
+#gadomi-resa input[type=text],#gadomi-resa input[type=number],#gadomi-resa input[type=datetime-local],#gadomi-resa input[type=date],#gadomi-resa input[type=email],#gadomi-resa input[type=tel],#gadomi-resa select,#gadomi-resa textarea{
+  background:#FFFFFF;border:1px solid #D9DEDC;border-radius:12px;padding:13px 14px;min-height:50px;font-weight:300;font-size:16px}
+#gadomi-resa input:focus,#gadomi-resa select:focus,#gadomi-resa textarea:focus,#gadomi-resa input[type=date]:focus,#gadomi-resa input[type=email]:focus,#gadomi-resa input[type=tel]:focus{outline:2px solid #F5B82E;outline-offset:1px;border-color:#F5B82E;background:#FFFFFF}
+#gadomi-resa input::placeholder,#gadomi-resa textarea::placeholder{color:#A3A3A3}
+#gadomi-resa .seg{background:#F7F6F2;border-radius:16px;padding:6px;gap:6px}
+#gadomi-resa .seg button{border-radius:12px;padding:12px 14px}
+#gadomi-resa .seg button b{font-weight:600;font-size:16px}
+#gadomi-resa .seg button span{font-size:13px}
+#gadomi-resa .seg button[aria-pressed="true"]{background:#FEF3D7;box-shadow:0 0 0 2px #F5B82E inset}
+#gadomi-resa .chips button{font-weight:500;font-size:15px;padding:10px 16px;background:#F7F6F2}
+#gadomi-resa .chips button[aria-pressed="true"]{background:#FEF3D7;border-color:#F5B82E;color:#16302E}
+#gadomi-resa .stepper{background:#F7F6F2;border-radius:12px}
+#gadomi-resa .toggle{background:#F7F6F2;border-radius:14px;padding:14px 16px}
+#gadomi-resa .toggle span{font-size:15px;font-weight:500}
+#gadomi-resa .toggle span small{font-size:13.5px}
+#gadomi-resa .toggle input:checked{background:#16302E}
+#gadomi-resa .toggle em{color:#16302E;font-weight:600}
+#gadomi-resa .toggle small.oblig{color:#16302E}
+#gadomi-resa .daybox,#gadomi-resa .autre,#gadomi-resa .animal1.boxed{border-radius:14px;border:1px solid #D9DEDC;padding:16px}
+#gadomi-resa .slots button{font-weight:500;padding:9px 14px;border-radius:12px;background:#F7F6F2}
+#gadomi-resa .slots button[aria-pressed="true"]{background:#16302E;color:#FFFFFF}
+#gadomi-resa .check{font-size:14.5px;font-weight:400;color:#3A4644}
+#gadomi-resa .check input{accent-color:#16302E}
+#gadomi-resa .dist{background:#FEF3D7;border:1px solid #F5D78A;border-radius:14px;color:#16302E;padding:14px 16px}
+#gadomi-resa .dist-km{font-size:28px}#gadomi-resa .dist-km b{font-weight:600}
+#gadomi-resa .dist-label{font-weight:600}
+#gadomi-resa .dist-type{border-color:#F5D78A;font-weight:600}
+#gadomi-resa .ticket{border:0;border-radius:20px;box-shadow:0 8px 28px rgba(22,48,46,.10);top:24px}
+#gadomi-resa .ticket-top{padding:22px 24px 18px}
+#gadomi-resa .ticket-top .kind{font-weight:600}
+#gadomi-resa .price{font-weight:600;letter-spacing:-.01em}
+#gadomi-resa .price small{font-weight:500}
+#gadomi-resa .ticket-body{padding:8px 24px 24px;gap:18px}
+#gadomi-resa .route li{font-size:14.5px}
+#gadomi-resa .route-head{font-weight:600}
+#gadomi-resa .lines div{font-size:15px}
+#gadomi-resa .lines .total dd{font-weight:600}
+#gadomi-resa .notes{font-size:13.5px}
+#gadomi-resa .notes li::before{background:#F5B82E}
+#gadomi-resa .bookbtn,#gadomi-resa .callbtn{min-height:56px;border-radius:16px;background:#F5B82E;color:#1B1606;font-family:"Outfit",sans-serif;font-weight:500;font-size:18px;box-shadow:none;transform:none}
+#gadomi-resa .bookbtn:hover,#gadomi-resa .callbtn:hover{background:#FFC74A;filter:none;transform:none;box-shadow:none}
+#gadomi-resa .bookbtn[aria-disabled="true"]{background:#EDEFEE;color:#8A9694}
+#gadomi-resa .callbtn.secondary{background:#FFFFFF;border:1px solid #16302E;color:#16302E;font-size:16px;min-height:48px}
+#gadomi-resa .cta .tel{font-weight:600}
+#gadomi-resa .tip{color:#5B6B69}
+#gadomi-resa .tip:hover,#gadomi-resa .tip.on{color:#16302E}
+.gd-tipbox{font:400 14px/1.5 "Outfit",sans-serif;border-radius:12px;max-width:300px}
+#gadomi-resa .done,#gadomi-resa .alert{border:0;border-radius:20px}
+#gadomi-resa .done h3,#gadomi-resa .alert b{font-weight:600}
+@media (max-width:820px){
+  #gadomi-resa .grid{grid-template-columns:minmax(0,1fr);gap:16px}
+  .rs-main #gadomi-resa{margin-top:-56px}
+  #gadomi-resa .form{padding:22px 18px;border-radius:18px;gap:30px}
+  #gadomi-resa legend{font-size:20px}
+  #gadomi-resa .ticket{border-radius:18px}
+}
+#gadomi-resa .status:empty{display:none}
+#gadomi-resa .toggle > span{display:block;line-height:1.45}
+#gadomi-resa .toggle > span > small{display:block;margin-top:2px}
+#gadomi-resa .toggle > span > em{margin-left:6px}
+#gadomi-resa .toggle span.tip{display:inline-grid;vertical-align:-3px}
+#gadomi-resa .toggle > span > em{white-space:nowrap}
+@media (max-width:520px){
+  #gadomi-resa .animal1 .row{grid-template-columns:1fr 1fr}
+  #gadomi-resa .animal1 .row > .field:last-child{grid-column:1 / -1}
+}
+
+.rs-demo{position:relative;z-index:3;margin:0 0 14px;padding:10px 14px;border-radius:12px;background:#FEF3D7;color:#3A4644;font-size:14px;line-height:1.45}.rs-demo b{color:#16302E}</style>
+
+</head>
+<body>
+<div id="dc-root"></div>
+<template id="dc-tpl">
+<div class="tf-top" id="haut">
+<div class="tf-top-in">
+<header style="display: flex; flex-wrap: nowrap; align-items: flex-start">
+<a href="index.html" aria-label="Gadomi Taxi Animalier, retour à l'accueil" style="flex: none; display: block; margin-right: min(2.22vw, 32px)">
+<img src="assets/d052ca0c091a3d19cd5c4455eefdac21.png" alt="Gadomi Taxi Animalier" style="width: min(8.9vw, 128px); height: auto; display: block">
+</a>
+<nav class="nav" aria-label="Navigation principale" style="flex: none; display: flex; flex-wrap: nowrap; gap: min(1.25vw, 18px); padding-top: min(0.9vw, 13px); margin-right: min(1.67vw, 24px); font-weight: 500; font-size: min(1.6vw, 23px); white-space: nowrap; text-shadow: 0 1px 10px rgba(10,30,30,0.35)">
+<a href="index.html#trajets">Trajets</a>
+<a href="index.html#zones">Zones</a>
+<a href="index.html#transport">Transport</a>
+<a href="tarifs.html">Tarifs</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div style="flex: none; display: flex; align-items: flex-start; gap: min(1.39vw, 20px)">
+<div style="display: flex; flex-direction: column; align-items: center; gap: min(0.9vw, 13px)">
+<div style="display: flex; align-items: center; gap: min(0.97vw, 14px)">
+<a href="reserver.html" class="hv-btn hv-grn" style="display: inline-flex; align-items: center; justify-content: center; width: min(18.4vw, 265px); height: min(4.44vw, 64px); background: #16302E; color: #FFFFFF; text-decoration: none; font-weight: 400; font-size: min(1.6vw, 23px); white-space: nowrap; border-radius: 999px; gap: 0.45em; border: 1px solid #FFFFFF; box-sizing: border-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 1.05em; height: 1.05em; display: block; flex: none"><rect x="3" y="4.5" width="18" height="16.5" rx="2.5"></rect><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.5 15l2.5 2.5 4.5-4.5"></path></svg>Réserver un trajet</a>
+<a href="tel:+33670984055" class="hv-btn hv-yel" style="display: inline-flex; align-items: center; justify-content: center; width: min(18.4vw, 265px); height: min(4.44vw, 64px); background: #F6B82F; color: #FFFFFF; text-decoration: none; font-weight: 400; font-size: min(1.6vw, 23px); white-space: nowrap; border-radius: 999px; gap: 0.45em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width: 1em; height: 1em; display: block; flex: none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>06.70.98.40.55</a>
+</div>
+<p style="margin: 0; font-weight: 400; font-size: min(1.25vw, 18px); white-space: nowrap; text-shadow: 0 1px 10px rgba(10,30,30,0.35)">Ouvert 7j/7 6h00 à 20h00&nbsp; <span style="font-size: min(1.11vw, 16px)">sauf urgence</span></p>
+</div>
+<div style="display: flex; align-items: center; gap: min(0.42vw, 6px); height: min(4.44vw, 64px)">
+<a href="mailto:gadomi42@gmail.com" aria-label="E-mail" style="color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; width: min(2.78vw, 40px); height: min(2.78vw, 40px)"><svg viewBox="0 0 40 30" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true" style="width: min(1.81vw, 26px); height: auto; display: block"><rect x="2" y="3" width="36" height="24" rx="2"></rect><path d="M2 4l18 14L38 4M2 26l13-11M38 26L25 15"></path></svg></a>
+<a href="#facebook" aria-label="Facebook" style="color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; width: min(2.78vw, 40px); height: min(2.78vw, 40px)"><svg viewBox="0 0 20 38" fill="currentColor" aria-hidden="true" style="width: min(0.90vw, 13px); height: auto; display: block"><path d="M13 38V21h5.6l.9-6.6H13v-4.2c0-1.9.5-3.2 3.3-3.2H20V1.1C19.4 1 17.2.8 14.7.8 9.4.8 5.9 4 5.9 9.8v4.6H0V21h5.9v17z"></path></svg></a>
+<a href="#instagram" aria-label="Instagram" style="color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; width: min(2.78vw, 40px); height: min(2.78vw, 40px)"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true" style="width: min(1.67vw, 24px); height: auto; display: block"><rect x="2" y="2" width="32" height="32" rx="9"></rect><circle cx="18" cy="18" r="7.5"></circle><circle cx="27" cy="9" r="1.6" fill="currentColor" stroke="none"></circle></svg></a>
+</div>
+</div>
+</header>
+<nav class="fq-crumb" aria-label="Fil d’Ariane"><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7"/><path d="M6 9.5V20h12V9.5"/><path d="M10 20v-5h4v5"/></svg>Accueil</a><span aria-hidden="true">›</span><span aria-current="page">Réserver un trajet</span></nav>
+<div class="tf-hero">
+<h1>Réserver un trajet</h1>
+<p>Prix calculé sur la prise en charge et les kilomètres réellement parcourus depuis Feurs. Confirmation par e-mail.</p>
+</div>
+</div>
+</div>
+</div>
+<main class="tf-main rs-main">
+<p class="rs-demo"><b>Aperçu :</b> tapez une ville de démonstration (Balbigny, Montbrison, Roanne, Saint-Étienne, Lyon, Grenoble, Marseille, Paris, Genève, Lausanne, Turin, Milan, Barcelone…). Les créneaux sont fictifs et rien n’est envoyé.</p><section id="gadomi-resa" data-dc-keep aria-labelledby="gd-title">
+		<h2 id="gd-title" hidden>Réserver votre trajet</h2>
+	<div class="grid" id="gd-app">
+		<form class="form" id="gd-form" novalidate>
+			<fieldset>
+				<legend>1. Le trajet <small id="gd-mode-hint"></small></legend>
+				<div class="row">
+					<div class="field">
+						<label for="gd-a1">Adresse de prise en charge <span class="req">*</span></label>
+						<input type="text" id="gd-a1" autocomplete="off" placeholder="Ville ou adresse, ex. Balbigny" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="gd-s1">
+						<ul class="sugg" id="gd-s1" role="listbox" hidden></ul>
+					</div>
+					<div class="field">
+						<label for="gd-a2">Destination <span class="req">*</span></label>
+						<input type="text" id="gd-a2" autocomplete="off" placeholder="Ville ou adresse, ex. Montbrison" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="gd-s2">
+						<ul class="sugg" id="gd-s2" role="listbox" hidden></ul>
+					</div>
+				</div>
+				<p class="hint">Les distances sont calculées au départ et au retour de Feurs. <span style="white-space:nowrap"><span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="Jusqu&#x27;à 65 km, l&#x27;itinéraire est calculé sans péage. Au-delà de 65 km, il passe par l&#x27;autoroute et les péages sont inclus dans le prix. Le carburant est inclus dans le prix de tous les trajets, local comme longue distance."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></span></p>
+				<div class="dist" id="gd-dist" hidden aria-live="polite">
+					<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM18 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM6 15V9a4 4 0 0 1 4-4h2M18 9v6a4 4 0 0 1-4 4h-2"/></svg>
+					<div><span class="dist-label">Itinéraire calculé</span><span class="dist-km"><b id="gd-dist-km"></b> km</span><span class="dist-sub">entre la prise en charge et la destination</span></div>
+					<span class="dist-type" id="gd-dist-type"></span>
+				</div>
+				<p class="status" id="gd-status" aria-live="polite"></p>
+			</fieldset>
+
+			<fieldset>
+				<legend>2. Le type de trajet</legend>
+				<div class="seg" role="group" aria-label="Type de trajet">
+					<button type="button" data-zone="local" aria-pressed="true"><b>Trajet local<span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="Le trajet de votre animal, de chez vous à la destination, fait moins de 65 km. Prise en charge jusqu&#x27;à 50 km autour de Feurs, au-delà sur devis."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></b><span>Moins de 65 km</span></button>
+					<button type="button" data-zone="france" aria-pressed="false"><b>Longue distance France<span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="Plus de 65 km entre chez vous et la destination. Votre animal voyage seul, péages et carburant inclus. À réserver 7 jours à l&#x27;avance."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></b><span>Plus de 65 km</span></button>
+					<button type="button" data-zone="europe" aria-pressed="false"><b>Europe<span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="Passage de frontière +40 €, vignette suisse et tunnel du Fréjus ajoutés selon la destination. Puce, passeport européen et vaccin antirabique obligatoires. À réserver 15 jours à l&#x27;avance."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></b><span>Suisse, Italie, Allemagne…</span></button>
+				</div>
+				<div id="gd-formule-wrap" class="subgroup">
+					<p class="sublabel">Formule</p>
+					<div class="seg" role="group" aria-label="Formule">
+						<button type="button" data-formule="simple" aria-pressed="false"><b>Aller simple<span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="Un seul sens, sans retour. En longue distance, c&#x27;est la seule formule proposée."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></b><span>Un seul sens : déménagement, aéroport, gare, adoption</span></button>
+						<button type="button" data-formule="ar" aria-pressed="true"><b>Aller-retour même jour<span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="J&#x27;attends sur place pendant le rendez-vous. 15 min comprises, puis 5 € par quart d&#x27;heure."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></b><span>Vétérinaire, toilettage : j'attends sur place</span></button>
+						<button type="button" data-formule="deux" aria-pressed="false"><b>Aller-retour dates différentes<span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="Deux trajets à deux dates, par exemple pour une pension, réglés en un seul prix."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></b><span>Départ un jour, retour un autre : pension</span></button>
+					</div>
+				</div>
+				<p class="hint" id="gd-zone-hint" hidden></p>
+				<p class="hint" id="gd-zone-lock" hidden>Le type de trajet est déterminé par les adresses indiquées. Pour le changer, modifiez le trajet.</p>
+			</fieldset>
+
+			<fieldset>
+				<legend id="gd-animal-legend">3. Votre animal</legend>
+				<div class="row" style="align-items:end">
+					<div class="field">
+						<label id="gd-nb-lbl">Nombre d'animaux du foyer<span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="2 animaux maximum d&#x27;un même foyer, selon leur taille. +5 € en local, +20 € en longue distance."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></label>
+						<div class="stepper" role="group" aria-labelledby="gd-nb-lbl">
+							<button type="button" id="gd-nb-minus" aria-label="Un animal de moins">−</button>
+							<output id="gd-nb" aria-live="polite">1</output>
+							<button type="button" id="gd-nb-plus" aria-label="Un animal de plus">+</button>
+						</div>
+					</div>
+					<div class="field">
+						<label for="gd-who">Il voyage<span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="En local, vous pouvez voyager avec votre animal (1 accompagnant offert). S&#x27;il voyage seul pour un aller-retour chez le vétérinaire, l&#x27;accompagnement complet (+20 €) est ajouté d&#x27;office."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></label>
+						<select id="gd-who">
+							<option value="seul">Seul, avec le chauffeur</option>
+							<option value="avec">Avec vous (1 accompagnant offert)</option>
+						</select>
+						<p class="hint" id="gd-who-hint" hidden>En longue distance, votre animal voyage seul avec le chauffeur.</p>
+					</div>
+				</div>
+				<div id="gd-a1box" class="animal1">
+					<h4 id="gd-a1-title" hidden>Animal 1</h4>
+					<div class="row">
+						<div class="field">
+							<label for="gd-atype">Type</label>
+							<select id="gd-atype"><option value="chien">Chien</option><option value="chat">Chat</option><option value="nac">NAC (lapin, furet, hamster…)</option><option value="oiseau">Oiseau</option><option value="reptile">Reptile</option><option value="poisson">Poisson</option></select>
+						</div>
+						<div class="field">
+							<label for="gd-anom" id="gd-anom-lbl">Son nom</label>
+							<input type="text" id="gd-anom" maxlength="60" placeholder="ex. Pixel">
+						</div>
+						<div class="field">
+							<label for="gd-adet">Race, poids, caractère</label>
+							<input type="text" id="gd-adet" maxlength="400" placeholder="ex. Beagle, 12 kg, stressé en voiture">
+						</div>
+					</div>
+				</div>
+				<div id="gd-autres" class="autres"></div>
+			</fieldset>
+
+			<fieldset>
+				<legend>4. Options</legend>
+				<div class="row">
+					<div class="field" id="gd-wait-wrap">
+						<label for="gd-rdv">Type de rendez-vous <span class="req">*</span><span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="Sert à estimer l&#x27;attente sur place. Si le rendez-vous dure plus longtemps, l&#x27;attente supplémentaire (5 € par quart d&#x27;heure) vous est facturée après la course, par un lien de paiement envoyé par SMS."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></label>
+						<select id="gd-rdv"><option value="" selected disabled>Choisissez le type de rendez-vous</option><option value="controle">Vaccin ou contrôle (15 min)</option><option value="consultation">Consultation (30 min)</option><option value="examens">Examens : prise de sang, radio (1 h)</option></select>
+					</div>
+				</div>
+				<label class="toggle" id="gd-accomp-wrap" for="gd-accomp">
+					<input type="checkbox" id="gd-accomp">
+					<span>Accompagnement complet <em>+20 €</em><small>Vous ne pouvez pas venir : on présente votre animal au vétérinaire, attente jusqu'à 1 h comprise, photos et compte rendu envoyés.</small></span>
+				</label>
+				<label class="toggle" id="gd-eu-wrap" for="gd-eu" hidden>
+					<input type="checkbox" id="gd-eu" disabled>
+					<span>Passage de frontière <em>+40 €</em><small>Ajouté automatiquement pour un trajet en Europe : contrôle des documents, déclaration en douane.</small><small class="oblig" id="gd-eu-etat"></small></span>
+				</label>
+				<label class="toggle" id="gd-vignette-wrap" for="gd-vignette" hidden>
+					<input type="checkbox" id="gd-vignette" disabled>
+					<span>Vignette autoroutière suisse <em>+43 €</em><small>Ajoutée automatiquement pour un trajet en Suisse, hors Genève : vignette obligatoire sur les autoroutes suisses (CHF 40).</small><small class="oblig" id="gd-vignette-etat"></small></span>
+				</label>
+				<label class="toggle" id="gd-tunnel-wrap" for="gd-tunnel" hidden>
+					<input type="checkbox" id="gd-tunnel" disabled>
+					<span>Tunnel du Fréjus <em>+93,80 €</em><small>Ajouté automatiquement pour un trajet vers l'Italie : passage aller-retour du tunnel (aller avec votre animal, retour du chauffeur).</small><small class="oblig" id="gd-tunnel-etat"></small></span>
+				</label>
+				<label class="toggle" id="gd-nuitee-wrap" for="gd-nuitee" hidden>
+					<input type="checkbox" id="gd-nuitee" disabled>
+					<span>Nuitée du chauffeur <em>+100 €</em><small>Ajoutée automatiquement pour un trajet de plus de 350 km : le chauffeur ne peut pas rentrer le jour même en sécurité (nuit et repas).</small><small class="oblig" id="gd-nuitee-etat"></small></span>
+				</label>
+				<label class="toggle" id="gd-maj-wrap" for="gd-maj">
+					<input type="checkbox" id="gd-maj" disabled>
+					<span>Dimanche et jours fériés <em>+50 %</em><span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="+50 % le dimanche et les jours fériés (1er janvier, lundi de Pâques, 1er et 8 mai, Ascension, lundi de Pentecôte, 14 juillet, 15 août, 1er et 11 novembre, 25 décembre), en local comme en longue distance. Ne s&#x27;applique pas à la vignette suisse ni au tunnel du Fréjus."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span><small>Ajoutée automatiquement si votre trajet a lieu un dimanche ou un jour férié.</small><small class="oblig" id="gd-maj-etat"></small></span>
+				</label>
+				<label class="toggle" for="gd-remise">
+					<input type="checkbox" id="gd-remise">
+					<span>Refuges et associations partenaires ou clients de la garde à domicile Gadomi42 <em>−10 %</em><span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="Un justificatif vous sera demandé."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></span>
+				</label>
+			</fieldset>
+
+			<fieldset id="gd-when">
+				<legend>5. Date et heure</legend>
+				<div class="daybox" id="gd-day1">
+					<h4 id="gd-day1-title">Aller</h4>
+					<div class="field">
+						<label for="gd-date1">Date <span class="req">*</span></label>
+						<input type="date" id="gd-date1">
+					</div>
+					<p class="sublabel" id="gd-h1-lbl">Heure de prise en charge <span class="req">*</span><span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="Réservation en ligne de 6 h à 20 h, 24 h à l&#x27;avance pour un trajet local, 7 jours à l&#x27;avance pour les trajets longue distance France, 15 jours à l&#x27;avance pour les trajets Europe. +50 % le dimanche et les jours fériés. Pour les urgences, appelez le 06 70 98 40 55."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></p>
+					<div class="slots" id="gd-slots1" role="group" aria-labelledby="gd-h1-lbl"><span class="empty">Les heures disponibles s'affichent ici dès que les adresses et la date sont indiquées.</span></div>
+				</div>
+				<div class="daybox" id="gd-day2" hidden>
+					<h4>Retour <small class="hint">· heure de reprise de votre animal à la destination</small></h4>
+					<div class="field">
+						<label for="gd-date2">Date <span class="req">*</span></label>
+						<input type="date" id="gd-date2">
+					</div>
+					<p class="sublabel" id="gd-h2-lbl">Heure de reprise à la destination <span class="req">*</span></p>
+					<div class="slots" id="gd-slots2" role="group" aria-labelledby="gd-h2-lbl"><span class="empty">Choisissez d'abord l'heure de l'aller.</span></div>
+				</div>
+				<p class="hint" id="gd-when-rule" hidden></p>
+			</fieldset>
+
+			<fieldset>
+				<legend>6. Vos coordonnées</legend>
+				<div class="row">
+					<div class="field"><label for="gd-prenom">Prénom <span class="req">*</span></label><input type="text" id="gd-prenom" autocomplete="given-name" maxlength="80"></div>
+					<div class="field"><label for="gd-nom">Nom <span class="req">*</span></label><input type="text" id="gd-nom" autocomplete="family-name" maxlength="80"></div>
+				</div>
+				<div class="row">
+					<div class="field"><label for="gd-adr">Adresse <span class="req">*</span></label><input type="text" id="gd-adr" autocomplete="street-address" maxlength="160" placeholder="ex. 12 rue de la Loire"></div>
+					<div class="field"><label for="gd-ville">Code postal et ville <span class="req">*</span></label><input type="text" id="gd-ville" autocomplete="address-level2" maxlength="100" placeholder="ex. 42110 Feurs"></div>
+				</div>
+				<div class="row">
+					<div class="field"><label for="gd-tel">Téléphone <span class="req">*</span></label><input type="tel" id="gd-tel" autocomplete="tel" maxlength="30"></div>
+					<div class="field"><label for="gd-email">E-mail <span class="req">*</span></label><input type="email" id="gd-email" autocomplete="email" maxlength="120"></div>
+				</div>
+				<div class="field"><label for="gd-rem">Précisions (code d'accès, étage, consignes…)</label><textarea id="gd-rem" maxlength="1000"></textarea></div>
+				<div class="hp" aria-hidden="true"><label for="gd-site">Site web</label><input type="text" id="gd-site" tabindex="-1" autocomplete="off"></div>
+				<label class="check" for="gd-cgv">
+					<input type="checkbox" id="gd-cgv">
+					<span>En cochant cette case, j'accepte les conditions générales d'annulation<span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="Annulation trajet local, plus de 24 h avant le départ : 50 % remboursés.&#10;Annulation trajet local, moins de 24 h avant le départ : aucun remboursement.&#10;Annulation longue distance France et Europe, plus de 72 h avant le départ : 70 % remboursés.&#10;Annulation longue distance France et Europe, moins de 72 h avant le départ : aucun remboursement.&#10;Absence au moment de la prise en charge : aucun remboursement.&#10;Annulation de notre fait (panne, indisponibilité du chauffeur) : remboursement intégral, quel que soit le délai.&#10;Changement de date ou d'heure gratuit jusqu'à 24 h avant le départ (72 h pour la longue distance et l'Europe), par téléphone, selon nos disponibilités.&#10;Le remboursement est fait sur la carte bancaire utilisée pour le paiement, sous 5 à 10 jours ouvrés selon votre banque."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></span>
+				</label>
+			</fieldset>
+		</form>
+
+		<aside class="ticket" id="gd-ticket" aria-live="polite">
+			<div class="ticket-top">
+				<div class="kind" id="gd-kind">Votre trajet</div>
+				<div class="price" id="gd-price">— <small>€</small></div>
+				<p id="gd-sub">Indiquez les deux adresses pour voir le prix.</p>
+			</div>
+			<div class="perf" aria-hidden="true"></div>
+			<div class="ticket-body">
+				<div id="gd-route-wrap" hidden>
+					<div class="route-head"><span>Kilomètres comptés<span class="tip" tabindex="0" role="button" aria-label="En savoir plus" data-tip="Les kilomètres sont comptés depuis Feurs jusqu&#x27;au retour à Feurs, pas seulement entre chez vous et la destination. Jusqu&#x27;à 65 km, l&#x27;itinéraire est calculé sans péage. Au-delà de 65 km, il passe par l&#x27;autoroute et les péages sont inclus dans le prix. Le carburant est inclus dans le prix de tous les trajets, local comme longue distance."><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="7.6" r="1.25" fill="currentColor"/></svg></span></span><span id="gd-kmtot"></span></div>
+					<ul class="route" id="gd-route"></ul>
+				</div>
+				<dl class="lines" id="gd-lines" hidden></dl>
+				<ul class="notes" id="gd-notes"></ul>
+				<div class="cta">
+					<button type="button" class="bookbtn" id="gd-book" aria-disabled="true">Réserver ce trajet</button>
+					<p class="missing" id="gd-missing">Complétez le formulaire pour réserver.</p>
+					<p class="formerr" id="gd-err" role="alert" hidden></p>
+										<a class="callbtn secondary" id="gd-call" href="tel:+33670984055">
+						<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
+						<span>Une question ? 06 70 98 40 55</span>
+					</a>
+									</div>
+			</div>
+		</aside>
+	</div>
+</section>
+	
+</main>
+<!-- Pied de page -->
+<footer class="ft" aria-label="Pied de page">
+<div class="ft-in">
+<div class="ft-brand">
+<img src="assets/d052ca0c091a3d19cd5c4455eefdac21.png" alt="Gadomi Taxi Animalier">
+<p>Transport sécurisé de chiens, chats et NAC, avec ou sans leur propriétaire, au départ de Feurs.</p>
+<p class="ft-badge">Certifié ACACED · Agrément type 1 et 2</p>
+<div class="ft-soc"><a href="#facebook" aria-label="Facebook"><svg viewBox="0 0 20 38" fill="currentColor" aria-hidden="true"><path d="M13 38V21h5.6l.9-6.6H13v-4.2c0-1.9.5-3.2 3.3-3.2H20V1.1C19.4 1 17.2.8 14.7.8 9.4.8 5.9 4 5.9 9.8v4.6H0V21h5.9v17z"/></svg></a><a href="#instagram" aria-label="Instagram"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><rect x="2" y="2" width="32" height="32" rx="9"/><circle cx="18" cy="18" r="7.5"/><circle cx="27" cy="9" r="1.6" fill="currentColor" stroke="none"/></svg></a></div>
+</div>
+<nav class="ft-col" aria-label="Plan du site"><h2>Navigation</h2><ul>
+<li><a href="index.html#trajets">Trajets</a></li><li><a href="index.html#zones">Zones</a></li><li><a href="index.html#transport">Transport</a></li><li><a href="tarifs.html">Tarifs</a></li><li><a href="faq.html">Questions fréquentes</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+<div class="ft-col"><h2>Contact</h2><ul class="ft-ct">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+33670984055">06 70 98 40 55</a></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:gadomi42@gmail.com">gadomi42@gmail.com</a></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Feurs (42110), Loire</span></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>7j/7 de 6 h à 20 h<br>sauf urgence</span></li></ul></div>
+<div class="ft-col"><h2>Réserver</h2><p class="ft-txt">Votre trajet en quelques clics, prix annoncé avant de réserver.</p>
+<a class="ft-btn hv-btn hv-yel" href="reserver.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M16 3v4M8 3v4M4 11h16"/><path d="M9 16l2 2 4-4"/></svg>Réserver un trajet</a></div>
+</div>
+<div class="ft-bot"><div class="ft-bot-in">
+<p>© 2026 Gadomi Taxi Animalier · TVA non applicable, art. 293 B du CGI</p>
+<ul><li><a href="#mentions">Mentions légales</a></li><li><a href="conditions.html">Conditions de réservation et d’annulation</a></li><li><a href="#confidentialite">Confidentialité</a></li></ul>
+</div></div>
+</footer>
+
+<a href="#haut" class="to-top" aria-label="Revenir en haut de la page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+<a href="https://wa.me/33670984055?text=Bonjour%2C%20je%20souhaite%20un%20renseignement%20pour%20un%20transport%20d%27animal." target="_blank" rel="noopener" class="wa-btn" aria-label="Écrire sur WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</template>
+<script type="text/x-dc" id="dc-code">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sent: false, err: '', name: '', tel: '', mail: '', type: 'Question', animal: 'Chien', msg: '', ok: false };
+  }
+  renderVals() {
+    var s = this.state, self = this;
+    var set = function (k) { return function (e) { var o = {}; o[k] = e.target.value; self.setState(o); }; };
+    return {
+      sent: s.sent, notSent: !s.sent, err: s.err, hasErr: !!s.err,
+      setName: set('name'), setTel: set('tel'), setMail: set('mail'), setType: set('type'), setAnimal: set('animal'), setMsg: set('msg'),
+      setOk: function (e) { self.setState({ ok: e.target.checked }); },
+      send: function () {
+        var err = '';
+        if (!s.name.trim()) err = 'Merci d’indiquer votre nom.';
+        else if (!s.tel.trim() && !s.mail.trim()) err = 'Merci d’indiquer un téléphone ou un e-mail pour que je puisse vous répondre.';
+        else if (s.mail.trim() && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(s.mail.trim())) err = 'L’adresse e-mail ne semble pas valide.';
+        else if (!s.msg.trim()) err = 'Merci d’écrire votre message.';
+        else if (!s.ok) err = 'Merci de cocher la case d’accord pour l’utilisation de vos données.';
+        self.setState(err ? { err: err } : { err: '', sent: true });
+      },
+      again: function () { self.setState({ sent: false, err: '', name: '', tel: '', mail: '', type: 'Question', animal: 'Chien', msg: '', ok: false }); }
+    };
+  }
+}
+</script>
+<script src="assets/morphdom.min.js"></script>
+<script src="assets/dc-lite.js"></script>
+<script>window.GADOMI_RESA = {"seuilNuitee": 350, "api": "https://apercu.gadomi/wp-json/gadomi/v1/", "telephone": "06 70 98 40 55", "enLigne": true, "seuil": 65, "delaiLocal": 24, "delaiLongue": 7, "delaiEurope": 15, "horizon": 60};</script>
+<script>/* APERÇU UNIQUEMENT : imite le serveur WordPress de l'extension (prix, créneaux, réservation).
+   Les règles de prix sont les mêmes que dans includes/pricing.php. */
+(function () {
+  var T = {
+    local: { pec: 18, km: 1, att: 15, qh: 5, acc: 20, attAcc: 60, supp: 5, maj: 0.5, rayon: 50 },
+    rdv: { controle: 15, consultation: 30, examens: 60 },
+    longue: { seuil: 65, pec: 50, km: 0.85, nuitee: 100, seuilNuitee: 350, frontiere: 40, supp: 20, max: 500 },
+    remise: 0.10,
+    ag: { debut: 6, fin: 20, dL: 6, fL: 12, pas: 15, marge: 10, delaiLocal: 24, delaiLongue: 7, horizon: 60 }
+  };
+  var FEURS = { n: 'Feurs', cp: '42110', lat: 45.7426, lon: 4.2264 };
+  var VILLES = [
+    FEURS,
+    { n: 'Balbigny', cp: '42510', lat: 45.8197, lon: 4.1886, d: 12 },
+    { n: 'Montbrison', cp: '42600', lat: 45.6075, lon: 4.0653, d: 25 },
+    { n: 'Boën-sur-Lignon', cp: '42130', lat: 45.7447, lon: 4.0058, d: 20 },
+    { n: 'Montrond-les-Bains', cp: '42210', lat: 45.6436, lon: 4.2381, d: 12 },
+    { n: 'Panissières', cp: '42360', lat: 45.7917, lon: 4.3411, d: 13 },
+    { n: 'Saint-Galmier', cp: '42330', lat: 45.5975, lon: 4.3108, d: 21 },
+    { n: 'Andrézieux-Bouthéon', cp: '42160', lat: 45.5258, lon: 4.26, d: 28 },
+    { n: 'Roanne', cp: '42300', lat: 46.0347, lon: 4.0722, d: 40 },
+    { n: 'Saint-Étienne', cp: '42000', lat: 45.4397, lon: 4.3872, d: 45 },
+    { n: 'VetAgro Sup, Marcy-l\'Étoile', cp: '69280', lat: 45.7833, lon: 4.7106, d: 60 },
+    { n: 'Lyon', cp: '69000', lat: 45.764, lon: 4.8357, d: 70 },
+    { n: 'Aéroport Lyon Saint-Exupéry', cp: '69125', lat: 45.7256, lon: 5.0811, d: 100, r: 130 },
+    { n: 'Clermont-Ferrand', cp: '63000', lat: 45.7772, lon: 3.087, d: 110, r: 140 },
+    { n: 'Grenoble', cp: '38000', lat: 45.1885, lon: 5.7245, d: 175, r: 205 },
+    { n: 'Montpellier', cp: '34000', lat: 43.6108, lon: 3.8767, d: 310, r: 340 },
+    { n: 'Marseille', cp: '13000', lat: 43.2965, lon: 5.3698, d: 380, r: 410 },
+    { n: 'Paris', cp: '75000', lat: 48.8566, lon: 2.3522, d: 480, r: 510 },
+    { n: 'Genève (Suisse)', pays: 'CH', cp: '1200', lat: 46.2044, lon: 6.1432, d: 230 },
+    { n: 'Lausanne (Suisse)', pays: 'CH', cp: '1000', lat: 46.5197, lon: 6.6323, d: 290 },
+    { n: 'Turin (Italie)', pays: 'IT', cp: '10100', lat: 45.0703, lon: 7.6869, d: 380 },
+    { n: 'Berne (Suisse)', pays: 'CH', cp: '3000', lat: 46.948, lon: 7.4474, d: 390 },
+    { n: 'Bâle (Suisse)', pays: 'CH', cp: '4000', lat: 47.5596, lon: 7.5886, d: 460 },
+    { n: 'Zurich (Suisse)', pays: 'CH', cp: '8000', lat: 47.3769, lon: 8.5417, d: 510 },
+    { n: 'Milan (Italie)', pays: 'IT', cp: '20100', lat: 45.4642, lon: 9.19, d: 520 },
+    { n: 'Fribourg-en-Brisgau (Allemagne)', pays: 'DE', cp: '79098', lat: 47.999, lon: 7.8421, d: 520 },
+    { n: 'Monaco', pays: 'MC', cp: '98000', lat: 43.7384, lon: 7.4246, d: 540 },
+    { n: 'Gérone (Espagne)', pays: 'ES', cp: '17001', lat: 41.9794, lon: 2.8214, d: 560 },
+    { n: 'Barcelone (Espagne)', pays: 'ES', cp: '08001', lat: 41.3874, lon: 2.1686, d: 650 },
+    { n: 'Stuttgart (Allemagne)', pays: 'DE', cp: '70173', lat: 48.7758, lon: 9.1829, d: 660 },
+    { n: 'Luxembourg', pays: 'LU', cp: '1009', lat: 49.6116, lon: 6.1319, d: 660 },
+    { n: 'Bruxelles (Belgique)', pays: 'BE', cp: '1000', lat: 50.8503, lon: 4.3517, d: 720 }
+  ];
+  function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+  function hav(a, b) {
+    var R = 6371, dLat = (b.lat - a.lat) * Math.PI / 180, dLon = (b.lon - a.lon) * Math.PI / 180;
+    var x = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(a.lat * Math.PI / 180) * Math.cos(b.lat * Math.PI / 180) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    return 2 * R * Math.asin(Math.sqrt(x));
+  }
+  function find(p) { return VILLES.filter(function (v) { return Math.abs(v.lat - p.lat) < 1e-4 && Math.abs(v.lon - p.lon) < 1e-4; })[0]; }
+  function km(a, b, retour) {
+    var va = find(a), vb = find(b);
+    if (va === vb) return va === FEURS ? 0 : 2;
+    if (va === FEURS && vb && vb.d) return vb.d;
+    if (vb === FEURS && va && va.d) return retour ? (va.r || va.d) : va.d;
+    return Math.round(hav(a, b) * 1.3);
+  }
+  function sec(k) { return Math.round(k / (k > 65 ? 95 : 60) * 3600); }
+
+  function paques(y) { var a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),da=((h+l-7*m+114)%31)+1; return new Date(y,mo-1,da); }
+  function ferie(dt) {
+    var key = (dt.getMonth() + 1) + '-' + dt.getDate();
+    if (['1-1','5-1','5-8','7-14','8-15','11-1','11-11','12-25'].indexOf(key) > -1) return true;
+    var p = paques(dt.getFullYear());
+    return [1, 39, 50].some(function (n) { var x = new Date(p); x.setDate(p.getDate() + n); return x.getMonth() === dt.getMonth() && x.getDate() === dt.getDate(); });
+  }
+  function majoration(s) {
+    if (!s) return null; var dt = new Date(s); if (isNaN(dt)) return null;
+    if (dt.getDay() === 0) return 'dimanche'; if (ferie(dt)) return 'jour férié';
+    var h = dt.getHours(); return (h >= 20 || h < 6) ? 'nuit' : null;
+  }
+  function e(v) { var dec = Math.abs(v - Math.round(v)) > 0.001 ? 2 : 0; return v.toLocaleString('fr-FR', { minimumFractionDigits: dec, maximumFractionDigits: 2 }) + ' €'; }
+  function sum(l) { return l.reduce(function (s, x) { return s + x[2]; }, 0); }
+
+  function calcul(p, A, B, D) {
+    var L = T.local, G = T.longue, f = ['ar', 'simple', 'deux'].indexOf(p.formule) > -1 ? p.formule : 'ar';
+    var rdv = p.rdv || 'consultation'; if (f === 'ar' && rdv === 'long') f = 'deux';
+    var supp = Math.max(0, Math.min(1, (p.nb || 1) - 1));
+    if (f === 'ar' && p.voyage !== 'avec') p.accomp = true; // animal seul : accompagnement complet obligatoire
+    var r = { type: 'local', formule: f, lines: [], notes: [], route: [], km: 0, total: 0, acompte: 0, attente: 0, bloque: false };
+    function remise() { if (p.remise) r.lines.push(['Tarif solidaire', '−10 %', -sum(r.lines) * T.remise, 'minus']); }
+    if (B > G.seuil) {
+      r.type = 'longue'; r.formule = 'simple';
+      r.km = A + B + D;
+      r.route = [['Feurs', null], ['Prise en charge', A], ['Destination', B], ['Retour du chauffeur à Feurs', D]];
+      r.lines.push(['Prise en charge', 'préparation du véhicule, documents, désinfection', G.pec]);
+      r.lines.push(['Kilomètres', r.km + ' km × ' + e(G.km), r.km * G.km]);
+      if (B > G.seuilNuitee) r.lines.push(['Nuitée du chauffeur', 'trajet de plus de ' + G.seuilNuitee + ' km', G.nuitee]);
+      if (p.eu) r.lines.push(['Passage de frontière', 'contrôle des documents, douane', G.frontiere]);
+      var vig = function (q) { return q && q.pays === 'CH' && !(q.lat >= 46.12 && q.lat <= 46.37 && q.lon >= 5.95 && q.lon <= 6.32); };
+      if (vig(p.depart) || vig(p.arrivee)) r.lines.push(['Vignette autoroutière suisse', 'CHF 40', 43]);
+      if ((p.depart && p.depart.pays === 'IT') || (p.arrivee && p.arrivee.pays === 'IT')) r.lines.push(['Tunnel du Fréjus', 'aller-retour, véhicule classe 2', 93.80]);
+      if (supp) r.lines.push(['Animal supplémentaire', supp + ' × ' + e(G.supp), supp * G.supp]);
+      // Dimanche ou jour férié : +50 %, hors vignette et tunnel (refacturés au prix coûtant).
+      var whyL = majoration(p.aller);
+      if (whyL) { var baseL = sum(r.lines.filter(function (l) { return !/^(Vignette|Tunnel)/.test(l[0]); })); r.lines.push(['Majoration ' + whyL, '+50 %', baseL * T.local.maj]); }
+      remise();
+      r.total = Math.floor(sum(r.lines));
+      r.notes.push('Aller simple, porte à porte et sans groupage. Votre animal voyage seul à bord, pause toutes les 2 heures, nouvelles à l\'arrivée.');
+      r.notes.push('Péages et carburant inclus. Kilomètres comptés jusqu\'au retour à Feurs.');
+      r.notes.push('Prix payé en totalité en ligne à la réservation.');
+      if (p.eu) r.notes.push('Documents : puce, passeport européen, vaccin antirabique valide. Certificat sanitaire si vous ne voyagez pas dans les 5 jours avant ou après votre animal.');
+      return r;
+    }
+    // Trajet local : prise en charge jusqu'à 50 km autour de Feurs, au-delà sur devis.
+    if (A > T.local.rayon) { r.bloque = true; r.notes.push('Pour un trajet local, je viens chercher votre animal jusqu\'à ' + T.local.rayon + ' km autour de Feurs. Au-delà, contactez-moi pour un devis.'); return r; }
+    var courses = [];
+    if (f === 'ar') { r.km = 2 * A + 2 * B; r.route = [['Feurs', null], ['Chez vous', A], ['Destination', B], ['Chez vous', B], ['Retour à Feurs', A]]; courses.push({ l: '', km: r.km, d: p.aller }); }
+    else if (f === 'simple') { r.km = A + B + D; r.route = [['Feurs', null], ['Chez vous', A], ['Destination', B], ['Retour à Feurs', D]]; courses.push({ l: '', km: r.km, d: p.aller }); }
+    else { var k = A + B + D; r.km = 2 * k; r.route = [['Feurs', null], ['Chez vous', A], ['Destination', B], ['Feurs', D]]; courses.push({ l: 'Aller · ', km: k, d: p.aller }, { l: 'Retour · ', km: k, d: p.retour }); }
+    if (f === 'ar') { var m = T.rdv[rdv] || 30; r.attente = p.accomp ? Math.max(m, L.attAcc) : m; }
+    courses.forEach(function (c, i) {
+      var l = [];
+      l.push([c.l + 'Prise en charge', 'désinfection, 15 min d\'attente', L.pec]);
+      l.push([c.l + 'Kilomètres', c.km + ' km × ' + e(L.km), c.km * L.km]);
+      if (i === 0 && f === 'ar') {
+        var comp = p.accomp ? L.attAcc : L.att;
+        if (p.accomp) l.push(['Accompagnement complet', 'attente jusqu\'à 1 h comprise', L.acc]);
+        var q = Math.ceil(Math.max(0, r.attente - comp) / 15);
+        if (q) l.push(['Attente estimée', q + ' × 15 min au-delà des ' + comp + ' min comprises', q * L.qh]);
+      }
+      if (supp) l.push([c.l + 'Animal supplémentaire', supp + ' × ' + e(L.supp), supp * L.supp]);
+      var why = majoration(c.d);
+      if (why) l.push([c.l + 'Majoration ' + why, '+50 %', sum(l) * L.maj]);
+      r.lines = r.lines.concat(l);
+    });
+    remise();
+    r.total = Math.floor(sum(r.lines));
+    r.notes.push('Prix estimé, payé en totalité en ligne à la réservation. Si le rendez-vous dure plus longtemps que prévu, l\'attente supplémentaire vous est facturée après la course, par un lien de paiement envoyé par SMS.');
+    r.notes.push('Itinéraire calculé sans péage.');
+    if (f === 'ar') r.notes.push('Attente estimée selon le rendez-vous (' + r.attente + ' min). Si le rendez-vous dure plus longtemps, chaque quart d\'heure supplémentaire est compté 5 €.');
+    if (f === 'deux' && rdv === 'long') r.notes.push('Opération ou durée inconnue : le chauffeur dépose votre animal, repart, et revient le chercher à l\'heure convenue. Deux courses, sans attente facturée.');
+    r.notes.push('Toujours compris : prise en charge à domicile, cage de transport adaptée, véhicule climatisé et désinfecté, carburant, photo à l\'arrivée.');
+    return r;
+  }
+
+  function route(p) {
+    var A = km(FEURS, p.depart), B = km(p.depart, p.arrivee), D = km(p.arrivee, FEURS, true);
+    return { A: A, B: B, D: D, s: [sec(A), sec(B), sec(D)] };
+  }
+  function occupation(type, f, s, att, B, t, leg) {
+    var m = T.ag.marge * 60, ch = 300, a = s[0], b = s[1], d = s[2];
+    if (type === 'longue') { var end = t + 2 * ch + Math.round((b + d) * 1.15) + Math.floor(b / 7200) * 900 + m; return [t - a - m, end]; }
+    if (f === 'ar') return [t - a - m, t + 2 * ch + 2 * b + att * 60 + a + m];
+    if (leg === 'retour') return [t - d - m, t + 2 * ch + b + a + m];
+    return [t - a - m, t + 2 * ch + b + d + m];
+  }
+  function creneaux(p) {
+    var r = route(p), dv = calcul(p, r.A, r.B, r.D);
+    if (dv.bloque) return { heures: [], message: dv.notes[0] };
+    var ag = T.ag, now = Date.now() / 1000, longue = dv.type === 'longue';
+    var day = new Date(p.date + 'T00:00:00'); if (isNaN(day)) return { heures: [], message: 'Date invalide.' };
+    var base = day.getTime() / 1000, h0 = longue ? ag.dL : ag.debut, h1 = longue ? ag.fL : ag.fin;
+    var busy = [[base + 12 * 3600, base + 13.5 * 3600]]; // exemple : pause déjeuner bloquée dans l'agenda
+    if (p.leg === 'retour' && p.aller) { var t0 = new Date(p.aller).getTime() / 1000; busy.push([0, occupation(dv.type, dv.formule, r.s, dv.attente, r.B, t0, 'aller')[1]]); }
+    var heures = [], raison = '';
+    for (var t = base + h0 * 3600; t <= base + h1 * 3600; t += ag.pas * 60) {
+      if (t > now + ag.horizon * 86400) { raison = raison || 'Les réservations en ligne sont ouvertes 60 jours à l\'avance.'; continue; }
+      var dl = p.eu ? 15 : ag.delaiLongue;
+      if (longue && t < now + dl * 86400) { raison = raison || (p.eu ? 'Les trajets Europe se réservent' : 'La longue distance se réserve') + ' au moins ' + dl + ' jours à l\'avance.'; continue; }
+      if (!longue && t < now + ag.delaiLocal * 3600) { raison = raison || 'Les trajets se réservent au moins 24 h à l\'avance. Pour une urgence, appelez.'; continue; }
+      var o = occupation(dv.type, dv.formule, r.s, dv.attente, r.B, t, p.leg === 'retour' ? 'retour' : 'aller');
+      if (!longue && (o[0] + ag.marge * 60 < base + ag.debut * 3600 || o[1] - ag.marge * 60 > base + ag.fin * 3600)) continue;
+      if (busy.some(function (b) { return o[0] < b[1] && o[1] > b[0]; })) continue;
+      var dt = new Date(t * 1000); heures.push(String(dt.getHours()).padStart(2, '0') + ':' + String(dt.getMinutes()).padStart(2, '0'));
+    }
+    return { heures: heures, message: heures.length ? '' : (raison || 'Aucun créneau libre ce jour-là. Essayez une autre date ou appelez-nous.') };
+  }
+
+  function rep(body, status) {
+    return new Promise(function (res) { setTimeout(function () { res(new Response(JSON.stringify(body), { status: status || 200, headers: { 'Content-Type': 'application/json' } })); }, 180); });
+  }
+  var realFetch = window.fetch.bind(window);
+  window.fetch = function (url, opt) {
+    var api = (window.GADOMI_RESA || {}).api || '';
+    if (typeof url !== 'string' || url.indexOf(api) !== 0) return realFetch(url, opt);
+    var path = url.slice(api.length), p = opt && opt.body ? JSON.parse(opt.body) : {};
+    if (path.indexOf('adresse') === 0) {
+      var q = norm(new URLSearchParams(path.split('?')[1] || '').get('q') || '');
+      return rep({ resultats: VILLES.filter(function (v) { return norm(v.n).indexOf(q) > -1 || v.cp.indexOf(q) === 0; }).slice(0, 5).map(function (v) { return { main: v.n, sub: v.cp + ' · ville de démonstration', lat: v.lat, lon: v.lon, pays: v.pays || 'FR' }; }) });
+    }
+    if (path === 'devis') { var r = route(p); return rep({ devis: calcul(p, r.A, r.B, r.D), km_trajet: r.B, en_ligne: true, stripe: true }); }
+    if (path === 'creneaux') return rep(creneaux(p));
+    if (path === 'reserver') {
+      var r2 = route(p), dv = calcul(p, r2.A, r2.B, r2.D), ref = 'GT-DEMO-' + Math.random().toString(36).slice(2, 6).toUpperCase();
+      return rep({ ok: true, ref: ref, statut: 'confirmee', message: 'Aperçu : sur le site, le client serait maintenant envoyé sur la page de paiement sécurisée pour régler ' + e(dv.total) + '. Rien n\'a été payé ni envoyé.' });
+    }
+    return rep({ erreur: 'Inconnu' }, 404);
+  };
+})();
+</script>
+<script>/* Gadomi Réservation — formulaire. Le prix et les créneaux sont calculés par le site (WordPress). */
+(function () {
+  var C = window.GADOMI_RESA || {};
+  var root = document.getElementById('gadomi-resa');
+  if (!root || !C.api) return;
+  var $ = function (id) { return document.getElementById(id); };
+
+  var S = {
+    zone: 'local', zoneUser: 'local', formule: 'ar', animal: 'chien', nb: 1, autres: [], longRdv: false,
+    depart: null, arrivee: null,
+    devis: null, type: null,
+    date1: '', time1: '', date2: '', time2: '',
+    ctxKey: ''
+  };
+
+  /* ---------- utilitaires ---------- */
+  function post(path, body) {
+    return fetch(C.api + path, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body)
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        if (!r.ok) throw new Error(j.erreur || j.message || 'Le service ne répond pas. Réessayez ou appelez-nous.');
+        return j;
+      });
+    });
+  }
+  function get(path) {
+    return fetch(C.api + path).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        if (!r.ok) throw new Error(j.erreur || 'Le service ne répond pas.');
+        return j;
+      });
+    });
+  }
+  function euro(v) {
+    var a = Math.abs(v), dec = Math.abs(a - Math.round(a)) > 0.001 ? 2 : 0;
+    return (v < 0 ? '−' : '') + a.toLocaleString('fr-FR', { minimumFractionDigits: dec, maximumFractionDigits: 2 }) + ' €';
+  }
+  function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
+  function debounce(fn, ms) { var t; return function () { clearTimeout(t); t = setTimeout(fn, ms); }; }
+  function setStatus(t, err) { var s = $('gd-status'); s.textContent = t || ''; s.classList.toggle('err', !!err); }
+  function pressGroup(sel, attr, val) {
+    root.querySelectorAll(sel).forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute(attr) === val)); });
+  }
+  function ymd(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+  function addDays(n) { var d = new Date(); d.setDate(d.getDate() + n); return d; }
+
+  /* ---------- paramètres envoyés au site ---------- */
+  function params(extra) {
+    var p = {
+      formule: S.zone === 'local' ? S.formule : 'simple',
+      rdv: S.longRdv ? 'long' : $('gd-rdv').value,
+      depart: S.depart, arrivee: S.arrivee,
+      nb: S.nb,
+      accomp: $('gd-accomp').checked,
+      voyage: $('gd-who').value,
+      eu: S.zone === 'europe',
+      remise: $('gd-remise').checked,
+      aller: S.date1 && S.time1 ? S.date1 + 'T' + S.time1 : '',
+      retour: S.date2 && S.time2 ? S.date2 + 'T' + S.time2 : ''
+    };
+    for (var k in extra) p[k] = extra[k];
+    return p;
+  }
+  /* Ce qui change la durée de la course, donc les créneaux libres. */
+  function ctxKey() {
+    return [S.zone, S.formule, S.longRdv, $('gd-rdv').value, $('gd-accomp').checked,
+      S.depart && S.depart.lat, S.depart && S.depart.lon, S.arrivee && S.arrivee.lat, S.arrivee && S.arrivee.lon].join('|');
+  }
+
+  /* ---------- prix ---------- */
+  var devisSeq = 0;
+  function refreshDevis() {
+    if (!S.depart || !S.arrivee) { renderEmpty(); syncVisibility(); checkReady(); return Promise.resolve(); }
+    var seq = ++devisSeq;
+    $('gd-ticket').classList.add('loading');
+    return post('devis', params()).then(function (j) {
+      if (seq !== devisSeq) return;
+      S.devis = j.devis; S.type = j.devis.type; S.stripe = !!j.stripe;
+      // Le type choisi ne correspond pas à la distance réelle : on bascule et on prévient.
+      var hint = '';
+      if (!j.devis.bloque && S.type === 'longue' && S.zone === 'local') {
+        var cible = S.zoneUser === 'europe' ? 'europe' : 'france';
+        setZone(cible, true);
+        if (cible !== S.zoneUser) hint = 'Ce trajet fait ' + j.km_trajet + ' km : c\'est une longue distance. Le tarif longue distance s\'applique.';
+        else { $('gd-zone-hint').hidden = true; refreshSoon(); }
+      }
+      else if (S.type === 'local' && S.zone !== 'local') { setZone('local', true); hint = 'Ce trajet fait ' + j.km_trajet + ' km : c\'est un trajet local. Le tarif local s\'applique.'; }
+      if (hint) { $('gd-zone-hint').textContent = hint; $('gd-zone-hint').hidden = false; refreshSoon(); }
+      setStatus('');
+      showDist(j.km_trajet, j.devis);
+      render();
+      syncVisibility();
+      var k = ctxKey();
+      if (k !== S.ctxKey) { S.ctxKey = k; loadSlots(1); if (S.zone === 'local' && S.formule === 'deux') loadSlots(2); }
+      checkReady();
+    }).catch(function (e) {
+      if (seq !== devisSeq) return;
+      S.devis = null; renderEmpty(); setStatus(e.message, true); checkReady();
+    }).then(function () { if (seq === devisSeq) $('gd-ticket').classList.remove('loading'); });
+  }
+  var refreshSoon = debounce(refreshDevis, 250);
+
+  function showDist(km, d) {
+    var box = $('gd-dist');
+    $('gd-dist-km').textContent = km.toLocaleString('fr-FR');
+    var t = d.bloque ? 'Hors zone locale · sur devis' : (d.type === 'local' ? 'Trajet local' : (S.zone === 'europe' ? 'Europe' : 'Longue distance France'));
+    $('gd-dist-type').textContent = t;
+    box.classList.toggle('longue', d.type === 'longue');
+    box.hidden = false;
+  }
+  function renderEmpty() {
+    $('gd-dist').hidden = true;
+    $('gd-kind').textContent = 'Votre trajet';
+    $('gd-price').innerHTML = '— <small>€</small>';
+    $('gd-sub').textContent = 'Indiquez les deux adresses pour voir le prix.';
+    $('gd-route-wrap').hidden = true; $('gd-lines').hidden = true; $('gd-notes').innerHTML = '';
+  }
+  function render() {
+    var d = S.devis;
+    $('gd-kind').textContent = d.bloque ? 'Hors zone locale' : (d.type === 'longue' ? 'Longue distance' : 'Tarif local');
+    if (d.bloque) {
+      $('gd-price').textContent = 'Sur devis';
+      $('gd-sub').textContent = 'Contactez-nous pour ce trajet.';
+      $('gd-route-wrap').hidden = true; $('gd-lines').hidden = true;
+      $('gd-notes').innerHTML = d.notes.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('');
+      return;
+    }
+    $('gd-price').innerHTML = d.total.toLocaleString('fr-FR') + ' <small>€</small>';
+    $('gd-sub').textContent = d.type === 'longue'
+      ? 'Prix fixe, payé en ligne à la réservation'
+      : 'Prix estimé, payé en ligne à la réservation';
+    $('gd-route-wrap').hidden = false;
+    $('gd-kmtot').textContent = d.km + ' km';
+    $('gd-route').innerHTML = d.route.map(function (s, i) {
+      // Adresse réelle à côté de chaque étape : prise en charge et destination.
+      var lieu = (s[0] === 'Chez vous' || s[0] === 'Prise en charge') ? (S.depart && S.depart.label) : (s[0] === 'Destination' ? (S.arrivee && S.arrivee.label) : '');
+      return '<li' + (i === 0 || i === d.route.length - 1 ? ' class="base"' : '') + '><span>' + esc(s[0]) + (lieu ? '<small class="lieu">' + esc(lieu) + '</small>' : '') + '</span><span class="leg">' + (s[1] === null ? 'départ' : '+' + s[1] + ' km') + '</span></li>';
+    }).join('');
+    var rows = d.lines.map(function (l) {
+      return '<div' + (l[3] ? ' class="' + esc(l[3]) + '"' : '') + '><dt>' + esc(l[0]) + (l[1] ? '<small>' + esc(l[1]) + '</small>' : '') + '</dt><dd>' + euro(l[2]) + '</dd></div>';
+    }).join('');
+    rows += '<div class="total"><dt>Total TTC</dt><dd>' + d.total.toLocaleString('fr-FR') + ' €</dd></div>';
+    $('gd-lines').innerHTML = rows; $('gd-lines').hidden = false;
+    $('gd-notes').innerHTML = d.notes.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '<li>TVA non applicable, art. 293 B du CGI.</li>';
+  }
+
+  /* Dimanche ou jour férié (même règle que le calcul du prix). */
+  function jfPaques(y) { var a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4, l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451), mo = Math.floor((h + l - 7 * m + 114) / 31), da = ((h + l - 7 * m + 114) % 31) + 1; return new Date(y, mo - 1, da); }
+  function jourMajore(ymdStr) {
+    if (!ymdStr) return null; var p = ymdStr.split('-'); var dt = new Date(+p[0], +p[1] - 1, +p[2]);
+    if (dt.getDay() === 0) return 'un dimanche';
+    var key = (dt.getMonth() + 1) + '-' + dt.getDate();
+    if (['1-1', '5-1', '5-8', '7-14', '8-15', '11-1', '11-11', '12-25'].indexOf(key) > -1) return 'un jour férié';
+    var pq = jfPaques(dt.getFullYear());
+    if ([1, 39, 50].some(function (n) { var x = new Date(pq); x.setDate(pq.getDate() + n); return x.getMonth() === dt.getMonth() && x.getDate() === dt.getDate(); })) return 'un jour férié';
+    return null;
+  }
+  function syncVisibility() {
+    var longue = S.type === 'longue' || (S.type === null && S.zone !== 'local'), f = S.zone === 'local' ? S.formule : 'simple';
+    $('gd-wait-wrap').hidden = longue || f !== 'ar';
+    $('gd-accomp-wrap').hidden = longue || f !== 'ar';
+    // « Avec vous » : uniquement pour les trajets locaux.
+    var optAvec = $('gd-who').querySelector('option[value="avec"]');
+    optAvec.disabled = longue;
+    if (longue && $('gd-who').value === 'avec') $('gd-who').value = 'seul';
+    $('gd-who').disabled = longue;
+    $('gd-who-hint').hidden = !longue;
+    // Animal seul chez le vétérinaire : l'accompagnement complet est obligatoire.
+    var oblig = !longue && f === 'ar' && $('gd-who').value === 'seul';
+    if (oblig) $('gd-accomp').checked = true;
+    else if ($('gd-accomp').disabled) $('gd-accomp').checked = false;
+    $('gd-accomp').disabled = oblig;
+    // Passage de frontière : information en longue distance, coché quand le client a choisi « Europe ».
+    $('gd-eu-wrap').hidden = !longue;
+    $('gd-eu').checked = S.zone === 'europe';
+    $('gd-eu-etat').textContent = S.zone === 'europe' ? 'Inclus : vous avez choisi un trajet en Europe.' : 'Non applicable : trajet en France.';
+    // Vignette suisse : information en Europe, cochée pour la Suisse hors Genève.
+    $('gd-vignette-wrap').hidden = !longue || S.zone !== 'europe';
+    var vig = !!(S.devis && S.devis.lines && S.devis.lines.some(function (l) { return /^Vignette/.test(l[0]); }));
+    $('gd-vignette').checked = vig;
+    $('gd-vignette-etat').textContent = vig ? 'Incluse : votre trajet passe par les autoroutes suisses.' : (S.devis ? 'Non applicable à ce trajet (Genève ou hors Suisse).' : '');
+    // Tunnel du Fréjus : information en longue distance, coché pour l'Italie.
+    $('gd-tunnel-wrap').hidden = !longue || S.zone !== 'europe';
+    var tun = !!(S.devis && S.devis.lines && S.devis.lines.some(function (l) { return /^Tunnel/.test(l[0]); }));
+    $('gd-tunnel').checked = tun;
+    $('gd-tunnel-etat').textContent = tun ? 'Inclus : votre trajet passe par l\'Italie.' : (S.devis ? 'Non applicable : destination hors d\'Italie.' : '');
+    // Nuitée : information en longue distance, cochée quand le trajet dépasse le seuil.
+    $('gd-nuitee-wrap').hidden = !longue;
+    var nuit = !!(S.devis && S.devis.lines && S.devis.lines.some(function (l) { return /^Nuitée/.test(l[0]); }));
+    $('gd-nuitee').checked = nuit;
+    $('gd-nuitee-etat').textContent = nuit ? 'Incluse : votre trajet dépasse ' + C.seuilNuitee + ' km.' : (S.devis ? 'Non applicable à ce trajet.' : '');
+    // Dimanche et jours fériés : local et longue distance, cochée automatiquement selon la date choisie.
+    $('gd-maj-wrap').hidden = false;
+    var deuxDates = S.zone === 'local' && S.formule === 'deux';
+    var m1 = jourMajore(S.date1), m2 = deuxDates ? jourMajore(S.date2) : null;
+    $('gd-maj').checked = !!(m1 || m2);
+    $('gd-maj-etat').textContent = (m1 || m2)
+      ? 'Incluse : ' + (m1 && m2 ? 'l\'aller et le retour ont lieu ' + (m1 === m2 ? m1 : 'un dimanche ou un jour férié') : (m1 ? (deuxDates ? 'l\'aller a lieu ' : 'votre trajet a lieu ') + m1 : 'le retour a lieu ' + m2)) + '.'
+      : (S.date1 ? 'Non applicable : ' + (deuxDates && S.date2 ? 'ni dimanche ni jour férié.' : 'votre date n\'est ni un dimanche ni un jour férié.') : '');
+    $('gd-formule-wrap').hidden = S.zone !== 'local';
+    // Une fois le trajet rempli, le type est fixé par les adresses : il ne se change plus à la main.
+    var fige = !!(S.depart && S.arrivee && S.devis);
+    root.querySelectorAll('[data-zone]').forEach(function (b) { b.disabled = fige; });
+    $('gd-zone-lock').hidden = !fige;
+    $('gd-day2').hidden = longue || f !== 'deux';
+    $('gd-day1-title').textContent = (!longue && f === 'deux') ? 'Aller' : 'Prise en charge';
+    $('gd-mode-hint').textContent = longue ? '· longue distance' : '';
+    var minDays = longue ? (S.zone === 'europe' ? C.delaiEurope : C.delaiLongue) : 1;
+    $('gd-date1').min = ymd(addDays(minDays)); $('gd-date1').max = ymd(addDays(C.horizon));
+    $('gd-date2').min = S.date1 || ymd(addDays(1)); $('gd-date2').max = ymd(addDays(C.horizon));
+    $('gd-when-rule').textContent = 'Réservation en ligne ' + C.delaiLocal + ' h à l\'avance pour un trajet local, '
+      + C.delaiLongue + ' jours à l\'avance pour les trajets longue distance France, '
+      + C.delaiEurope + ' jours à l\'avance pour les trajets Europe. Pour les urgences, appelez' + (C.telephone ? ' le ' + C.telephone : '') + '.';
+  }
+
+  /* ---------- créneaux ---------- */
+  var slotSeq = { 1: 0, 2: 0 };
+  function loadSlots(n) {
+    var box = $('gd-slots' + n), date = n === 1 ? S.date1 : S.date2;
+    if (!S.depart || !S.arrivee || !S.devis) { box.innerHTML = '<span class="empty">Les heures disponibles s\'affichent ici dès que les adresses et la date sont indiquées.</span>'; return; }
+    if (n === 2 && !(S.date1 && S.time1)) { box.innerHTML = '<span class="empty">Choisissez d\'abord l\'heure de l\'aller.</span>'; return; }
+    if (!date) { box.innerHTML = '<span class="empty">Choisissez une date pour voir les heures disponibles.</span>'; return; }
+    var seq = ++slotSeq[n];
+    box.innerHTML = '<span class="empty"><span class="spin"></span> Recherche des créneaux libres…</span>';
+    post('creneaux', params({ date: date, leg: n === 1 ? 'aller' : 'retour' })).then(function (j) {
+      if (seq !== slotSeq[n]) return;
+      var cur = n === 1 ? S.time1 : S.time2;
+      if (cur && j.heures.indexOf(cur) < 0) { if (n === 1) { S.time1 = ''; } else { S.time2 = ''; } cur = ''; refreshSoon(); }
+      if (!j.heures.length) { box.innerHTML = '<span class="empty">' + esc(j.message || 'Aucun créneau libre ce jour-là.') + '</span>'; checkReady(); return; }
+      box.innerHTML = j.heures.map(function (h) {
+        return '<button type="button" data-h="' + h + '" aria-pressed="' + (h === cur) + '">' + h.replace(':', ' h ') + '</button>';
+      }).join('');
+      box.querySelectorAll('button').forEach(function (b) {
+        b.addEventListener('click', function () {
+          if (n === 1) { S.time1 = b.dataset.h; S.time2 = ''; } else { S.time2 = b.dataset.h; }
+          box.querySelectorAll('button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+          refreshDevis();
+          if (n === 1 && S.zone === 'local' && S.formule === 'deux') { if (!S.date2) { S.date2 = S.date1; $('gd-date2').value = S.date1; } loadSlots(2); }
+          checkReady();
+        });
+      });
+      checkReady();
+    }).catch(function (e) {
+      if (seq !== slotSeq[n]) return;
+      box.innerHTML = '<span class="empty" style="color:var(--gd-warn)">' + esc(e.message) + '</span>';
+    });
+  }
+
+  /* ---------- prêt à réserver ? ---------- */
+  function missing() {
+    if (!C.enLigne) return 'La réservation en ligne est fermée pour le moment. Appelez-nous.';
+    if (!S.depart || !S.arrivee) return 'Indiquez les deux adresses.';
+    if (!S.devis) return 'Calcul du prix en cours…';
+    if (S.devis.bloque) return 'Ce trajet se réserve sur devis, par téléphone.';
+    if (S.zone === 'local' && S.formule === 'ar' && !S.longRdv && S.type !== 'longue' && !$('gd-rdv').value) return 'Choisissez le type de rendez-vous.';
+    if (!S.time1) return 'Choisissez une date et une heure.';
+    if (S.zone === 'local' && S.formule === 'deux' && S.type !== 'longue' && !S.time2) return 'Choisissez l\'heure du retour.';
+    if (!$('gd-prenom').value.trim() || !$('gd-nom').value.trim()) return 'Indiquez votre prénom et votre nom.';
+    if (!$('gd-adr').value.trim() || !$('gd-ville').value.trim()) return 'Indiquez votre adresse et votre ville.';
+    if (!/^[+0-9 ().-]{8,}$/.test($('gd-tel').value.trim())) return 'Indiquez votre téléphone.';
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($('gd-email').value.trim())) return 'Indiquez votre e-mail.';
+    if (!$('gd-cgv').checked) return 'Acceptez les conditions de réservation.';
+    return '';
+  }
+  function checkReady() {
+    var m = missing(), b = $('gd-book');
+    b.setAttribute('aria-disabled', String(!!m));
+    $('gd-missing').textContent = m;
+    $('gd-missing').hidden = !m;
+    if (S.devis && !S.devis.bloque) {
+      b.textContent = S.stripe ? 'Réserver et payer (' + euro(S.devis.total) + ')' : 'Réserver ce trajet';
+    }
+  }
+
+  var sending = false;
+  $('gd-book').addEventListener('click', function () {
+    var m = missing();
+    $('gd-err').hidden = true;
+    if (m) { $('gd-missing').textContent = m; return; }
+    if (sending) return;
+    sending = true;
+    var btn = $('gd-book'), label = btn.textContent;
+    btn.innerHTML = '<span class="spin"></span> Réservation en cours…';
+    post('reserver', params({
+      client: { prenom: $('gd-prenom').value, nom: $('gd-nom').value, adresse: $('gd-adr').value, ville: $('gd-ville').value, tel: $('gd-tel').value, email: $('gd-email').value },
+      animal: { type: S.animal, nom: $('gd-anom').value, details: $('gd-adet').value, autres: lireAutres() },
+      voyage: $('gd-who').value,
+      remarques: $('gd-rem').value,
+      conditions: $('gd-cgv').checked,
+      site_web: $('gd-site').value,
+      page: window.location.href
+    })).then(function (j) {
+      if (j.paiement) { btn.innerHTML = '<span class="spin"></span> Ouverture du paiement sécurisé…'; window.location.href = j.paiement; return; }
+      var tel = C.telephone ? ' Pour toute question : <strong>' + esc(C.telephone) + '</strong>.' : '';
+      $('gd-app').innerHTML = '<div class="done" role="status"><p class="eyebrow">Réservation enregistrée</p><h3>Merci, c\'est noté !</h3>'
+        + '<p>' + esc(j.message) + tel + '</p><p>Référence : <span class="ref">' + esc(j.ref) + '</span></p></div>';
+      root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }).catch(function (e) {
+      sending = false; btn.textContent = label;
+      $('gd-err').textContent = e.message; $('gd-err').hidden = false;
+      if (/créneau/i.test(e.message)) { S.time1 = ''; S.time2 = ''; loadSlots(1); checkReady(); }
+    });
+  });
+
+  /* ---------- adresses ---------- */
+  function setupAC(inputId, listId, key) {
+    var inp = $(inputId), ul = $(listId), timer = null, items = [], idx = -1, lastQ = '';
+    function close() { ul.hidden = true; inp.setAttribute('aria-expanded', 'false'); idx = -1; }
+    function choose(it) {
+      var label = it.main + (it.sub ? ', ' + it.sub.split(' · ')[0] : '');
+      inp.value = label;
+      S[key] = { lat: it.lat, lon: it.lon, label: label, pays: it.pays || 'FR' };
+      close(); setStatus('Calcul de l\'itinéraire…');
+      autoZone(key);
+      refreshDevis();
+    }
+    function show(list) {
+      items = list; idx = -1; ul.innerHTML = '';
+      list.forEach(function (it, i) {
+        var li = document.createElement('li');
+        li.setAttribute('role', 'option'); li.id = listId + '-' + i; li.setAttribute('aria-selected', 'false');
+        li.textContent = it.main;
+        if (it.sub) { var sm = document.createElement('small'); sm.textContent = it.sub; li.appendChild(sm); }
+        li.addEventListener('mousedown', function (e) { e.preventDefault(); choose(it); });
+        ul.appendChild(li);
+      });
+      ul.hidden = !list.length; inp.setAttribute('aria-expanded', String(!!list.length));
+    }
+    function search(q) { return get('adresse?q=' + encodeURIComponent(q) + (S.zone === 'europe' ? '&zone=europe' : '')).then(function (j) { return j.resultats || []; }); }
+    function resolve() {
+      if (S[key]) return;
+      var q = inp.value.trim(); if (q.length < 2) return;
+      if (items.length && q === lastQ) { choose(items[0]); return; }
+      search(q).then(function (list) {
+        if (list.length) choose(list[0]); else setStatus('Adresse introuvable : « ' + q + ' ». Essayez avec le code postal (ex. 42110 Feurs).', true);
+      }).catch(function (e) { setStatus(e.message, true); });
+    }
+    inp.addEventListener('input', function () {
+      if (S[key]) { S[key] = null; S.devis = null; renderEmpty(); syncVisibility(); checkReady(); }
+      $('gd-zone-hint').hidden = true;
+      clearTimeout(timer); lastQ = ''; items = [];
+      var q = inp.value.trim(); if (q.length < 2) { close(); return; }
+      timer = setTimeout(function () {
+        search(q).then(function (list) {
+          if (inp.value.trim() !== q) return;
+          lastQ = q; show(list);
+          setStatus(list.length ? '' : 'Aucun résultat pour « ' + q + ' ». Ajoutez le code postal.', !list.length);
+        }).catch(function (e) { setStatus(e.message, true); });
+      }, 250);
+    });
+    inp.addEventListener('keydown', function (e) {
+      var lis = ul.querySelectorAll('li');
+      if (!ul.hidden && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+        e.preventDefault(); idx = (idx + (e.key === 'ArrowDown' ? 1 : -1) + lis.length) % lis.length;
+        lis.forEach(function (li, i) { li.setAttribute('aria-selected', String(i === idx)); });
+        inp.setAttribute('aria-activedescendant', listId + '-' + idx);
+      } else if (e.key === 'Enter') {
+        e.preventDefault(); if (!ul.hidden && items.length) choose(items[idx < 0 ? 0 : idx]); else resolve();
+      } else if (e.key === 'Escape') close();
+    });
+    inp.addEventListener('blur', function () { setTimeout(function () { close(); resolve(); }, 150); });
+  }
+  setupAC('gd-a1', 'gd-s1', 'depart');
+  setupAC('gd-a2', 'gd-s2', 'arrivee');
+
+  /* ---------- commandes ---------- */
+  /* Adresse hors de France : type « Europe » sélectionné tout de suite (et l'inverse). */
+  function autoZone(key) {
+    var etranger = [S.depart, S.arrivee].some(function (p) { return p && p.pays && p.pays !== 'FR'; });
+    if (etranger && S.zone !== 'europe') {
+      S.zoneUser = 'europe'; setZone('europe', true);
+      $('gd-zone-hint').textContent = 'Adresse hors de France : type de trajet « Europe » sélectionné.';
+      $('gd-zone-hint').hidden = false;
+    } else if (!etranger && S.zone === 'europe' && S.depart && S.arrivee) {
+      S.zoneUser = 'france'; setZone('france', true);
+      $('gd-zone-hint').textContent = 'Les deux adresses sont en France : type « Europe » retiré.';
+      $('gd-zone-hint').hidden = false;
+    }
+  }
+  function setZone(z, silent) {
+    S.zone = z; S.time2 = '';
+    pressGroup('[data-zone]', 'data-zone', z);
+    if (!silent) { $('gd-zone-hint').hidden = true; }
+    syncVisibility();
+  }
+  root.querySelectorAll('[data-zone]').forEach(function (b) {
+    b.addEventListener('click', function () { if (b.disabled) return; S.zoneUser = b.dataset.zone; setZone(b.dataset.zone); refreshDevis(); });
+  });
+  root.querySelectorAll('[data-formule]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (b.disabled) return;
+      S.formule = b.dataset.formule; S.longRdv = false; S.time2 = '';
+      pressGroup('[data-formule]', 'data-formule', S.formule);
+      syncVisibility(); refreshDevis();
+    });
+  });
+  $('gd-atype').addEventListener('change', function () { S.animal = this.value; });
+  /* Un bloc « nom + race » par animal supplémentaire du foyer. */
+  function lireAutres() {
+    var out = [];
+    for (var i = 2; i <= S.nb; i++) {
+      out.push({ type: $('gd-t' + i).value, nom: $('gd-n' + i).value, details: $('gd-d' + i).value });
+    }
+    return out;
+  }
+  function renderAutres() {
+    var keep = S.nb > 1 ? (function () { var o = []; root.querySelectorAll('.autre').forEach(function (el, k) { o[k] = { type: el.querySelector('select').value, nom: el.querySelector('[data-f=nom]').value, details: el.querySelector('[data-f=det]').value }; }); return o; })() : [];
+    var box = $('gd-autres'); box.innerHTML = '';
+    $('gd-anom-lbl').textContent = 'Son nom';
+    $('gd-a1box').classList.toggle('boxed', S.nb > 1); $('gd-a1-title').hidden = S.nb < 2;
+    $('gd-animal-legend').textContent = S.nb > 1 ? '3. Vos animaux' : '3. Votre animal';
+    for (var i = 2; i <= S.nb; i++) {
+      var v = keep[i - 2] || S.autres[i - 2] || { type: S.animal, nom: '', details: '' };
+      var d = document.createElement('div'); d.className = 'autre';
+      d.innerHTML = '<h4>Animal ' + i + '</h4><div class="row">'
+        + '<div class="field"><label for="gd-t' + i + '">Type</label><select id="gd-t' + i + '"><option value="chien">Chien</option><option value="chat">Chat</option><option value="nac">NAC (lapin, furet, hamster…)</option><option value="oiseau">Oiseau</option><option value="reptile">Reptile</option><option value="poisson">Poisson</option></select></div>'
+        + '<div class="field"><label for="gd-n' + i + '">Son nom</label><input type="text" id="gd-n' + i + '" data-f="nom" maxlength="60" placeholder="ex. Caramel"></div>'
+        + '<div class="field"><label for="gd-d' + i + '">Race, poids, caractère</label><input type="text" id="gd-d' + i + '" data-f="det" maxlength="400" placeholder="ex. Européen, 4 kg"></div>'
+        + '</div>';
+      box.appendChild(d);
+      $('gd-t' + i).value = v.type; $('gd-n' + i).value = v.nom; $('gd-d' + i).value = v.details;
+    }
+    S.autres = keep.concat(S.autres.slice(keep.length));
+  }
+  $('gd-nb-minus').addEventListener('click', function () { S.nb = Math.max(1, S.nb - 1); $('gd-nb').textContent = S.nb; renderAutres(); refreshSoon(); });
+  $('gd-nb-plus').addEventListener('click', function () { S.nb = Math.min(2, S.nb + 1); $('gd-nb').textContent = S.nb; renderAutres(); refreshSoon(); });
+  $('gd-rdv').addEventListener('change', function () {
+    checkReady();
+    if (this.value === 'long') {
+      this.value = ''; S.longRdv = true; S.formule = 'deux'; S.time2 = ''; S.zone = 'local'; pressGroup('[data-zone]', 'data-zone', 'local');
+      pressGroup('[data-formule]', 'data-formule', 'deux'); syncVisibility();
+    }
+    refreshDevis();
+  });
+  ['gd-accomp', 'gd-remise'].forEach(function (id) { $(id).addEventListener('change', refreshDevis); });
+  $('gd-who').addEventListener('change', function () { syncVisibility(); refreshDevis(); });
+  $('gd-date1').addEventListener('change', function () { S.date1 = this.value; S.time1 = ''; S.time2 = ''; syncVisibility(); loadSlots(1); if (S.zone === 'local' && S.formule === 'deux') loadSlots(2); refreshSoon(); checkReady(); });
+  $('gd-date2').addEventListener('change', function () { S.date2 = this.value; S.time2 = ''; syncVisibility(); loadSlots(2); refreshSoon(); checkReady(); });
+  ['gd-prenom', 'gd-nom', 'gd-adr', 'gd-ville', 'gd-tel', 'gd-email', 'gd-cgv'].forEach(function (id) { $(id).addEventListener('input', checkReady); $(id).addEventListener('change', checkReady); });
+
+  syncVisibility();
+  checkReady();
+})();
+
+/* Info-bulles : survol sur ordinateur, toucher sur téléphone. */
+(function () {
+  var root = document.getElementById('gadomi-resa'); if (!root) return;
+  var box = document.createElement('div'); box.className = 'gd-tipbox'; box.setAttribute('role', 'tooltip'); document.body.appendChild(box);
+  var cur = null;
+  function show(t) {
+    cur = t; root.querySelectorAll('.tip.on').forEach(function (x) { x.classList.remove('on'); }); t.classList.add('on');
+    box.textContent = t.getAttribute('data-tip'); box.className = 'gd-tipbox';
+    var r = t.getBoundingClientRect(), w = Math.min(280, window.innerWidth - 24); box.style.maxWidth = w + 'px';
+    var bw = box.offsetWidth, bh = box.offsetHeight, cx = r.left + r.width / 2;
+    var left = Math.max(12, Math.min(window.innerWidth - bw - 12, cx - bw / 2));
+    var below = r.top - bh - 12 < 8;
+    box.style.left = left + 'px'; box.style.top = (below ? r.bottom + 10 : r.top - bh - 10) + 'px';
+    box.style.setProperty('--ax', (cx - left) + 'px'); box.classList.add(below ? 'below' : 'above', 'show');
+  }
+  function hide() { if (cur) cur.classList.remove('on'); cur = null; box.classList.remove('show'); }
+  root.addEventListener('mouseover', function (e) { var t = e.target.closest && e.target.closest('.tip'); if (t && matchMedia('(hover:hover)').matches) show(t); });
+  root.addEventListener('mouseout', function (e) { var t = e.target.closest && e.target.closest('.tip'); if (t && matchMedia('(hover:hover)').matches && !t.contains(e.relatedTarget)) hide(); });
+  var viaPointer = false;
+  root.addEventListener('pointerdown', function () { viaPointer = true; }, true);
+  root.addEventListener('keydown', function () { viaPointer = false; }, true);
+  root.addEventListener('focusin', function (e) { if (!viaPointer && e.target.classList && e.target.classList.contains('tip')) show(e.target); });
+  root.addEventListener('focusout', function (e) { if (e.target.classList && e.target.classList.contains('tip')) hide(); });
+  // Un toucher ou un clic sur l'icône ouvre ou ferme la bulle, sans cocher ni choisir l'option autour.
+  root.addEventListener('click', function (e) {
+    var t = e.target.closest && e.target.closest('.tip');
+    if (t) { e.preventDefault(); e.stopPropagation(); if (cur === t && !matchMedia('(hover:hover)').matches) hide(); else show(t); return; }
+    hide();
+  }, true);
+  root.addEventListener('keydown', function (e) { var t = e.target.classList && e.target.classList.contains('tip') ? e.target : null; if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); e.stopPropagation(); cur === t ? hide() : show(t); } if (e.key === 'Escape') hide(); }, true);
+  window.addEventListener('scroll', hide, true); window.addEventListener('resize', hide);
+})();
+</script>
+</body>
+</html>
