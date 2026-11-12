@@ -923,7 +923,7 @@ class Component extends DCLogic {
       r.total = Math.floor(sum(r.lines));
       r.notes.push('Aller simple, porte à porte et sans groupage. Votre animal voyage seul à bord, pause toutes les 2 heures, nouvelles à l\'arrivée.');
       r.notes.push('Péages et carburant inclus. Kilomètres comptés jusqu\'au retour à Feurs.');
-      r.notes.push('Prix payé en totalité en ligne à la réservation.');
+      r.notes.push('Prix réglé à la prise en charge de votre animal, par carte, virement ou espèces.');
       if (p.eu) r.notes.push('Documents : puce, passeport européen, vaccin antirabique valide. Certificat sanitaire si vous ne voyagez pas dans les 5 jours avant ou après votre animal.');
       return r;
     }
@@ -951,7 +951,7 @@ class Component extends DCLogic {
     });
     remise();
     r.total = Math.floor(sum(r.lines));
-    r.notes.push('Prix estimé, payé en totalité en ligne à la réservation. Si le rendez-vous dure plus longtemps que prévu, l\'attente supplémentaire vous est facturée après la course, par un lien de paiement envoyé par SMS.');
+    r.notes.push('Prix estimé. Vous payez à la fin de la course, par carte, virement ou espèces.');
     r.notes.push('Itinéraire calculé sans péage.');
     if (f === 'ar') r.notes.push('Attente estimée selon le rendez-vous (' + r.attente + ' min). Si le rendez-vous dure plus longtemps, chaque quart d\'heure supplémentaire est compté 5 €.');
     if (f === 'deux' && rdv === 'long') r.notes.push('Opération ou durée inconnue : le chauffeur dépose votre animal, repart, et revient le chercher à l\'heure convenue. Deux courses, sans attente facturée.');
@@ -1004,11 +1004,11 @@ class Component extends DCLogic {
       var q = norm(new URLSearchParams(path.split('?')[1] || '').get('q') || '');
       return rep({ resultats: VILLES.filter(function (v) { return norm(v.n).indexOf(q) > -1 || v.cp.indexOf(q) === 0; }).slice(0, 5).map(function (v) { return { main: v.n, sub: v.cp + ' · ville de démonstration', lat: v.lat, lon: v.lon, pays: v.pays || 'FR' }; }) });
     }
-    if (path === 'devis') { var r = route(p); return rep({ devis: calcul(p, r.A, r.B, r.D), km_trajet: r.B, en_ligne: true, stripe: true }); }
+    if (path === 'devis') { var r = route(p); return rep({ devis: calcul(p, r.A, r.B, r.D), km_trajet: r.B, en_ligne: true, stripe: false }); }
     if (path === 'creneaux') return rep(creneaux(p));
     if (path === 'reserver') {
       var r2 = route(p), dv = calcul(p, r2.A, r2.B, r2.D), ref = 'GT-DEMO-' + Math.random().toString(36).slice(2, 6).toUpperCase();
-      return rep({ ok: true, ref: ref, statut: 'confirmee', message: 'Aperçu : sur le site, le client serait maintenant envoyé sur la page de paiement sécurisée pour régler ' + e(dv.total) + '. Rien n\'a été payé ni envoyé.' });
+      return rep({ ok: true, ref: ref, statut: 'confirmee', message: 'Votre réservation est enregistrée. Un récapitulatif vous a été envoyé par e-mail. (Aperçu : rien n\'a été envoyé.)' });
     }
     return rep({ erreur: 'Inconnu' }, 404);
   };
@@ -1144,8 +1144,8 @@ class Component extends DCLogic {
     }
     $('gd-price').innerHTML = d.total.toLocaleString('fr-FR') + ' <small>€</small>';
     $('gd-sub').textContent = d.type === 'longue'
-      ? 'Prix fixe, payé en ligne à la réservation'
-      : 'Prix estimé, payé en ligne à la réservation';
+      ? (S.stripe ? 'Prix fixe, payé en ligne à la réservation' : 'Prix fixe, réglé à la prise en charge')
+      : (S.stripe ? 'Prix estimé, payé en ligne à la réservation' : 'Prix estimé, payé à la fin de la course');
     $('gd-route-wrap').hidden = false;
     $('gd-kmtot').textContent = d.km + ' km';
     $('gd-route').innerHTML = d.route.map(function (s, i) {
