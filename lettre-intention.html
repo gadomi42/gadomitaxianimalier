@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Lettre d'intention · Gadomi Taxi Animalier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap">
+<style>
+:root{
+  --ink:#16302E; --ink-2:#2C5652; --yel:#F5B82E; --yel-h:#FFC74A; --bg:#F7F6F2;
+  --mut:#5B6B69; --txt:#3A4644; --line:#E4E2D9; --soft:#C9D3D1; --tag:#FEF3D7; --err:#B3261E;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);font-family:"Outfit",system-ui,sans-serif;color:var(--ink);font-size:17px;line-height:1.5}
+a{color:inherit}
+.top{background:var(--ink);color:#fff}
+.top-in{max-width:1080px;margin:0 auto;padding:28px 24px 110px}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand img{width:112px;height:auto;display:block}
+.brand a.back{color:var(--soft);text-decoration:none;font-size:15px}
+.brand a.back:hover{color:var(--yel)}
+.hero{text-align:center;margin-top:40px}
+.pill{display:inline-block;background:var(--yel);color:#1B1606;font-weight:600;font-size:14px;padding:6px 14px;border-radius:999px}
+.hero h1{margin:16px 0 0;font-weight:500;font-size:clamp(30px,4.6vw,46px);line-height:1.15}
+.hero p{margin:14px auto 0;max-width:640px;color:var(--soft);font-size:clamp(16px,1.8vw,19px)}
+.main{max-width:1080px;margin:-72px auto 0;padding:0 24px 80px}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.why > div{background:#fff;border-radius:20px;box-shadow:0 8px 28px rgba(22,48,46,.10);padding:24px}
+.why .ic{width:44px;height:44px;border-radius:50%;background:var(--yel);display:grid;place-items:center}
+.why .ic svg{width:22px;height:22px}
+.why h2{margin:14px 0 0;font-size:19px;font-weight:600}
+.why p{margin:6px 0 0;color:var(--txt);font-size:15.5px}
+.card{margin-top:28px;background:#fff;border-radius:20px;box-shadow:0 4px 16px rgba(22,48,46,.08);padding:36px 40px}
+.sec + .sec{margin-top:36px;padding-top:32px;border-top:1px solid var(--line)}
+.sec h3{margin:0;display:flex;align-items:center;gap:12px;font-size:22px;font-weight:600}
+.sec h3 .n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:15px}
+.lead{margin:12px 0 0;color:var(--txt)}
+.grid{margin-top:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 22px}
+.f label,.q{display:block;font-size:14.5px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.req{color:#B07D10}
+input[type=text],input[type=email],input[type=tel],input[type=number],select,textarea{
+  width:100%;font:inherit;font-size:16px;color:var(--ink);background:#FBFBF9;border:1px solid #D7DCDA;border-radius:12px;padding:12px 14px;outline:none;transition:border-color .15s,box-shadow .15s}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0 0 3px rgba(245,184,46,.35)}
+.f.bad input,.f.bad select{border-color:var(--err)}
+.hint{font-size:13px;color:var(--mut);margin-top:5px}
+.checks{margin-top:10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px}
+.checks.one{grid-template-columns:1fr}
+.ck{display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:16px;color:var(--txt);padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#FBFBF9}
+.ck:hover{border-color:var(--soft)}
+.ck input{flex:none;width:20px;height:20px;margin:2px 0 0;accent-color:var(--ink)}
+.ck:has(input:checked){border-color:var(--yel);background:var(--tag)}
+.est{margin-top:18px;display:flex;align-items:center;flex-wrap:wrap;gap:10px;color:var(--txt)}
+.est input{width:96px;text-align:center}
+.block{margin-top:22px}
+.sig-wrap{margin-top:20px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:22px;align-items:start}
+.pad{position:relative;border:1.5px dashed #B9C3C1;border-radius:14px;background:#FBFBF9;touch-action:none}
+.pad.bad{border-color:var(--err)}
+.pad canvas{display:block;width:100%;height:190px;border-radius:14px;cursor:crosshair}
+.pad .ph{position:absolute;inset:0;display:grid;place-items:center;color:#9AA6A4;font-size:15px;pointer-events:none}
+.pad .clr{position:absolute;right:10px;top:10px;font:inherit;font-size:13px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--mut);cursor:pointer}
+.pad .clr:hover{color:var(--ink);border-color:var(--soft)}
+.note{margin-top:26px;background:var(--tag);color:#6B4E00;border-radius:14px;padding:14px 18px;font-size:15px}
+.note b{color:#4A3600}
+.send{margin-top:26px;display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+.btn{font:inherit;font-weight:600;font-size:17px;border:0;border-radius:999px;padding:15px 30px;background:var(--yel);color:#1B1606;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:background-color .15s}
+.btn:hover{background:var(--yel-h)}
+.btn[disabled]{opacity:.6;cursor:wait}
+.btn svg{width:18px;height:18px}
+.msg{font-size:15px}
+.msg.err{color:var(--err)}
+.legal{margin-top:16px;font-size:13px;color:var(--mut)}
+.done{display:none;text-align:center;padding:40px 10px}
+.done .ic{width:72px;height:72px;margin:0 auto;border-radius:50%;background:var(--yel);display:grid;place-items:center}
+.done .ic svg{width:36px;height:36px}
+.done h2{margin:20px 0 0;font-size:30px;font-weight:500}
+.done p{margin:12px auto 0;max-width:560px;color:var(--txt)}
+.hp{position:absolute;left:-9999px}
+.ft{background:var(--ink);color:var(--soft);font-size:15px}
+.ft-in{max-width:1080px;margin:0 auto;padding:34px 24px;display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between}
+.ft strong{color:#fff;font-weight:600}
+.ft a{color:var(--yel);text-decoration:none}
+@media (max-width:820px){
+  .why{grid-template-columns:1fr}
+  .card{padding:26px 20px}
+  .grid,.checks,.sig-wrap{grid-template-columns:1fr}
+  .top-in{padding-bottom:96px}
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="top-in">
+    <div class="brand">
+      <a href="index.html" aria-label="Gadomi Taxi Animalier, accueil"><img src="assets/d052ca0c091a3d19cd5c4455eefdac21.png" alt="Gadomi Taxi Animalier"></a>
+      <a class="back" href="index.html">Découvrir le service →</a>
+    </div>
+    <div class="hero">
+      <span class="pill">Lancement début 2027</span>
+      <h1>Lettre d'intention</h1>
+      <p>Votre nouveau taxi animalier dans la Loire, au départ de Feurs. Votre avis de professionnel m'aide à financer son lancement : 2 minutes, sans engagement.</p>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+  <div class="why">
+    <div>
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg></div>
+      <h2>Pourquoi cette lettre ?</h2>
+      <p>Pour financer le véhicule, les banques me demandent de prouver que ce service répond à un vrai besoin dans la Loire. Le témoignage des professionnels est la preuve la plus solide.</p>
+    </div>
+    <div>
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+      <h2>Sans aucun engagement</h2>
+      <p>Pas de contrat, pas de commande, pas de frais. La lettre sert uniquement à mon dossier de financement.</p>
+    </div>
+    <div>
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4l10-10-4-4L4 16z"/><path d="M13 7l4 4"/></svg></div>
+      <h2>En 2 minutes</h2>
+      <p>Remplissez le formulaire, signez au doigt ou à la souris, puis cliquez sur « Envoyer ». C'est tout.</p>
+    </div>
+  </div>
+
+  <form class="card" id="form" novalidate>
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <section class="sec">
+      <h3><span class="n">1</span>Votre structure</h3>
+      <div class="grid">
+        <div class="f"><label for="structure">Nom de la structure <span class="req">*</span></label><input type="text" id="structure" name="Structure" required autocomplete="organization"></div>
+        <div class="f"><label for="activite">Activité <span class="req">*</span></label>
+          <select id="activite" name="Activité" required>
+            <option value="">Choisissez dans la liste</option>
+            <option>Cabinet ou clinique vétérinaire</option>
+            <option>Service d'urgences vétérinaires</option>
+            <option>Refuge ou association</option>
+            <option>Pension</option>
+            <option>Toilettage</option>
+            <option>Élevage</option>
+            <option>Autre</option>
+          </select></div>
+        <div class="f"><label for="adresse">Adresse <span class="req">*</span></label><input type="text" id="adresse" name="Adresse" required autocomplete="street-address"></div>
+        <div class="f"><label for="commune">Code postal et commune <span class="req">*</span></label><input type="text" id="commune" name="Code postal et commune" required></div>
+        <div class="f"><label for="siret">SIRET ou n° d'ordre (vétérinaire)</label><input type="text" id="siret" name="SIRET ou n° d'ordre"></div>
+        <div class="f"><label for="signataire">Nom et fonction du signataire <span class="req">*</span></label><input type="text" id="signataire" name="Signataire (nom et fonction)" required placeholder="Ex. : Dr Martin, vétérinaire"></div>
+        <div class="f"><label for="tel">Téléphone</label><input type="tel" id="tel" name="Téléphone" autocomplete="tel"></div>
+        <div class="f"><label for="email">E-mail <span class="req">*</span></label><input type="email" id="email" name="E-mail" required autocomplete="email"></div>
+      </div>
+    </section>
+
+    <section class="sec">
+      <h3><span class="n">2</span>Votre déclaration</h3>
+      <p class="lead">La structure désignée ci-dessus déclare avoir pris connaissance du projet <b>Gadomi Taxi Animalier</b> porté par M. Pierre-Joan Bandiera à Feurs (42) : transport de chiens, chats et NAC vers les vétérinaires, les services d'urgences, les toiletteurs, les pensions, et en longue distance.</p>
+
+      <div class="block">
+        <span class="q">Dans notre activité, nous constatons des besoins de transport pour :</span>
+        <div class="checks" data-group="Besoins constatés">
+          <label class="ck"><input type="checkbox" value="Clients sans véhicule ou indisponibles">des clients sans véhicule ou indisponibles</label>
+          <label class="ck"><input type="checkbox" value="Personnes âgées ou à mobilité réduite">des personnes âgées ou à mobilité réduite</label>
+          <label class="ck"><input type="checkbox" value="Urgences la nuit ou le week-end">des urgences, la nuit ou le week-end</label>
+          <label class="ck"><input type="checkbox" value="Adoptions, transferts ou placements">des adoptions, transferts ou placements</label>
+          <label class="ck"><input type="checkbox" value="Rendez-vous chez un spécialiste éloigné">des rendez-vous chez un spécialiste éloigné</label>
+          <label class="ck"><input type="checkbox" value="Trajets longue distance (France, Europe)">des trajets longue distance (France, Europe)</label>
+        </div>
+      </div>
+
+      <div class="est">
+        <span>Nous estimons que cela concerne environ</span>
+        <input type="number" min="0" step="1" inputmode="numeric" id="nombre" name="Clients ou animaux concernés par mois" aria-label="Nombre de clients ou d'animaux par mois">
+        <span>clients ou animaux par mois.</span>
+      </div>
+
+      <div class="block">
+        <span class="q">À l'ouverture du service, nous avons l'intention de :</span>
+        <div class="checks one" data-group="Intentions">
+          <label class="ck"><input type="checkbox" value="Recommander Gadomi Taxi Animalier à nos clients">recommander Gadomi Taxi Animalier à nos clients</label>
+          <label class="ck"><input type="checkbox" value="Mettre ses dépliants ou cartes à disposition">mettre ses dépliants ou cartes à disposition dans nos locaux</label>
+          <label class="ck"><input type="checkbox" value="Faire appel au service pour nos propres transports">faire appel à ce service pour nos propres transports d'animaux</label>
+        </div>
+      </div>
+
+      <div class="f block"><label for="commentaire">Commentaire (facultatif)</label><textarea id="commentaire" name="Commentaire"></textarea></div>
+    </section>
+
+    <section class="sec">
+      <h3><span class="n">3</span>Signature</h3>
+      <div class="sig-wrap">
+        <div>
+          <span class="q">Signez dans le cadre <span class="req">*</span></span>
+          <div class="pad" id="pad">
+            <canvas id="sig" aria-label="Zone de signature"></canvas>
+            <div class="ph" id="ph">Signez ici avec le doigt ou la souris</div>
+            <button type="button" class="clr" id="clr">Effacer</button>
+          </div>
+        </div>
+        <div>
+          <div class="f"><label for="lieu">Fait à <span class="req">*</span></label><input type="text" id="lieu" name="Fait à" required></div>
+          <div class="f" style="margin-top:18px"><label for="date">Le</label><input type="text" id="date" name="Date" readonly></div>
+        </div>
+      </div>
+
+      <label class="ck block" id="certif-l"><input type="checkbox" id="certif" required>Je certifie l'exactitude de ces informations et j'accepte qu'elles soient jointes au dossier de financement de Gadomi Taxi Animalier. <span class="req">*</span></label>
+
+      <div class="note">Cette lettre exprime une intention. <b>Elle ne constitue ni un contrat ni un engagement financier.</b></div>
+    </section>
+
+    <div class="send">
+      <button type="submit" class="btn" id="btn">Envoyer ma lettre d'intention <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <span class="msg" id="msg" role="status" aria-live="polite"></span>
+    </div>
+    <p class="legal">Les informations transmises servent uniquement à constituer le dossier de financement de Gadomi Taxi Animalier. Elles ne sont ni revendues ni utilisées à d'autres fins. <a href="confidentialite.html">Politique de confidentialité</a>.</p>
+  </form>
+
+  <div class="card done" id="done" role="status">
+    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <h2>Merci pour votre soutien !</h2>
+    <p>Votre lettre d'intention a bien été envoyée. Elle rejoindra mon dossier de financement. Je vous tiendrai informé du lancement de Gadomi Taxi Animalier.</p>
+    <p><b>Pierre-Joan Bandiera</b> · 06 70 98 40 55</p>
+  </div>
+</main>
+
+<footer class="ft">
+  <div class="ft-in">
+    <div><strong>Gadomi Taxi Animalier</strong> · Bandiera Pierre-Joan · Feurs (42110)</div>
+    <div><a href="tel:+33670984055">06 70 98 40 55</a> · <a href="mailto:gadomi42@gmail.com">gadomi42@gmail.com</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Clé publique Web3Forms (à créer sur web3forms.com avec gadomi42@gmail.com, puis à coller ici).
+  var ACCESS_KEY = "A_REMPLACER_PAR_LA_CLE_WEB3FORMS";
+  var ENDPOINT = "https://api.web3forms.com/submit";
+
+  var form = document.getElementById("form");
+  var btn = document.getElementById("btn");
+  var msg = document.getElementById("msg");
+  var dateEl = document.getElementById("date");
+  dateEl.value = new Date().toLocaleDateString("fr-FR", { day: "2-digit", month: "long", year: "numeric" });
+
+  // ---- Signature (tracés mémorisés en SVG) ----
+  var cv = document.getElementById("sig"), pad = document.getElementById("pad"), ph = document.getElementById("ph");
+  var ctx = cv.getContext("2d"), strokes = [], cur = null, VW = 600, VH = 190;
+  function fit() {
+    var r = cv.getBoundingClientRect(), d = window.devicePixelRatio || 1;
+    cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d);
+    redraw();
+  }
+  function toV(e) {
+    var r = cv.getBoundingClientRect();
+    return [Math.round((e.clientX - r.left) / r.width * VW), Math.round((e.clientY - r.top) / r.height * VH)];
+  }
+  function redraw() {
+    ctx.setTransform(cv.width / VW, 0, 0, cv.height / VH, 0, 0);
+    ctx.clearRect(0, 0, VW, VH);
+    ctx.lineWidth = 2.6; ctx.lineCap = "round"; ctx.lineJoin = "round"; ctx.strokeStyle = "#16302E";
+    strokes.forEach(function (s) {
+      ctx.beginPath(); ctx.moveTo(s[0][0], s[0][1]);
+      for (var i = 1; i < s.length; i++) ctx.lineTo(s[i][0], s[i][1]);
+      if (s.length === 1) ctx.lineTo(s[0][0] + 0.1, s[0][1]);
+      ctx.stroke();
+    });
+  }
+  cv.addEventListener("pointerdown", function (e) {
+    e.preventDefault(); cv.setPointerCapture(e.pointerId);
+    cur = [toV(e)]; strokes.push(cur); ph.style.display = "none"; pad.classList.remove("bad"); redraw();
+  });
+  cv.addEventListener("pointermove", function (e) {
+    if (!cur) return; var p = toV(e), l = cur[cur.length - 1];
+    if (Math.abs(p[0] - l[0]) + Math.abs(p[1] - l[1]) > 1) { cur.push(p); redraw(); }
+  });
+  ["pointerup", "pointercancel", "pointerleave"].forEach(function (t) { cv.addEventListener(t, function () { cur = null; }); });
+  document.getElementById("clr").addEventListener("click", function () { strokes = []; ph.style.display = ""; redraw(); });
+  window.addEventListener("resize", fit); fit();
+
+  function sigSvg() {
+    var d = strokes.map(function (s) {
+      return "M" + s.map(function (p) { return p[0] + " " + p[1]; }).join(" L");
+    }).join(" ");
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + VW + " " + VH + '"><path d="' + d +
+      '" fill="none" stroke="#16302E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  }
+
+  // effacer les alertes dès que l'utilisateur corrige
+  form.addEventListener("input", function (e) {
+    var f = e.target.closest(".f"); if (f) f.classList.remove("bad");
+    if (e.target.id === "certif") document.getElementById("certif-l").style.borderColor = "";
+    if (msg.className.indexOf("err") > -1) { msg.textContent = ""; msg.className = "msg"; }
+  });
+
+  // ---- Envoi ----
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    msg.textContent = ""; msg.className = "msg";
+    var ok = true;
+    form.querySelectorAll("[required]").forEach(function (el) {
+      var f = el.closest(".f"), bad = el.type === "checkbox" ? !el.checked : !el.value.trim();
+      if (el.type === "email" && el.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)) bad = true;
+      if (f) f.classList.toggle("bad", bad);
+      if (bad) ok = false;
+    });
+    var cert = document.getElementById("certif");
+    document.getElementById("certif-l").style.borderColor = cert.checked ? "" : "var(--err)";
+    if (!strokes.length) { pad.classList.add("bad"); ok = false; }
+    if (!ok) { msg.textContent = "Merci de compléter les champs marqués d'un astérisque et de signer."; msg.className = "msg err"; return; }
+
+    if (!ACCESS_KEY || ACCESS_KEY.indexOf("A_REMPLACER") === 0) {
+      msg.textContent = "L'envoi n'est pas encore activé. Merci de réessayer plus tard ou d'écrire à gadomi42@gmail.com.";
+      msg.className = "msg err"; return;
+    }
+
+    var data = {
+      access_key: ACCESS_KEY,
+      subject: "Lettre d'intention : " + document.getElementById("structure").value.trim(),
+      from_name: "Gadomi Taxi Animalier · lettres d'intention",
+      replyto: document.getElementById("email").value.trim(),
+    };
+    if (form.botcheck.checked) data.botcheck = true;
+    form.querySelectorAll("input[name], select[name], textarea[name]").forEach(function (el) {
+      if (el.name === "botcheck") return;
+      data[el.name] = el.value.trim() || "—";
+    });
+    form.querySelectorAll(".checks").forEach(function (g) {
+      var v = Array.prototype.map.call(g.querySelectorAll("input:checked"), function (i) { return i.value; });
+      data[g.getAttribute("data-group")] = v.length ? v.join(" ; ") : "—";
+    });
+    data["Certification"] = "Le signataire certifie l'exactitude des informations et accepte leur ajout au dossier de financement. Lettre sans engagement contractuel ni financier.";
+    data["Signature (tracé SVG)"] = sigSvg();
+
+    btn.disabled = true; msg.textContent = "Envoi en cours…";
+    fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.success !== false, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok) throw new Error((res.j && res.j.message) || "Erreur");
+        form.style.display = "none";
+        var d = document.getElementById("done"); d.style.display = "block";
+        d.scrollIntoView({ behavior: "smooth", block: "center" });
+      })
+      .catch(function () {
+        btn.disabled = false;
+        msg.textContent = "L'envoi n'a pas abouti. Vérifiez votre connexion et réessayez, ou écrivez à gadomi42@gmail.com.";
+        msg.className = "msg err";
+      });
+  });
+})();
+</script>
+</body>
+</html>
