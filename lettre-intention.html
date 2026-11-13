@@ -103,6 +103,16 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
 .cta-big svg{width:26px;height:26px}
 @media (max-width:820px){.cta-big{position:static;margin-top:22px;font-size:21px;padding:18px 26px;width:100%;justify-content:center}}
 @media (max-width:820px){.br-d{display:none}}
+.svc{margin-top:28px;background:#fff;border-radius:20px;box-shadow:0 4px 16px rgba(22,48,46,.08);padding:30px 32px}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--tag);color:var(--ink);font-weight:600;font-size:14.5px;padding:7px 14px;border-radius:999px}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--yel)}
+.svc h2{margin:22px 0 0;font-size:24px;font-weight:600}
+.svc-grid{margin-top:16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.svc-grid img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:14px;background:var(--line)}
+.svc-grid h3{margin:12px 0 0;font-size:16.5px;font-weight:600}
+.svc-grid p{margin:4px 0 0;font-size:14.5px;color:var(--mut);line-height:1.45}
+@media (max-width:820px){.svc{padding:24px 20px}.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}.svc h2{font-size:21px}}
 </style>
 </head>
 <body>
@@ -140,6 +150,21 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
       <p>Le formulaire se remplit en 2&nbsp;minutes, depuis un ordinateur ou un téléphone. Il vous suffit de signer dans le cadre prévu, au doigt ou à la souris, puis de cliquer sur «&nbsp;Envoyer&nbsp;». Aucun document à imprimer ni à scanner.</p>
     </div>
   </div>
+
+  <section class="svc" aria-label="Le service">
+    <div class="badges">
+      <span class="badge">ACACED chiens, chats, NAC</span>
+      <span class="badge">Certificat TAV</span>
+      <span class="badge">Autorisation de transport type 1 et 2</span>
+    </div>
+    <h2>Un trajet pour chaque besoin</h2>
+    <div class="svc-grid">
+      <div><img src="assets/svc-veterinaire.jpg" alt="Consultation chez le vétérinaire" loading="lazy" width="640" height="480"><h3>Vétérinaire &amp; soins</h3><p>Aller-retour avec attente, ou prise en charge complète sans le maître.</p></div>
+      <div><img src="assets/svc-urgences.jpg" alt="Chien en caisse de transport" loading="lazy" width="640" height="480"><h3>Urgences</h3><p>Départ rapide vers les urgences de Saint-Étienne ou VetAgro Sup.</p></div>
+      <div><img src="assets/svc-pension.jpg" alt="Dépose en pension" loading="lazy" width="640" height="480"><h3>Pension &amp; toilettage</h3><p>Dépose et retour à domicile, nouvelles envoyées à l'arrivée.</p></div>
+      <div><img src="assets/svc-aeroport.jpg" alt="Véhicule Gadomi à l'aéroport" loading="lazy" width="640" height="480"><h3>Aéroports &amp; longue distance</h3><p>Porte à porte en France et en Europe, sans groupage.</p></div>
+    </div>
+  </section>
 
   <form class="card" id="form" novalidate>
     <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
