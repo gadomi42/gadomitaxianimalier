@@ -121,6 +121,10 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
 .perk p{margin:4px 0 0;color:var(--soft);font-size:15.5px}
 .perk p b{color:#fff;font-weight:600}
 @media (max-width:820px){.perk{padding:20px;gap:14px}.perk .pct{width:62px;height:62px;font-size:17px}.perk h2{font-size:18px}}
+.dl{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.dl .dl-t{margin:0 0 14px;font-weight:500;color:var(--ink)}
+.dl .btn{justify-content:center}
+@media (max-width:820px){.dl .btn{width:100%;font-size:16px;padding:15px 18px}.dl .lg{display:none}}
 </style>
 </head>
 <body>
@@ -277,6 +281,11 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
     <h2>Merci pour votre soutien !</h2>
     <p>Votre lettre d'intention a bien été envoyée. Elle rejoindra mon dossier de financement. Je vous tiendrai informé du lancement de Gadomi Taxi Animalier.</p>
     <p><b>Pierre-Joan Bandiera</b><span class="dot"> · </span><span class="tel">06&nbsp;70&nbsp;98&nbsp;40&nbsp;55</span></p>
+    <div class="dl">
+      <p class="dl-t">Conservez une copie de votre lettre signée :</p>
+      <button type="button" class="btn" id="dl">Télécharger ma lettre<span class="lg">&nbsp;d'intention</span> (PDF) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></button>
+      <p class="msg" id="dlmsg" role="status" aria-live="polite"></p>
+    </div>
   </div>
 </main>
 
@@ -342,6 +351,147 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
       '" fill="none" stroke="#16302E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   }
 
+  var letter = null;
+
+  function sigPng() {
+    var c2 = document.createElement("canvas"); c2.width = VW * 2; c2.height = VH * 2;
+    var x = c2.getContext("2d"); x.scale(2, 2);
+    x.lineWidth = 2.6; x.lineCap = "round"; x.lineJoin = "round"; x.strokeStyle = "#16302E";
+    strokes.forEach(function (s) {
+      x.beginPath(); x.moveTo(s[0][0], s[0][1]);
+      for (var i = 1; i < s.length; i++) x.lineTo(s[i][0], s[i][1]);
+      if (s.length === 1) x.lineTo(s[0][0] + 0.1, s[0][1]);
+      x.stroke();
+    });
+    return c2.toDataURL("image/png");
+  }
+
+  function loadScript(src) {
+    return new Promise(function (ok, ko) {
+      if (window.jspdf) return ok();
+      var t = document.createElement("script"); t.src = src; t.onload = ok; t.onerror = ko; document.head.appendChild(t);
+    });
+  }
+  function imgData(src) {
+    return fetch(src).then(function (r) { return r.blob(); }).then(function (b) {
+      return new Promise(function (ok) { var f = new FileReader(); f.onload = function () { ok(f.result); }; f.readAsDataURL(b); });
+    });
+  }
+
+  function makePdf(L, logo) {
+    var doc = new window.jspdf.jsPDF({ unit: "mm", format: "a4" });
+    var W = 210, H = 297, M = 18, y;
+    var INK = [22, 48, 46], YEL = [245, 184, 46], MUT = [91, 107, 105], SOFT = [201, 211, 209], TAG = [254, 243, 215], LINE = [228, 226, 217];
+    function t(v) { return String(v || "").replace(/−/g, "-").replace(/ /g, " "); }
+    function col(c) { doc.setTextColor(c[0], c[1], c[2]); }
+    function ensure(h) { if (y + h > H - 24) { doc.addPage(); y = 20; } }
+    function heading(txt) {
+      ensure(14); doc.setFillColor(YEL[0], YEL[1], YEL[2]); doc.rect(M, y - 4, 1.4, 5.5, "F");
+      doc.setFont("helvetica", "bold"); doc.setFontSize(12); col(INK); doc.text(t(txt), M + 4, y); y += 7;
+    }
+    function para(txt, size, color, bold) {
+      doc.setFont("helvetica", bold ? "bold" : "normal"); doc.setFontSize(size || 10); col(color || INK);
+      var lines = doc.splitTextToSize(t(txt), W - 2 * M); ensure(lines.length * (size || 10) * 0.45);
+      doc.text(lines, M, y); y += lines.length * (size || 10) * 0.45 + 1.5;
+    }
+    function bullets(list) {
+      if (!list.length) { para("Non précisé", 10, MUT); return; }
+      list.forEach(function (it) {
+        doc.setFont("helvetica", "normal"); doc.setFontSize(10);
+        var lines = doc.splitTextToSize(t(it), W - 2 * M - 6); ensure(lines.length * 4.6);
+        doc.setFillColor(YEL[0], YEL[1], YEL[2]); doc.circle(M + 1.6, y - 1.2, 0.9, "F");
+        col(INK); doc.text(lines, M + 5, y); y += lines.length * 4.6 + 0.6;
+      });
+      y += 1;
+    }
+
+    // En-tête
+    doc.setFillColor(INK[0], INK[1], INK[2]); doc.rect(0, 0, W, 30, "F");
+    if (logo) doc.addImage(logo, "PNG", M, 4.5, 26, 26 * 295 / 372);
+    doc.setFont("helvetica", "bold"); doc.setFontSize(17); doc.setTextColor(255, 255, 255);
+    doc.text("Lettre d'intention", W - M, 15, { align: "right" });
+    doc.setFont("helvetica", "normal"); doc.setFontSize(9); col(SOFT);
+    doc.text("Gadomi Taxi Animalier · sans engagement", W - M, 21.5, { align: "right" });
+    doc.setFillColor(YEL[0], YEL[1], YEL[2]); doc.rect(0, 30, W, 1, "F");
+
+    y = 41;
+    doc.setFont("helvetica", "normal"); doc.setFontSize(9); col(MUT);
+    doc.text("À l'attention de M. Pierre-Joan Bandiera · Gadomi Taxi Animalier · Feurs (42110)", M, y); y += 10;
+
+    // Structure
+    heading("Structure signataire");
+    var rows = [["Nom de la structure", L.structure], ["Activité", L.activite], ["Adresse", L.adresse], ["Code postal et commune", L.commune],
+      ["SIRET ou n° d'ordre", L.siret || "—"], ["Signataire", L.signataire], ["Téléphone", L.tel || "—"], ["E-mail", L.email]];
+    var cw = (W - 2 * M - 8) / 2;
+    for (var i = 0; i < rows.length; i += 2) {
+      ensure(12);
+      [rows[i], rows[i + 1]].forEach(function (r, k) {
+        if (!r) return; var x = M + k * (cw + 8);
+        doc.setFont("helvetica", "bold"); doc.setFontSize(7.5); col(MUT); doc.text(t(r[0]).toUpperCase(), x, y);
+        doc.setFont("helvetica", "normal"); doc.setFontSize(10.5); col(INK);
+        doc.text(doc.splitTextToSize(t(r[1]), cw)[0], x, y + 5);
+      });
+      y += 12;
+    }
+    y += 3;
+
+    // Déclaration
+    heading("Déclaration");
+    para("La structure désignée ci-dessus, représentée par " + L.signataire + ", déclare avoir pris connaissance du projet Gadomi Taxi Animalier porté par M. Pierre-Joan Bandiera à Feurs (42) : transport de chiens, chats et NAC vers les vétérinaires, les services d'urgences, les toiletteurs, les pensions, et en longue distance.", 10);
+    y += 2;
+    para("Dans notre activité, nous constatons des besoins de transport pour :", 10, INK, true);
+    bullets(L.besoins);
+    para("Nombre de clients ou d'animaux concernés par mois : " + (L.nombre || "non précisé"), 10, INK, true);
+    y += 1.5;
+    para("À l'ouverture du service, nous avons l'intention de :", 10, INK, true);
+    bullets(L.intentions);
+    if (L.commentaire) { para("Commentaire :", 10, INK, true); para(L.commentaire, 10); }
+
+    // Mention
+    y += 2; ensure(12);
+    doc.setFillColor(TAG[0], TAG[1], TAG[2]); doc.roundedRect(M, y - 4.5, W - 2 * M, 9, 2, 2, "F");
+    doc.setFont("helvetica", "bold"); doc.setFontSize(9); col(INK);
+    doc.text("Cette lettre exprime une intention. Elle ne constitue ni un contrat ni un engagement financier.", M + 4, y + 1);
+    y += 13;
+
+    // Signature
+    ensure(48);
+    heading("Signature");
+    doc.setFont("helvetica", "normal"); doc.setFontSize(10); col(INK);
+    doc.text(t("Fait à " + L.lieu + ", le " + L.date), M, y + 2);
+    doc.setFontSize(9); col(MUT);
+    doc.text(doc.splitTextToSize(t(L.signataire), 80), M, y + 9);
+    var sw = 70, sh = sw * 190 / 600, sx = W - M - sw;
+    doc.setDrawColor(LINE[0], LINE[1], LINE[2]); doc.setLineWidth(0.3);
+    doc.roundedRect(sx - 2, y - 3, sw + 4, sh + 6, 2, 2, "S");
+    if (L.sig) doc.addImage(L.sig, "PNG", sx, y, sw, sh);
+    y += sh + 8;
+    doc.setFontSize(7.5); col(MUT);
+    doc.text("Signature électronique apposée en ligne le " + t(L.date) + ".", sx - 2, y);
+
+    // Pied de page
+    var n = doc.getNumberOfPages();
+    for (var p = 1; p <= n; p++) {
+      doc.setPage(p);
+      doc.setDrawColor(LINE[0], LINE[1], LINE[2]); doc.setLineWidth(0.3); doc.line(M, H - 15, W - M, H - 15);
+      doc.setFont("helvetica", "normal"); doc.setFontSize(7.5); col(MUT);
+      doc.text("Gadomi Taxi Animalier · Gadomi42 garde d'animaux à domicile", M, H - 10);
+      doc.text("06 70 98 40 55 · gadomi42@gmail.com", W - M, H - 10, { align: "right" });
+    }
+    var fname = "Lettre-intention-Gadomi-" + (L.structure || "partenaire").normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "") + ".pdf";
+    doc.save(fname);
+  }
+
+  document.getElementById("dl").addEventListener("click", function () {
+    var dm = document.getElementById("dlmsg"), b = this;
+    if (!letter) return;
+    b.disabled = true; dm.className = "msg"; dm.textContent = "Préparation du PDF…";
+    loadScript("https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js")
+      .then(function () { return imgData("assets/d052ca0c091a3d19cd5c4455eefdac21.png").catch(function () { return null; }); })
+      .then(function (logo) { makePdf(letter, logo); dm.textContent = ""; b.disabled = false; })
+      .catch(function () { b.disabled = false; dm.className = "msg err"; dm.textContent = "Le téléchargement n'a pas abouti. Réessayez dans un instant."; });
+  });
+
   // effacer les alertes dès que l'utilisateur corrige
   form.addEventListener("input", function (e) {
     var f = e.target.closest(".f"); if (f) f.classList.remove("bad");
@@ -387,6 +537,18 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
     });
     data["Certification"] = "Le signataire certifie l'exactitude des informations et accepte leur ajout au dossier de financement. Lettre sans engagement contractuel ni financier.";
     data["Signature (tracé SVG)"] = sigSvg();
+
+    function val(id) { return document.getElementById(id).value.trim(); }
+    function labels(group) {
+      return Array.prototype.map.call(form.querySelectorAll('.checks[data-group="' + group + '"] input:checked'),
+        function (i) { return i.parentNode.textContent.trim(); });
+    }
+    letter = {
+      structure: val("structure"), activite: val("activite"), adresse: val("adresse"), commune: val("commune"),
+      siret: val("siret"), signataire: val("signataire"), tel: val("tel"), email: val("email"),
+      besoins: labels("Besoins constatés"), nombre: val("nombre"), intentions: labels("Intentions"),
+      commentaire: val("commentaire"), lieu: val("lieu"), date: val("date"), sig: sigPng()
+    };
 
     btn.disabled = true; msg.textContent = "Envoi en cours…";
     fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) })
