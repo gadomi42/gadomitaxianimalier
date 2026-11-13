@@ -210,8 +210,6 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
 
     <section class="sec">
       <h3><span class="n">2</span>Vos besoins de transport</h3>
-      <p class="lead">Je connais le projet <b>Gadomi Taxi Animalier</b> de Pierre-Joan Bandiera, mon pet-sitter Gadomi42 : transport de chiens, chats et NAC au départ de Feurs (42), avec ou sans moi.</p>
-
       <div class="block">
         <span class="q">J'aurais besoin de ce service pour :</span>
         <div class="checks" data-group="Besoins">
@@ -237,7 +235,6 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
           <option>Peut-être, selon le besoin</option>
         </select></div>
 
-      <div class="f block"><label for="commentaire">Un mot pour la banque ? (facultatif)</label><textarea id="commentaire" name="Commentaire" placeholder="Ex. : je n'ai pas de voiture, mon chat a besoin de soins réguliers…"></textarea></div>
     </section>
 
     <section class="sec">
@@ -438,7 +435,6 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
     y += 1.5;
     para("À l'ouverture du service, j'utiliserais Gadomi Taxi Animalier : " + L.usage, 10, INK, true);
     y += 1.5;
-    if (L.commentaire) { para("Un mot pour la banque :", 10, INK, true); para(L.commentaire, 10); }
 
     // Mention
     y += 2; ensure(12);
@@ -539,7 +535,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
     letter = {
       nom: val("nom"), commune: val("commune"), tel: val("tel"), email: val("email"), depuis: val("depuis"), animaux: val("animaux"),
       besoins: labels("Besoins"), trajets: val("trajets"), usage: val("usage"),
-      commentaire: val("commentaire"), lieu: val("lieu"), date: val("date"), sig: sigPng()
+      lieu: val("lieu"), date: val("date"), sig: sigPng()
     };
 
     btn.disabled = true; msg.textContent = "Envoi en cours…";
