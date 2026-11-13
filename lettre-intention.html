@@ -113,6 +113,12 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
 .svc-grid h3{margin:12px 0 0;font-size:16.5px;font-weight:600}
 .svc-grid p{margin:4px 0 0;font-size:14.5px;color:var(--mut);line-height:1.45}
 @media (max-width:820px){.svc{padding:24px 20px}.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}.svc h2{font-size:21px}}
+.perk{margin-top:28px;display:flex;align-items:center;gap:18px;background:var(--ink);color:#fff;border-radius:20px;padding:22px 28px;box-shadow:0 4px 16px rgba(22,48,46,.12)}
+.perk .pct{flex:none;width:76px;height:76px;border-radius:50%;background:var(--yel);color:#1B1606;display:grid;place-items:center;font-weight:700;font-size:21px;letter-spacing:-.5px}
+.perk h2{margin:0;font-size:21px;font-weight:600}
+.perk p{margin:4px 0 0;color:var(--soft);font-size:15.5px}
+.perk p b{color:#fff;font-weight:600}
+@media (max-width:820px){.perk{padding:20px;gap:14px}.perk .pct{width:62px;height:62px;font-size:17px}.perk h2{font-size:18px}}
 </style>
 </head>
 <body>
@@ -163,6 +169,14 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
       <div><img src="assets/svc-urgences.jpg" alt="Chien en caisse de transport" loading="lazy" width="640" height="480"><h3>Urgences</h3><p>Départ rapide vers les urgences de Saint-Étienne ou VetAgro Sup.</p></div>
       <div><img src="assets/svc-pension.jpg" alt="Dépose en pension" loading="lazy" width="640" height="480"><h3>Pension &amp; toilettage</h3><p>Dépose et retour à domicile, nouvelles envoyées à l'arrivée.</p></div>
       <div><img src="assets/svc-aeroport.jpg" alt="Véhicule Gadomi à l'aéroport" loading="lazy" width="640" height="480"><h3>Aéroports &amp; longue distance</h3><p>Porte à porte en France et en Europe, sans groupage.</p></div>
+    </div>
+  </section>
+
+  <section class="perk" aria-label="Avantage partenaires">
+    <div class="pct">−10&nbsp;%</div>
+    <div>
+      <h2>Un avantage pour vos clients</h2>
+      <p>À l'ouverture du service, les clients que vous m'adresserez bénéficieront de <b>−10&nbsp;% sur tous les trajets</b>, sur simple mention de votre structure lors de la réservation.</p>
     </div>
   </section>
 
