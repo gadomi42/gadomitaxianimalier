@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Envoyer le SMS · Gadomi</title>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#F7F6F2;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#16302E}
+  .c{max-width:420px;margin:16px;background:#fff;border-radius:16px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.08);text-align:center}
+  h1{font-size:20px;margin:0 0 6px}
+  p{color:#5B6B69;font-size:15px;margin:0 0 18px}
+  a.b{display:block;background:#F5B82E;color:#16302E;font-weight:600;text-decoration:none;border-radius:12px;padding:14px;font-size:17px}
+  .err{color:#8A2F2A}
+</style>
+</head>
+<body>
+<div class="c">
+  <h1>Ouverture de Messages…</h1>
+  <p id="info">Si l'application ne s'ouvre pas, touchez le bouton ci-dessous.</p>
+  <a class="b" id="go" href="#">Ouvrir le SMS</a>
+</div>
+<script>
+  // Les données passent dans le fragment (#), jamais envoyé au serveur.
+  var q = new URLSearchParams(location.hash.slice(1));
+  var to = (q.get("to") || "").replace(/[^0-9+]/g, "");
+  var body = q.get("body") || "";
+  var go = document.getElementById("go");
+  if (!/^(0[67]\d{8}|\+33[67]\d{8})$/.test(to)) {
+    document.getElementById("info").textContent = "Numéro de portable manquant ou invalide.";
+    document.getElementById("info").className = "err";
+    go.style.display = "none";
+  } else {
+    var ios = /iPhone|iPad|iPod/.test(navigator.userAgent);
+    var url = "sms:" + to + (ios ? "&body=" : "?body=") + encodeURIComponent(body);
+    go.href = url;
+    location.href = url;
+  }
+</script>
+</body>
+</html>
