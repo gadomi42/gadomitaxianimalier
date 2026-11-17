@@ -152,7 +152,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
       <span class="pill">Lancement début 2027</span>
       <h1>Gadomi42 lance<br>son taxi animalier<br>et sa station de lavage pour chien Dog Wash</h1>
       <p>Après 6 ans de garde d'animaux à domicile, je prépare<br>2 projets de services aux animaux :<br><b>Gadomi Taxi Animalier</b> : transport de chiens, chats et NAC vers le vétérinaire, les urgences, le toiletteur, la pension, et sur longue distance en France et en Europe.<br><b>Gadomi Dog Wash</b>, une station de lavage pour chien en libre-service, pour laver votre chien facilement et avec tous les avantages.</p>
-      <p class="cta">Aidez-moi à préparer ce service au plus près de vos besoins :<br>8&nbsp;questions, 1&nbsp;minute.</p>
+      <p class="cta">Aidez-moi à préparer ce service au plus près de vos besoins :<br>12&nbsp;questions, 2&nbsp;minutes.</p>
     </div>
   </div>
 </div>
@@ -251,6 +251,47 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
       </div>
     </section>
 
+    <section class="sec" data-req="radio">
+      <p class="qq"><span class="qnum">9</span>Utiliseriez-vous une station de lavage pour chien en libre-service près de Feurs ? <span class="req">*</span></p>
+      <div class="checks" data-radio="Dog Wash intérêt">
+        <label class="ck"><input type="radio" name="dwint" value="Oui, sûrement">Oui, sûrement</label>
+        <label class="ck"><input type="radio" name="dwint" value="Peut-être">Peut-être</label>
+        <label class="ck"><input type="radio" name="dwint" value="Non">Non</label>
+      </div>
+    </section>
+
+    <section class="sec">
+      <p class="qq"><span class="qnum">10</span>À quelle fréquence, environ ?</p>
+      <div class="checks" data-radio="Dog Wash fréquence">
+        <label class="ck"><input type="radio" name="dwfreq" value="Moins d'une fois par mois">Moins d'une fois par mois</label>
+        <label class="ck"><input type="radio" name="dwfreq" value="1 fois par mois">1 fois par mois</label>
+        <label class="ck"><input type="radio" name="dwfreq" value="Plusieurs fois par mois">Plusieurs fois par mois</label>
+        <label class="ck"><input type="radio" name="dwfreq" value="Jamais">Jamais</label>
+      </div>
+    </section>
+
+    <section class="sec">
+      <p class="qq"><span class="qnum">11</span>Quel prix vous semble raisonnable pour un lavage complet (shampooing, rinçage, séchage) ?</p>
+      <div class="checks" data-radio="Dog Wash prix">
+        <label class="ck"><input type="radio" name="dwprix" value="10 à 12 €">10 à 12&nbsp;€</label>
+        <label class="ck"><input type="radio" name="dwprix" value="12 à 14 €">12 à 14&nbsp;€</label>
+        <label class="ck"><input type="radio" name="dwprix" value="Plus de 14 €">Plus de 14&nbsp;€</label>
+      </div>
+    </section>
+
+    <section class="sec">
+      <p class="qq"><span class="qnum">12</span>Qu'est-ce qui compte le plus pour vous ?</p>
+      <p class="hint">Plusieurs choix possibles</p>
+      <div class="checks" data-group="Dog Wash critères">
+        <label class="ck"><input type="checkbox" value="Proximité">Proximité</label>
+        <label class="ck"><input type="checkbox" value="Ouverture 7j/7">Ouverture 7j/7</label>
+        <label class="ck"><input type="checkbox" value="Séchage puissant">Séchage puissant</label>
+        <label class="ck"><input type="checkbox" value="Paiement par carte ou sans contact">Paiement par carte ou sans contact</label>
+        <label class="ck"><input type="checkbox" value="Propreté de la station">Propreté de la station</label>
+        <label class="ck"><input type="checkbox" value="Produits adaptés">Produits adaptés (peaux sensibles, antiparasitaires)</label>
+      </div>
+    </section>
+
     <div class="send">
       <button type="submit" class="btn" id="btn">Envoyer mes réponses <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       <span class="msg" id="msg" role="status" aria-live="polite"></span>
@@ -327,6 +368,11 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
     data["Être prévenu"] = prev;
     data["Nom"] = prev === "Oui" ? (document.getElementById("nom").value.trim() || "—") : "—";
     data["Contact"] = prev === "Oui" ? (document.getElementById("contact").value.trim() || "—") : "—";
+
+    data["Dog Wash intérêt"] = (checked('input[name=dwint]:checked')[0]) || "—";
+    data["Dog Wash fréquence"] = (checked('input[name=dwfreq]:checked')[0]) || "—";
+    data["Dog Wash prix"] = (checked('input[name=dwprix]:checked')[0]) || "—";
+    data["Dog Wash critères"] = checked('[data-group="Dog Wash critères"] input:checked').join(" ; ") || "—";
 
     btn.disabled = true; msg.textContent = "Envoi en cours…";
     fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) })
