@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sondage · Gadomi Taxi Animalier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&amp;display=swap">
+<style>
+:root{
+  --ink:#16302E; --ink-2:#2C5652; --yel:#F5B82E; --yel-h:#FFC74A; --bg:#F7F6F2;
+  --mut:#5B6B69; --txt:#3A4644; --line:#E4E2D9; --soft:#C9D3D1; --tag:#FEF3D7; --err:#B3261E;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);font-family:"Outfit",system-ui,sans-serif;color:var(--ink);font-size:17px;line-height:1.5}
+a{color:inherit}
+.top{color:#fff;background-color:var(--ink);background-image:linear-gradient(90deg,rgba(22,48,46,.96) 0%,rgba(22,48,46,.88) 34%,rgba(22,48,46,.35) 62%,rgba(22,48,46,.05) 100%),linear-gradient(180deg,rgba(22,48,46,.55) 0%,rgba(22,48,46,0) 30%),url("assets/a2386622b1625fcd8eb9cff5aa192882.jpg");background-size:cover;background-position:center 38%}
+.top-in{max-width:1080px;margin:0 auto;padding:28px 24px 130px}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand img{width:112px;height:auto;display:block}
+.brand a.back{color:#fff;text-decoration:none;font-size:15px;text-shadow:0 1px 8px rgba(10,30,30,.6)}
+.brand a.back:hover{color:var(--yel)}
+.hero{text-align:left;margin-top:56px;max-width:600px}
+.hero h1{max-width:480px}
+.hero p b{color:#fff;font-weight:600}
+.hero p.cta{margin-top:18px;max-width:520px;color:var(--yel);font-weight:600;font-size:clamp(16px,1.6vw,18px)}
+.pill{display:inline-block;background:var(--yel);color:#1B1606;font-weight:600;font-size:14px;padding:6px 14px;border-radius:999px}
+.hero h1{margin:16px 0 0;font-weight:500;font-size:clamp(28px,3.6vw,40px);line-height:1.15}
+.hero p{margin:14px 0 0;max-width:600px;color:var(--soft);font-size:clamp(15px,1.5vw,17px)}
+.main{max-width:1080px;margin:-72px auto 0;padding:0 24px 80px}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.why > div{background:#fff;border-radius:20px;box-shadow:0 8px 28px rgba(22,48,46,.10);padding:24px}
+.why .ic{width:44px;height:44px;border-radius:50%;background:var(--yel);display:grid;place-items:center}
+.why .ic svg{width:22px;height:22px}
+.why h2{margin:14px 0 0;font-size:19px;font-weight:600;text-wrap:balance}
+.why p{margin:6px 0 0;color:var(--txt);font-size:15.5px}
+.card{margin-top:28px;background:#fff;border-radius:20px;box-shadow:0 4px 16px rgba(22,48,46,.08);padding:36px 40px}
+.sec + .sec{margin-top:36px;padding-top:32px;border-top:1px solid var(--line)}
+.sec h3{margin:0;display:flex;align-items:center;gap:12px;font-size:22px;font-weight:600}
+.sec h3 .n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:15px}
+.lead{margin:12px 0 0;color:var(--txt)}
+.grid{margin-top:20px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 22px}
+.f label,.q{display:block;font-size:14.5px;font-weight:500;color:var(--ink);margin-bottom:6px}
+.req{color:#B07D10}
+input[type=text],input[type=email],input[type=tel],input[type=number],select,textarea{
+  width:100%;font:inherit;font-size:16px;color:var(--ink);background:#FBFBF9;border:1px solid #D7DCDA;border-radius:12px;padding:12px 14px;outline:none;transition:border-color .15s,box-shadow .15s}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0 0 3px rgba(245,184,46,.35)}
+.f.bad input,.f.bad select{border-color:var(--err)}
+.hint{font-size:13px;color:var(--mut);margin-top:5px}
+.checks{margin-top:10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 22px}
+.checks.one{grid-template-columns:1fr}
+.ck{display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:16px;color:var(--txt);padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#FBFBF9}
+.ck:hover{border-color:var(--soft)}
+.ck input{flex:none;width:20px;height:20px;margin:2px 0 0;accent-color:var(--ink)}
+.ck:has(input:checked){border-color:var(--yel);background:var(--tag)}
+.est{margin-top:18px;display:flex;align-items:center;flex-wrap:wrap;gap:10px;color:var(--txt)}
+.est input{width:96px;text-align:center}
+.block{margin-top:22px}
+.sig-wrap{margin-top:20px;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:22px;align-items:start}
+.pad{position:relative;border:1.5px dashed #B9C3C1;border-radius:14px;background:#FBFBF9;touch-action:none}
+.pad.bad{border-color:var(--err)}
+.pad canvas{display:block;width:100%;height:190px;border-radius:14px;cursor:crosshair}
+.pad .ph{position:absolute;inset:0;display:grid;place-items:center;color:#9AA6A4;font-size:15px;pointer-events:none}
+.pad .clr{position:absolute;right:10px;top:10px;font:inherit;font-size:13px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;color:var(--mut);cursor:pointer}
+.pad .clr:hover{color:var(--ink);border-color:var(--soft)}
+.note{margin-top:26px;background:var(--tag);color:#6B4E00;border-radius:14px;padding:14px 18px;font-size:15px}
+.note b{color:#4A3600}
+.send{margin-top:26px;display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+.btn{font:inherit;font-weight:600;font-size:17px;border:0;border-radius:999px;padding:15px 30px;background:var(--yel);color:#1B1606;cursor:pointer;display:inline-flex;align-items:center;gap:10px;transition:background-color .15s}
+.btn:hover{background:var(--yel-h)}
+.btn[disabled]{opacity:.6;cursor:wait}
+.btn svg{width:18px;height:18px}
+.msg{font-size:15px}
+.msg.err{color:var(--err)}
+.more{margin:18px 0 0;font-size:15px}
+.more a{color:var(--ink-2);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.more a:hover{color:var(--ink)}
+.legal{margin-top:16px;font-size:13px;color:var(--mut)}
+.done{display:none;text-align:center;padding:40px 10px}
+.done .ic{width:72px;height:72px;margin:0 auto;border-radius:50%;background:var(--yel);display:grid;place-items:center}
+.done .ic svg{width:36px;height:36px}
+.done h2{margin:20px 0 0;font-size:30px;font-weight:500}
+.done p{margin:12px auto 0;max-width:560px;color:var(--txt)}
+.hp{position:absolute;left:-9999px}
+.ft{background:var(--ink);color:var(--soft);font-size:15px}
+.ft-in{max-width:1080px;margin:0 auto;padding:34px 24px;display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between}
+.ft .ft-link{display:inline-block;margin-top:6px;color:var(--soft);text-decoration:underline;text-underline-offset:3px}
+.ft .ft-link:hover{color:var(--yel)}
+.ft strong{color:#fff;font-weight:600}
+.ft a{color:var(--yel);text-decoration:none}
+@media (max-width:820px){
+  .why{grid-template-columns:1fr}
+  .card{padding:26px 20px}
+  .grid,.checks,.sig-wrap{grid-template-columns:1fr}
+  .top-in{padding-bottom:96px}
+  .top{background-image:linear-gradient(180deg,rgba(22,48,46,.55) 0%,rgba(22,48,46,.82) 45%,rgba(22,48,46,.95) 100%),url("assets/a2386622b1625fcd8eb9cff5aa192882.jpg");background-position:center 30%}
+  .hero{margin-top:40px}
+}
+.top-in{position:relative}
+.cta-big{position:absolute;left:62%;top:400px;display:inline-flex;align-items:center;gap:14px;background:var(--yel);color:#1B1606;font-weight:700;font-size:26px;line-height:1;text-decoration:none;padding:22px 34px;border-radius:999px;box-shadow:0 12px 32px rgba(0,0,0,.35);transition:transform .15s,background-color .15s}
+.cta-big:hover{background:var(--yel-h);transform:translateY(-2px)}
+.cta-big svg{width:26px;height:26px}
+@media (max-width:820px){.cta-big{position:static;margin-top:22px;font-size:21px;padding:18px 26px;width:100%;justify-content:center}}
+@media (max-width:820px){.br-d{display:none}.done .dot{display:none}.done .tel{display:block;margin-top:4px}}
+.svc{margin-top:28px;background:#fff;border-radius:20px;box-shadow:0 4px 16px rgba(22,48,46,.08);padding:30px 32px}
+.badges{display:flex;flex-wrap:wrap;gap:10px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--tag);color:var(--ink);font-weight:600;font-size:14.5px;padding:7px 14px;border-radius:999px}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--yel)}
+.svc h2{margin:22px 0 0;font-size:24px;font-weight:600}
+.svc-grid{margin-top:16px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.svc-grid img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:14px;background:var(--line)}
+.svc-grid h3{margin:12px 0 0;font-size:16.5px;font-weight:600}
+.svc-grid p{margin:4px 0 0;font-size:14.5px;color:var(--mut);line-height:1.45}
+@media (max-width:820px){.svc{padding:24px 20px}.svc-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}.svc h2{font-size:21px}}
+.perk{margin-top:28px;display:flex;align-items:center;gap:18px;background:var(--ink);color:#fff;border-radius:20px;padding:22px 28px;box-shadow:0 4px 16px rgba(22,48,46,.12)}
+.perk .pct{flex:none;width:76px;height:76px;border-radius:50%;background:var(--yel);color:#1B1606;display:grid;place-items:center;font-weight:700;font-size:21px;letter-spacing:-.5px}
+.perk h2{margin:0;font-size:21px;font-weight:600}
+.perk p{margin:4px 0 0;color:var(--soft);font-size:15.5px}
+.perk p b{color:#fff;font-weight:600}
+@media (max-width:820px){.perk{padding:20px;gap:14px}.perk .pct{width:62px;height:62px;font-size:17px}.perk h2{font-size:18px}}
+.dl{margin-top:26px;padding-top:24px;border-top:1px solid var(--line)}
+.dl .dl-t{margin:0 0 14px;font-weight:500;color:var(--ink)}
+.dl .btn{justify-content:center}
+@media (max-width:820px){.dl .btn{width:100%;font-size:16px;padding:15px 18px}.dl .lg{display:none}}
+.top-in{padding-bottom:110px}
+.hero{margin-top:44px}
+.main{margin-top:-64px}
+.qnum{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-size:14px;font-weight:600;margin-right:10px;flex:none}
+.qq{font-size:18px;font-weight:600;margin:0;line-height:1.4}
+.qq .qnum{display:inline-grid;vertical-align:middle;position:relative;top:-2px}
+.sec .hint{margin-top:4px}
+.ck input[type=radio]{border-radius:50%}
+.checks.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+#contactBox{display:none}
+#contactBox.on{display:grid}
+@media (max-width:820px){.checks.three{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="top-in">
+    <div class="brand">
+      <img src="assets/d052ca0c091a3d19cd5c4455eefdac21.png" alt="Gadomi Taxi Animalier">
+    </div>
+    <div class="hero">
+      <span class="pill">Lancement début 2027</span>
+      <h1>Gadomi42 lance son taxi animalier</h1>
+      <p>Après 6 ans de garde d'animaux à domicile, je prépare <b>Gadomi Taxi Animalier</b> : transport de chiens, chats et NAC vers le vétérinaire, les urgences, le toiletteur, la pension, et sur longue distance en France et en Europe.</p>
+      <p class="cta">Aidez-moi à préparer ce service au plus près de vos besoins : 7 questions, 1&nbsp;minute.</p>
+    </div>
+  </div>
+</div>
+
+<main class="main">
+  <form class="card" id="form" novalidate>
+    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <section class="sec" data-req="checks">
+      <p class="qq"><span class="qnum">1</span>Quel(s) animal(aux) avez-vous ? <span class="req">*</span></p>
+      <p class="hint">Plusieurs choix possibles</p>
+      <div class="checks" data-group="Animaux">
+        <label class="ck"><input type="checkbox" value="Chien">Chien</label>
+        <label class="ck"><input type="checkbox" value="Chat">Chat</label>
+        <label class="ck"><input type="checkbox" value="NAC">NAC (lapin, furet, oiseau…)</label>
+        <label class="ck"><input type="checkbox" value="Autre">Autre</label>
+      </div>
+    </section>
+
+    <section class="sec">
+      <p class="qq"><span class="qnum">2</span>Dans quelle commune habitez-vous ? <span class="req">*</span></p>
+      <div class="f" style="margin-top:12px"><input type="text" id="commune" name="Commune" required placeholder="Ex. : Feurs" aria-label="Commune"></div>
+    </section>
+
+    <section class="sec" data-req="checks">
+      <p class="qq"><span class="qnum">3</span>Pour quels trajets pourriez-vous faire appel à un taxi animalier ? <span class="req">*</span></p>
+      <p class="hint">Plusieurs choix possibles</p>
+      <div class="checks" data-group="Trajets">
+        <label class="ck"><input type="checkbox" value="Vétérinaire">Vétérinaire</label>
+        <label class="ck"><input type="checkbox" value="Urgences">Urgences</label>
+        <label class="ck"><input type="checkbox" value="Toilettage">Toilettage</label>
+        <label class="ck"><input type="checkbox" value="Pension">Pension</label>
+        <label class="ck"><input type="checkbox" value="Gare ou aéroport">Gare ou aéroport</label>
+        <label class="ck"><input type="checkbox" value="Longue distance ou déménagement">Longue distance ou déménagement</label>
+      </div>
+    </section>
+
+    <section class="sec" data-req="radio">
+      <p class="qq"><span class="qnum">4</span>À quelle fréquence, environ ? <span class="req">*</span></p>
+      <div class="checks" data-radio="Fréquence">
+        <label class="ck"><input type="radio" name="frequence" value="Jamais">Jamais</label>
+        <label class="ck"><input type="radio" name="frequence" value="1 fois par an">1 fois par an</label>
+        <label class="ck"><input type="radio" name="frequence" value="2 à 5 fois par an">2 à 5 fois par an</label>
+        <label class="ck"><input type="radio" name="frequence" value="Plus de 5 fois par an">Plus de 5 fois par an</label>
+      </div>
+    </section>
+
+    <section class="sec">
+      <p class="qq"><span class="qnum">5</span>Pour quelle(s) raison(s) feriez-vous appel à ce service ?</p>
+      <p class="hint">Plusieurs choix possibles</p>
+      <div class="checks" data-group="Raisons">
+        <label class="ck"><input type="checkbox" value="Pas de voiture">Pas de voiture</label>
+        <label class="ck"><input type="checkbox" value="Manque de temps">Manque de temps</label>
+        <label class="ck"><input type="checkbox" value="Animal difficile à transporter">Animal difficile à transporter</label>
+        <label class="ck"><input type="checkbox" value="Urgence">Urgence</label>
+        <label class="ck"><input type="checkbox" value="Âge ou mobilité réduite">Âge ou mobilité réduite</label>
+      </div>
+    </section>
+
+    <section class="sec" data-req="radio">
+      <p class="qq"><span class="qnum">6</span>Quel prix vous semble raisonnable pour un trajet local d'environ 10&nbsp;km ? <span class="req">*</span></p>
+      <div class="checks" data-radio="Prix">
+        <label class="ck"><input type="radio" name="prix" value="Moins de 20 €">Moins de 20&nbsp;€</label>
+        <label class="ck"><input type="radio" name="prix" value="20 à 30 €">20 à 30&nbsp;€</label>
+        <label class="ck"><input type="radio" name="prix" value="30 à 40 €">30 à 40&nbsp;€</label>
+        <label class="ck"><input type="radio" name="prix" value="Plus de 40 €">Plus de 40&nbsp;€</label>
+      </div>
+    </section>
+
+    <section class="sec">
+      <p class="qq"><span class="qnum">7</span>Souhaitez-vous être prévenu(e) de l'ouverture ?</p>
+      <div class="checks" data-radio="Être prévenu">
+        <label class="ck"><input type="radio" name="prevenu" value="Oui">Oui</label>
+        <label class="ck"><input type="radio" name="prevenu" value="Non">Non</label>
+      </div>
+      <div class="grid" id="contactBox">
+        <div class="f"><label for="nom">Nom</label><input type="text" id="nom" autocomplete="name"></div>
+        <div class="f"><label for="contact">E-mail ou téléphone</label><input type="text" id="contact" autocomplete="email"></div>
+      </div>
+    </section>
+
+    <div class="send">
+      <button type="submit" class="btn" id="btn">Envoyer mes réponses <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <span class="msg" id="msg" role="status" aria-live="polite"></span>
+    </div>
+    <p class="legal">Vos réponses servent uniquement à préparer le lancement de Gadomi Taxi Animalier. Votre nom et vos coordonnées, si vous les donnez, servent seulement à vous prévenir de l'ouverture. Ils ne sont ni revendus ni utilisés à d'autres fins. <a href="confidentialite.html" target="_blank" rel="noopener">Politique de confidentialité</a></p>
+  </form>
+
+  <div class="card done" id="done" role="status">
+    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#16302E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <h2>Merci pour vos réponses !</h2>
+    <p>Elles m'aident à préparer Gadomi Taxi Animalier au plus près de vos besoins.</p>
+    <p><b>Pierre-Joan Bandiera</b><span class="dot"> · </span><span class="tel">06&nbsp;70&nbsp;98&nbsp;40&nbsp;55</span></p>
+  </div>
+</main>
+
+<footer class="ft">
+  <div class="ft-in">
+    <div><strong>Gadomi Taxi Animalier</strong> · <strong>Gadomi42 garde d'animaux à domicile</strong><br><a class="ft-link" href="index.html" target="_blank" rel="noopener">Découvrir le service et les tarifs</a></div>
+    <div><a href="tel:+33670984055">06 70 98 40 55</a> · <a href="mailto:gadomi42@gmail.com">gadomi42@gmail.com</a></div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var ACCESS_KEY = "e353c4aa-fe0d-4764-bfd7-7f859975c4a9";
+  var ENDPOINT = "https://api.web3forms.com/submit";
+  var form = document.getElementById("form"), btn = document.getElementById("btn"), msg = document.getElementById("msg");
+  var box = document.getElementById("contactBox");
+
+  form.querySelectorAll('input[name=prevenu]').forEach(function (r) {
+    r.addEventListener("change", function () { box.classList.toggle("on", r.value === "Oui" && r.checked); });
+  });
+
+  form.addEventListener("change", function (e) {
+    var s = e.target.closest(".sec"); if (!s) return;
+    s.querySelectorAll(".ck").forEach(function (c) { c.style.borderColor = ""; });
+    var f = e.target.closest(".f"); if (f) f.classList.remove("bad");
+  });
+  form.addEventListener("input", function (e) { var f = e.target.closest(".f"); if (f) f.classList.remove("bad"); });
+
+  function checked(sel) {
+    return Array.prototype.map.call(form.querySelectorAll(sel), function (i) { return i.value; });
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    msg.textContent = ""; msg.className = "msg";
+    var ok = true;
+    form.querySelectorAll(".sec").forEach(function (s) {
+      var bad = false, kind = s.getAttribute("data-req");
+      if (kind === "checks" || kind === "radio") bad = !s.querySelector("input:checked");
+      var t = s.querySelector("input[required]");
+      if (t) { bad = !t.value.trim(); t.closest(".f").classList.toggle("bad", bad); }
+      s.querySelectorAll(".ck").forEach(function (c) { c.style.borderColor = bad && !t ? "var(--err)" : ""; });
+      if (bad) ok = false;
+    });
+    if (!ok) { msg.textContent = "Merci de répondre aux questions marquées d'un astérisque."; msg.className = "msg err"; return; }
+
+    var data = {
+      access_key: ACCESS_KEY,
+      subject: "Lettre d'intention · Sondage clientèle : " + document.getElementById("commune").value.trim(),
+      from_name: "Gadomi Taxi Animalier · sondage"
+    };
+    if (form.botcheck.checked) data.botcheck = true;
+    data["Type"] = "Sondage clientèle";
+    data["Animaux"] = checked('[data-group="Animaux"] input:checked').join(" ; ") || "—";
+    data["Commune"] = document.getElementById("commune").value.trim();
+    data["Trajets"] = checked('[data-group="Trajets"] input:checked').join(" ; ") || "—";
+    data["Fréquence"] = (checked('input[name=frequence]:checked')[0]) || "—";
+    data["Raisons"] = checked('[data-group="Raisons"] input:checked').join(" ; ") || "—";
+    data["Prix"] = (checked('input[name=prix]:checked')[0]) || "—";
+    var prev = (checked('input[name=prevenu]:checked')[0]) || "—";
+    data["Être prévenu"] = prev;
+    data["Nom"] = prev === "Oui" ? (document.getElementById("nom").value.trim() || "—") : "—";
+    data["Contact"] = prev === "Oui" ? (document.getElementById("contact").value.trim() || "—") : "—";
+
+    btn.disabled = true; msg.textContent = "Envoi en cours…";
+    fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" }, body: JSON.stringify(data) })
+      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { ok: r.ok && j.success !== false, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok) throw new Error("Erreur");
+        form.style.display = "none";
+        var d = document.getElementById("done"); d.style.display = "block";
+        d.scrollIntoView({ behavior: "smooth", block: "center" });
+      })
+      .catch(function () {
+        btn.disabled = false;
+        msg.textContent = "L'envoi n'a pas abouti. Vérifiez votre connexion et réessayez, ou écrivez à gadomi42@gmail.com.";
+        msg.className = "msg err";
+      });
+  });
+})();
+</script>
+</body>
+</html>
