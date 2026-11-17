@@ -128,6 +128,8 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
 .top-in{padding-bottom:110px}
 .hero{margin-top:44px}
 .main{margin-top:-64px}
+.perk{margin-top:0}
+.card{margin-top:20px}
 .qnum{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-size:14px;font-weight:600;margin-right:10px;flex:none}
 .qq{font-size:18px;font-weight:600;margin:0;line-height:1.4}
 .qq .qnum{display:inline-grid;vertical-align:middle;position:relative;top:-2px}
@@ -150,17 +152,33 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
       <span class="pill">Lancement début 2027</span>
       <h1>Gadomi42 lance son taxi animalier</h1>
       <p>Après 6 ans de garde d'animaux à domicile, je prépare <b>Gadomi Taxi Animalier</b> : transport de chiens, chats et NAC vers le vétérinaire, les urgences, le toiletteur, la pension, et sur longue distance en France et en Europe.</p>
-      <p class="cta">Aidez-moi à préparer ce service au plus près de vos besoins : 7 questions, 1&nbsp;minute.</p>
+      <p class="cta">Aidez-moi à préparer ce service au plus près de vos besoins : 8 questions, 1&nbsp;minute.</p>
     </div>
   </div>
 </div>
 
 <main class="main">
+  <section class="perk" aria-label="Avantage clients Gadomi42">
+    <div class="pct">−10&nbsp;%</div>
+    <div>
+      <h2>Vous êtes client Gadomi42 ?</h2>
+      <p>À l'ouverture du service, vous bénéficierez de <b>−10&nbsp;% sur tous les trajets</b> Gadomi Taxi Animalier.</p>
+    </div>
+  </section>
+
   <form class="card" id="form" novalidate>
     <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
 
+    <section class="sec" data-req="radio">
+      <p class="qq"><span class="qnum">1</span>Êtes-vous client de Gadomi42 (garde d'animaux à domicile) ? <span class="req">*</span></p>
+      <div class="checks" data-radio="Client Gadomi42">
+        <label class="ck"><input type="radio" name="client" value="Oui">Oui</label>
+        <label class="ck"><input type="radio" name="client" value="Non">Non</label>
+      </div>
+    </section>
+
     <section class="sec" data-req="checks">
-      <p class="qq"><span class="qnum">1</span>Quel(s) animal(aux) avez-vous ? <span class="req">*</span></p>
+      <p class="qq"><span class="qnum">2</span>Quel(s) animal(aux) avez-vous ? <span class="req">*</span></p>
       <p class="hint">Plusieurs choix possibles</p>
       <div class="checks" data-group="Animaux">
         <label class="ck"><input type="checkbox" value="Chien">Chien</label>
@@ -171,12 +189,12 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
     </section>
 
     <section class="sec">
-      <p class="qq"><span class="qnum">2</span>Dans quelle commune habitez-vous ? <span class="req">*</span></p>
+      <p class="qq"><span class="qnum">3</span>Dans quelle commune habitez-vous ? <span class="req">*</span></p>
       <div class="f" style="margin-top:12px"><input type="text" id="commune" name="Commune" required placeholder="Ex. : Feurs" aria-label="Commune"></div>
     </section>
 
     <section class="sec" data-req="checks">
-      <p class="qq"><span class="qnum">3</span>Pour quels trajets pourriez-vous faire appel à un taxi animalier ? <span class="req">*</span></p>
+      <p class="qq"><span class="qnum">4</span>Pour quels trajets pourriez-vous faire appel à un taxi animalier ? <span class="req">*</span></p>
       <p class="hint">Plusieurs choix possibles</p>
       <div class="checks" data-group="Trajets">
         <label class="ck"><input type="checkbox" value="Vétérinaire">Vétérinaire</label>
@@ -189,7 +207,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
     </section>
 
     <section class="sec" data-req="radio">
-      <p class="qq"><span class="qnum">4</span>À quelle fréquence, environ ? <span class="req">*</span></p>
+      <p class="qq"><span class="qnum">5</span>À quelle fréquence, environ ? <span class="req">*</span></p>
       <div class="checks" data-radio="Fréquence">
         <label class="ck"><input type="radio" name="frequence" value="Jamais">Jamais</label>
         <label class="ck"><input type="radio" name="frequence" value="1 fois par an">1 fois par an</label>
@@ -199,7 +217,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
     </section>
 
     <section class="sec">
-      <p class="qq"><span class="qnum">5</span>Pour quelle(s) raison(s) feriez-vous appel à ce service ?</p>
+      <p class="qq"><span class="qnum">6</span>Pour quelle(s) raison(s) feriez-vous appel à ce service ?</p>
       <p class="hint">Plusieurs choix possibles</p>
       <div class="checks" data-group="Raisons">
         <label class="ck"><input type="checkbox" value="Pas de voiture">Pas de voiture</label>
@@ -211,7 +229,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
     </section>
 
     <section class="sec" data-req="radio">
-      <p class="qq"><span class="qnum">6</span>Quel prix vous semble raisonnable pour un trajet local d'environ 10&nbsp;km ? <span class="req">*</span></p>
+      <p class="qq"><span class="qnum">7</span>Quel prix vous semble raisonnable pour un trajet local d'environ 10&nbsp;km ? <span class="req">*</span></p>
       <div class="checks" data-radio="Prix">
         <label class="ck"><input type="radio" name="prix" value="25 à 30 €">25 à 30&nbsp;€</label>
         <label class="ck"><input type="radio" name="prix" value="30 à 35 €">30 à 35&nbsp;€</label>
@@ -221,7 +239,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
     </section>
 
     <section class="sec">
-      <p class="qq"><span class="qnum">7</span>Souhaitez-vous être prévenu(e) de l'ouverture ?</p>
+      <p class="qq"><span class="qnum">8</span>Souhaitez-vous être prévenu(e) de l'ouverture ?</p>
       <div class="checks" data-radio="Être prévenu">
         <label class="ck"><input type="radio" name="prevenu" value="Oui">Oui</label>
         <label class="ck"><input type="radio" name="prevenu" value="Non">Non</label>
@@ -297,6 +315,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--ink-2);box-shadow:0 0
     };
     if (form.botcheck.checked) data.botcheck = true;
     data["Type"] = "Sondage clientèle";
+    data["Client Gadomi42"] = (checked('input[name=client]:checked')[0]) || "—";
     data["Animaux"] = checked('[data-group="Animaux"] input:checked').join(" ; ") || "—";
     data["Commune"] = document.getElementById("commune").value.trim();
     data["Trajets"] = checked('[data-group="Trajets"] input:checked').join(" ; ") || "—";
